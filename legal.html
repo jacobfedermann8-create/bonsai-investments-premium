@@ -1,39 +1,1046 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Legal | BONSAI INVESTMENTS SA</title>
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+<style>
+
+
+:root{
+
+--black:#050505;
+--gold:#c6a46b;
+--white:#f5f5f3;
+--grey:#a5a5a5;
+
+--sans:'Inter',sans-serif;
+--serif:'Cormorant Garamond',serif;
+
+}
+
+
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+background:var(--black);
+
+color:var(--white);
+
+font-family:var(--sans);
+
+overflow-x:hidden;
+
+}
+
+
+
+/* =====================
+HEADER
+===================== */
+
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:95px;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+
+padding:0 8%;
+
+
+background:rgba(5,5,5,.75);
+
+
+backdrop-filter:blur(18px);
+
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+
+z-index:1000;
+
+}
+
+
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+text-decoration:none;
+
+}
+
+
+
+.logo-mark{
+
+width:50px;
+
+height:50px;
+
+
+border:1px solid var(--gold);
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+
+.logo-mark svg{
+
+width:36px;
+
+height:36px;
+
+}
+
+
+.logo-mark svg path,
+.logo-mark svg circle{
+
+stroke:var(--gold);
+
+stroke-width:3;
+
+fill:none;
+
+stroke-linecap:round;
+
+}
+
+
+
+.logo-mark .leaf{
+
+fill:var(--gold);
+
+stroke:none;
+
+}
+
+
+
+.logo-text{
+
+font-size:14px;
+
+letter-spacing:5px;
+
+color:white;
+
+font-weight:500;
+
+}
+
+
+
+nav a{
+
+color:#aaa;
+
+text-decoration:none;
+
+font-size:12px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+margin-left:35px;
+
+transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+color:var(--gold);
+
+}
+
+
+
+
+/* =====================
+LEGAL HERO
+===================== */
+
+
+.legal-hero{
+
+height:75vh;
+
+display:flex;
+
+align-items:center;
+
+padding:0 8%;
+
+
+background:
+
+linear-gradient(
+
+90deg,
+
+rgba(5,5,5,.95),
+
+rgba(5,5,5,.65)
+
+),
+
+
+url("https://images.unsplash.com/photo-1450101499163-c8848c66ca85");
+
+
+background-size:cover;
+
+background-position:center;
+
+}
+
+
+
+.hero-content{
+
+max-width:850px;
+
+margin-top:80px;
+
+}
+
+
+
+.small-title{
+
+color:var(--gold);
+
+font-size:12px;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+margin-bottom:30px;
+
+}
+
+
+
+.legal-hero h1{
+
+font-family:var(--serif);
+
+font-size:75px;
+
+font-weight:400;
+
+line-height:1.1;
+
+margin-bottom:35px;
+
+}
+
+
+
+.legal-hero h1 em{
+
+color:var(--gold);
+
+font-style:italic;
+
+}
+
+
+
+.legal-hero p{
+
+max-width:700px;
+
+font-size:18px;
+
+line-height:1.9;
+
+font-weight:300;
+
+color:#c0c0c0;
+
+}
+
+
+
+
+/* =====================
+LEGAL CONTENT
+===================== */
+
+
+.legal-section{
+
+padding:120px 8%;
+
+}
+
+
+
+.legal-grid{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:40px;
+
+margin-top:60px;
+
+}
+
+
+
+.legal-card{
+
+padding:45px 40px;
+
+border:1px solid rgba(255,255,255,.08);
+
+background:rgba(255,255,255,.02);
+
+transition:.4s;
+
+}
+
+
+
+.legal-card:hover{
+
+border-color:var(--gold);
+
+transform:translateY(-5px);
+
+}
+
+
+
+.legal-card h2{
+
+font-family:var(--serif);
+
+font-size:38px;
+
+font-weight:400;
+
+margin-bottom:25px;
+
+}
+
+
+
+.legal-card h3{
+
+font-size:18px;
+
+font-weight:400;
+
+color:var(--gold);
+
+margin-top:25px;
+
+margin-bottom:15px;
+
+}
+
+
+
+.legal-card p{
+
+color:#aaa;
+
+font-size:15px;
+
+line-height:2;
+
+}
+
+
+
+
+
+/* =====================
+COMPANY INFO
+===================== */
+
+
+.company-info{
+
+padding:120px 8%;
+
+background:#080808;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.info-content{
+
+max-width:900px;
+
+}
+
+
+
+.info-content p{
+
+margin-top:25px;
+
+color:#aaa;
+
+font-size:16px;
+
+line-height:2;
+
+}
+
+
+
+
+/* =====================
+FOOTER
+===================== */
+
+
+footer{
+
+padding:65px 8%;
+
+background:#030303;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+}
+
+
+
+.footer-company{
+
+font-size:14px;
+
+letter-spacing:4px;
+
+color:white;
+
+margin-bottom:15px;
+
+}
+
+
+
+footer p{
+
+color:#888;
+
+font-size:12px;
+
+line-height:2;
+
+}
+
+
+
+footer a{
+
+color:#999;
+
+font-size:12px;
+
+text-decoration:none;
+
+margin-left:30px;
+
+}
+
+
+
+footer a:hover{
+
+color:var(--gold);
+
+}
+
+
+
+
+
+/* =====================
+RESPONSIVE
+===================== */
+
+
+@media(max-width:900px){
+
+
+.legal-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.legal-hero h1{
+
+font-size:55px;
+
+}
+
+
+}
+
+
+
+@media(max-width:700px){
+
+
+header{
+
+padding:0 5%;
+
+}
+
+
+nav{
+
+display:none;
+
+}
+
+
+.legal-hero{
+
+padding:0 5%;
+
+}
+
+
+.legal-hero h1{
+
+font-size:42px;
+
+}
+
+
+.legal-section,
+.company-info{
+
+padding:80px 5%;
+
+}
+
+
+footer{
+
+flex-direction:column;
+
+gap:30px;
+
+text-align:center;
+
+}
+
+
+footer a{
+
+display:block;
+
+margin:15px 0;
+
+}
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+<body>
+
+
+
+
+
+<header>
+
+
+<a href="index.html" class="logo">
+
+
+<div class="logo-mark">
+
+
+<svg viewBox="0 0 100 100">
+
+
+<circle cx="50" cy="50" r="45"></circle>
+
+
+<path d="M50 80 V42"></path>
+
+
+<path d="M50 62 C35 55 25 60 30 45"></path>
+
+
+<path d="M50 55 C65 48 75 40 72 28"></path>
+
+
+<circle class="leaf" cx="30" cy="45" r="6"></circle>
+
+
+<circle class="leaf" cx="72" cy="28" r="6"></circle>
+
+
+<circle class="leaf" cx="50" cy="40" r="7"></circle>
+
+
+</svg>
+
+
+</div>
+
+
+
+<div class="logo-text">
+
 BONSAI INVESTMENTS SA
-Home | About | Strategy | Services | Team | Contact
+
+</div>
+
+
+</a>
+
+
+
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="strategy.html">Strategy</a>
+
+<a href="services.html">Services</a>
+
+<a href="team.html">Team</a>
+
+<a href="legal.html">Legal</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+
+<section class="legal-hero">
+
+
+<div class="hero-content">
+
+
+<div class="small-title">
+
+Legal & Compliance
+
+</div>
+
+
+
+<h1>
+
+Transparency, Trust & <em>Integrity.</em>
+
+</h1>
+
+
+
+<p>
+
+Bonsai Investments SA operates with a strong commitment to transparency, confidentiality and responsible business practices.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="legal-section">
+
+
+<div class="small-title">
+
+Legal Information
+
+</div>
+
+
+<div class="legal-grid">
+
+
+
+
+
+<div class="legal-card">
+
+
+<h2>
+
 Legal Notice
-Transparency, integrity and professionalism.
 
-Company Information
-BONSAI INVESTMENTS SA
-Landoltstrasse 1
-8006 Zürich
-Switzerland
+</h2>
 
-Commercial Register
-CH-020.4.091.692-9
 
-VAT / UID
-CHE-285.609.245
+<h3>
 
-Email
+Company
+
+</h3>
+
+
+<p>
+
+BONSAI INVESTMENTS SA<br>
+Zurich, Switzerland<br>
+Investment Advisory & Strategic Consulting
+
+</p>
+
+
+<h3>
+
+Contact
+
+</h3>
+
+
+<p>
+
 contact@bonsai-invest.com
 
-Purpose of this Website
-This website provides general information regarding BONSAI INVESTMENTS SA and its strategic investment advisory activities. The information published is intended solely for informational purposes and does not constitute an offer to sell securities, investment advice, solicitation or recommendation to enter into any financial transaction.
+</p>
 
-Disclaimer
-Investment opportunities involve risks, including the possible loss of capital. Any investment decision should be made independently and, where appropriate, with the assistance of qualified legal, tax and financial advisers. BONSAI INVESTMENTS SA makes no guarantee regarding future performance or investment results.
 
-Intellectual Property
-All texts, graphics, visual identity, logos and website content are protected by applicable intellectual property laws. Any reproduction or distribution without prior written authorization is prohibited.
+</div>
 
-Data Protection
-Information voluntarily submitted through the contact form is used solely to respond to enquiries and manage professional relationships. Personal information is handled confidentially and in accordance with applicable Swiss data protection requirements.
 
-Applicable Law
-This website is governed by Swiss law. Any dispute relating to the use of this website shall be subject to the competent Swiss authorities.
+
+
+
+
+<div class="legal-card">
+
+
+<h2>
+
+Privacy Policy
+
+</h2>
+
+
+<p>
+
+Bonsai Investments SA respects the confidentiality of personal information collected through its website and business communications.
+
+</p>
+
+
+<p>
+
+Personal data is used exclusively for professional communication, relationship management and service improvement.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="legal-card">
+
+
+<h2>
+
+Investment Disclaimer
+
+</h2>
+
+
+<p>
+
+The information provided on this website is for informational purposes only and does not constitute an offer, solicitation or recommendation to invest.
+
+</p>
+
+
+<p>
+
+Investment opportunities involve risks and require independent evaluation before any decision is made.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="legal-card">
+
+
+<h2>
+
+Confidentiality
+
+</h2>
+
+
+<p>
+
+All information exchanged with partners, investors and companies is treated with strict confidentiality and professional discretion.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="company-info">
+
+
+<div class="info-content">
+
+
+<div class="small-title">
+
+Company Information
+
+</div>
+
+
+
+<h2>
 
 BONSAI INVESTMENTS SA
+
+</h2>
+
+
+
+<p>
+
+Bonsai Investments SA is a strategic investment advisory company focused on connecting investors, entrepreneurs and innovative companies through long-term partnerships.
+
+</p>
+
+
+
+<p>
+
+Our approach is based on confidentiality, strategic analysis and the identification of sustainable growth opportunities across international markets.
+
+</p>
+
+
+
+<p>
+
+Registered office: Zurich, Switzerland<br>
+
+Activity: Strategic Investment Advisory & Business Consulting<br>
+
+Website: bonsai-invest.com
+
+</p>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<footer>
+
+
+
+<div>
+
+
+<p class="footer-company">
+
+BONSAI INVESTMENTS SA
+
+</p>
+
+
+<p>
+
 Zurich, Switzerland
-Private Investment Advisory · Strategic Capital
-Privacy Policy | Legal Notice | Contact
+
+</p>
+
+
+<p>
+
+Strategic Investment Advisory
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div>
+
+
+<a href="#">
+
+Confidentialité
+
+</a>
+
+
+<a href="legal.html">
+
+Mentions légales
+
+</a>
+
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
+
+</body>
+
+</html>
