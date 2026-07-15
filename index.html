@@ -10,34 +10,42 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
 
-        /* HEADER & LOGO (Identique) */
+        /* HEADER */
         header { position: fixed; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 8rem; z-index: 100; background: rgba(7, 7, 8, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
         .logo-container { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; }
         .logo-icon { width: 32px; height: 32px; }
         .logo-text { font-size: 0.85rem; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; color: var(--text-light); }
         .logo-text span { color: var(--accent); }
         nav a { color: var(--muted-light); text-decoration: none; margin-left: 2rem; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; }
+        nav a:hover { color: var(--accent); }
 
-        /* HERO PLUS RICHE */
-        .hero { padding: 18rem 8rem 12rem; background: linear-gradient(to bottom, #0f0f11, #070708); }
+        /* HERO AVEC IMAGE DE FOND */
+        .hero { 
+            padding: 20rem 8rem 15rem; 
+            background-image: linear-gradient(rgba(7, 7, 8, 0.85), rgba(7, 7, 8, 0.85)), url('fond.jpg'); 
+            background-size: cover; 
+            background-position: center; 
+            background-attachment: fixed;
+            border-bottom: 1px solid var(--border);
+        }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: 5.5rem; margin-bottom: 2rem; line-height: 1; }
         .hero p { color: var(--muted-light); font-size: 1.4rem; max-width: 800px; margin-bottom: 3rem; }
 
-        /* NOUVELLE SECTION : VALEURS */
+        /* VALEURS */
         .values-section { padding: 10rem 8rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
         .values-text h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 2rem; }
         .values-list { list-style: none; }
-        .values-list li { margin-bottom: 1.5rem; padding-left: 2rem; border-left: 2px solid var(--accent); }
-        .values-list h4 { color: var(--accent); margin-bottom: 0.5rem; }
+        .values-list li { margin-bottom: 2rem; padding-left: 2rem; border-left: 2px solid var(--accent); }
+        .values-list h4 { color: var(--accent); margin-bottom: 0.5rem; font-size: 1.2rem; }
 
-        /* SECTION SERVICES (Riche) */
+        /* SERVICES */
         .services-section { padding: 10rem 8rem; border-top: 1px solid var(--border); }
         .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
         .card { border: 1px solid var(--border); padding: 4rem 3rem; transition: 0.4s; }
         .card:hover { border-color: var(--accent); background: rgba(197, 168, 128, 0.03); }
         .card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; }
 
-        /* FOOTER (Identique) */
+        /* FOOTER */
         .footer-premium { padding: 6rem 8rem 4rem; background-color: #030304; border-top: 1px solid var(--border); color: var(--muted-light); }
         .footer-content { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4rem; }
         .footer-col h4 { font-family: 'Playfair Display', serif; color: #fff; margin-bottom: 1.5rem; }
