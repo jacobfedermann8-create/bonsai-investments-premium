@@ -6,119 +6,90 @@
     <title>BONSAI INVESTMENTS | Multi-Family Office & Stratégies</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
-        :root { --bg-dark: #070708; --text-light: #f4f4f5; --accent: #c5a880; --muted-light: #a1a1aa; --border: rgba(255, 255, 255, 0.08); }
+        :root {
+            --bg-dark: #070708; --text-light: #f4f4f5; --accent: #c5a880; 
+            --muted-light: #a1a1aa; --border: rgba(255, 255, 255, 0.05);
+            --grid-line: rgba(255, 255, 255, 0.02);
+        }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
 
-        /* HEADER */
-        header { position: fixed; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 8rem; z-index: 100; background: rgba(7, 7, 8, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+        /* HEADER COHÉRENT */
+        header { position: fixed; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 2rem 8rem; z-index: 100; border-bottom: 1px solid var(--border); backdrop-filter: blur(16px); background: rgba(7, 7, 8, 0.75); }
         .logo-container { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; }
-        .logo-icon { width: 32px; height: 32px; }
         .logo-text { font-size: 0.85rem; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; color: var(--text-light); }
         .logo-text span { color: var(--accent); }
-        nav a { color: var(--muted-light); text-decoration: none; margin-left: 2rem; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; }
+        nav a { color: var(--muted-light); text-decoration: none; margin-left: 2.5rem; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; transition: 0.4s; }
         nav a:hover { color: var(--accent); }
 
-        /* HERO AVEC IMAGE DE FOND */
-        .hero { 
-            padding: 20rem 8rem 15rem; 
-            background-image: linear-gradient(rgba(7, 7, 8, 0.85), rgba(7, 7, 8, 0.85)), url('fond.jpg'); 
-            background-size: cover; 
-            background-position: center; 
-            background-attachment: fixed;
-            border-bottom: 1px solid var(--border);
-        }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 5.5rem; margin-bottom: 2rem; line-height: 1; }
-        .hero p { color: var(--muted-light); font-size: 1.4rem; max-width: 800px; margin-bottom: 3rem; }
+        /* HERO PREMIUM */
+        .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; padding: 12rem 8rem 6rem; background: linear-gradient(rgba(7, 7, 8, 0.8), rgba(7, 7, 8, 0.8)), url('fond.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 5rem; line-height: 1.1; margin-bottom: 2rem; max-width: 900px; }
+        .hero h1 span { font-style: italic; color: var(--accent); }
+        .hero p { font-size: 1.3rem; color: var(--muted-light); max-width: 700px; line-height: 1.8; font-weight: 200; }
 
-        /* VALEURS */
-        .values-section { padding: 10rem 8rem; display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center; }
-        .values-text h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 2rem; }
-        .values-list { list-style: none; }
-        .values-list li { margin-bottom: 2rem; padding-left: 2rem; border-left: 2px solid var(--accent); }
-        .values-list h4 { color: var(--accent); margin-bottom: 0.5rem; font-size: 1.2rem; }
-
-        /* SERVICES */
+        /* SECTIONS SERVICES (Style About) */
         .services-section { padding: 10rem 8rem; border-top: 1px solid var(--border); }
-        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 4rem; }
-        .card { border: 1px solid var(--border); padding: 4rem 3rem; transition: 0.4s; }
-        .card:hover { border-color: var(--accent); background: rgba(197, 168, 128, 0.03); }
-        .card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; }
+        .grid-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 5rem; }
+        .card { border: 1px solid var(--border); padding: 3rem; background: rgba(255, 255, 255, 0.01); transition: 0.4s; }
+        .card:hover { border-color: var(--accent); transform: translateY(-10px); }
+        .card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--accent); margin-bottom: 1.5rem; }
+        .card p { color: var(--muted-light); font-size: 0.9rem; line-height: 1.8; }
 
-        /* FOOTER */
-        .footer-premium { padding: 6rem 8rem 4rem; background-color: #030304; border-top: 1px solid var(--border); color: var(--muted-light); }
-        .footer-content { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4rem; }
-        .footer-col h4 { font-family: 'Playfair Display', serif; color: #fff; margin-bottom: 1.5rem; }
-        .footer-col a { display: block; text-decoration: none; color: var(--muted-light); margin-bottom: 0.5rem; }
-        .footer-col a:hover { color: var(--accent); }
+        /* FOOTER COHÉRENT */
+        footer { padding: 5rem 8rem; background-color: #030304; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted-light); font-size: 0.78rem; }
+        footer a { color: var(--muted-light); text-decoration: none; margin-left: 2.5rem; }
     </style>
 </head>
 <body>
 
     <header>
         <a href="index.html" class="logo-container">
-            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="46" stroke="#c5a880" stroke-width="1.5" stroke-dasharray="2 2"/>
-                <path d="M50 85 V45" stroke="#c5a880" stroke-width="3" stroke-linecap="round"/>
-                <path d="M50 65 C40 60 30 65 32 50" stroke="#c5a880" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="32" cy="50" r="5" fill="#c5a880"/>
-            </svg>
-            <div class="logo-text">BONSAI<span>INVESTMENTS</span></div>
+            <div class="logo-text">BONSAI INVESTMENTS<span>.</span></div>
         </a>
         <nav>
-            <a href="index.html">Home</a><a href="about.html">About</a><a href="strategy.html">Strategy</a><a href="services.html">Services</a><a href="team.html">Team</a><a href="contact.html">Contact</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="about.html">About</a>
+            <a href="strategy.html">Strategy</a>
+            <a href="services.html">Services</a>
+            <a href="team.html">Team</a>
+            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>L'excellence financière,<br><span>multi-dimensionnelle</span>.</h1>
-            <p>Nous bâtissons des ponts entre le capital institutionnel et les opportunités de demain. BONSAI INVESTMENTS accompagne une clientèle exigeante à travers une gestion rigoureuse, innovante et pérenne.</p>
-        </section>
-
-        <section class="values-section">
-            <div class="values-text">
-                <h2>Philosophie d'investissement</h2>
-                <p>Notre approche repose sur trois piliers fondamentaux. Nous ne nous contentons pas de gérer, nous bâtissons une vision à long terme pour nos partenaires.</p>
-            </div>
-            <ul class="values-list">
-                <li><h4>Indépendance</h4><p>Une liberté totale dans nos choix stratégiques pour privilégier l'intérêt exclusif de nos investisseurs.</p></li>
-                <li><h4>Transparence</h4><p>Un reporting clair et une communication directe sur chaque actif sous gestion.</p></li>
-                <li><h4>Excellence</h4><p>Une sélection drastique des opportunités pour garantir une performance ajustée au risque.</p></li>
-            </ul>
+            <h1>L'excellence financière, <span>multi-dimensionnelle</span>.</h1>
+            <p>Nous bâtissons des ponts entre le capital institutionnel et les opportunités de demain. BONSAI INVESTMENTS structure vos ambitions avec une rigueur helvétique absolue.</p>
         </section>
 
         <section class="services-section">
-            <h2>Nos Domaines d'Intervention</h2>
-            <div class="services-grid">
-                <div class="card"><h3>Gestion de Patrimoine</h3><p>Ingénierie patrimoniale, optimisation fiscale et gestion de portefeuilles diversifiés pour préserver votre héritage financier.</p></div>
-                <div class="card"><h3>Immobilier & Private Equity</h3><p>Accès exclusif à des actifs immobiliers institutionnels et à des prises de participation dans des entreprises à fort potentiel.</p></div>
-                <div class="card"><h3>Venture Capital</h3><p>Accompagnement des startups technologiques les plus disruptives. Du seed aux phases de croissance, nous finançons l'innovation.</p></div>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem;">Nos Domaines d'Intervention</h2>
+            <div class="grid-container">
+                <div class="card">
+                    <h3>Gestion de Patrimoine</h3>
+                    <p>Ingénierie patrimoniale, optimisation fiscale et gestion de portefeuilles diversifiés pour préserver et accroître votre héritage financier sur le long terme.</p>
+                </div>
+                <div class="card">
+                    <h3>Immobilier & Private Equity</h3>
+                    <p>Accès exclusif à des actifs immobiliers institutionnels et à des prises de participation directes dans des entreprises à haut potentiel de croissance.</p>
+                </div>
+                <div class="card">
+                    <h3>Venture Capital</h3>
+                    <p>Accompagnement des startups les plus disruptives. Nous injectons du capital intelligent et une expertise stratégique pour propulser l'innovation.</p>
+                </div>
             </div>
         </section>
     </main>
 
-    <footer class="footer-premium">
-        <div class="footer-content">
-            <div class="footer-col">
-                <h4>BONSAI INVESTMENTS</h4>
-                <p>Landoltstrasse 1<br>8006 Zürich, Suisse</p>
-                <p style="margin-top: 1rem; color: var(--accent);">CH-020.4.091.692-9</p>
-            </div>
-            <div class="footer-col">
-                <h4>Navigation</h4>
-                <a href="index.html">Home</a><a href="about.html">About</a><a href="strategy.html">Strategy</a>
-            </div>
-            <div class="footer-col">
-                <h4>Expertise</h4>
-                <a href="services.html">Gestion de Patrimoine</a><a href="services.html">Private Equity</a><a href="contact.html">Contact</a>
-            </div>
-            <div class="footer-col">
-                <h4>Informations</h4>
-                <a href="faq.html">FAQ</a><a href="mentions-legales.html">Mentions Légales</a><a href="confidentialite.html">Confidentialité</a>
-                <p style="margin-top: 2rem; opacity: 0.5;">&copy; 2026 BONSAI INVESTMENTS</p>
-            </div>
+    <footer>
+        <div>&copy; 2026 BONSAI INVESTMENTS. Tous droits réservés.</div>
+        <div>
+            <a href="confidentialite.html">Confidentialité</a>
+            <a href="mentions-legales.html">Mentions Légales</a>
+            <a href="faq.html">FAQ</a>
         </div>
     </footer>
+
 </body>
 </html>
