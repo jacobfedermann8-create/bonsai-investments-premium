@@ -168,7 +168,7 @@
             line-height: 1.9;
         }
 
-        /* SECTION PHILOSOPHIE & VISION */
+        /* VISION & PHILOSOPHIE AVEC IMAGE */
         .philosophy-section {
             padding: 8rem 8rem;
             position: relative;
@@ -178,30 +178,80 @@
         }
         .philosophy-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1.2fr 0.8fr;
             gap: 6rem;
-            align-items: start;
+            align-items: center;
         }
         .philosophy-left h2 {
             font-family: var(--font-serif);
             font-size: 3rem;
             font-weight: 300;
             line-height: 1.25;
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
         }
         .philosophy-left h2 span {
             font-style: italic;
             color: var(--accent);
         }
-        .philosophy-right p {
+        .philosophy-left p {
             font-size: 1.05rem;
             color: var(--muted-light);
             line-height: 1.9;
             font-weight: 300;
             margin-bottom: 2rem;
         }
+        
+        /* Cadre Image Signature */
+        .philosophy-image-container {
+            position: relative;
+            border: 1px solid var(--border);
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.01);
+        }
+        .philosophy-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            filter: grayscale(1) contrast(1.1) brightness(0.85);
+            transition: all 0.6s ease;
+        }
+        .philosophy-image-container:hover .philosophy-image {
+            filter: grayscale(0.2) contrast(1.05) brightness(0.9);
+        }
 
-        /* NOS VALEURS & ENGAGEMENTS */
+        /* SECTION STATS */
+        .about-stats {
+            padding: 6rem 8rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4rem;
+            background: #030304;
+            border-top: 1px solid var(--border);
+            position: relative;
+            z-index: 2;
+        }
+        .about-stat-item {
+            text-align: center;
+            border-right: 1px solid var(--border);
+        }
+        .about-stat-item:last-child {
+            border-right: none;
+        }
+        .about-stat-num {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            color: var(--accent);
+            font-weight: 300;
+            margin-bottom: 0.5rem;
+        }
+        .about-stat-label {
+            font-size: 0.72rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--muted-light);
+        }
+
+        /* NOS ENGAGEMENTS PATRIMONIAUX & FINANCIERS */
         .values-section {
             padding: 8rem 8rem;
             position: relative;
@@ -219,11 +269,28 @@
             padding: 3rem 2rem;
             background: rgba(255, 255, 255, 0.01);
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .value-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            transform: scaleX(0);
+            transition: transform 0.5s ease;
         }
         .value-card:hover {
-            border-color: var(--accent);
+            border-color: rgba(197, 168, 128, 0.3);
             transform: translateY(-5px);
-            background: rgba(197, 168, 128, 0.01);
+            background: rgba(197, 168, 128, 0.02);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .value-card:hover::before {
+            transform: scaleX(1);
         }
         .value-title {
             font-size: 1.1rem;
@@ -332,15 +399,19 @@
 
         /* RESPONSIVE */
         @media (max-width: 1200px) {
-            header, .about-hero, .philosophy-section, .values-section, .cta-footer-section, footer, .grid-overlay { padding-left: 4rem; padding-right: 4rem; }
+            header, .about-hero, .philosophy-section, .about-stats, .values-section, .cta-footer-section, footer, .grid-overlay { padding-left: 4rem; padding-right: 4rem; }
             .values-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 900px) {
-            header, .about-hero, .philosophy-section, .values-section, .cta-footer-section, footer, .grid-overlay { padding-left: 2rem; padding-right: 2rem; }
+            header, .about-hero, .philosophy-section, .about-stats, .values-section, .cta-footer-section, footer, .grid-overlay { padding-left: 2rem; padding-right: 2rem; }
             .grid-overlay { display: none; }
             header { padding-top: 1.5rem; padding-bottom: 1.5rem; }
             .about-hero h1 { font-size: 3rem; }
-            .philosophy-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .philosophy-grid { grid-template-columns: 1fr; gap: 3.5rem; }
+            .philosophy-image-container { display: none; } /* On cache l'image sur petit écran mobile pour la fluidité */
+            .about-stats { grid-template-columns: 1fr; gap: 2rem; }
+            .about-stat-item { border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
+            .about-stat-item:last-child { border-bottom: none; }
             .values-grid { grid-template-columns: 1fr; }
             .cta-footer-section h2 { font-size: 2.5rem; }
             .btn { width: 100%; }
@@ -397,16 +468,33 @@
             <p>BONSAI INVESTMENTS est une société d'investissement internationale et un cabinet de conseil en gestion de patrimoine. Nous combinons vision entrepreneuriale globale et rigueur patrimoniale absolue.</p>
         </section>
 
-        <!-- VISION & PHILOSOPHIE -->
+        <!-- VISION & PHILOSOPHIE AVEC AJOUT IMAGE SIGNATURE -->
         <section class="philosophy-section">
             <div class="philosophy-grid">
                 <div class="philosophy-left">
                     <h2>Une approche <span>sur-mesure</span>, sans frontières.</h2>
-                </div>
-                <div class="philosophy-right">
                     <p>Fondée sur la conviction que chaque parcours de croissance est unique, notre structure refuse les schémas préétablis. Nous intervenons partout dans le monde, en éliminant les barrières de tickets d'investissement minimum pour nous concentrer uniquement sur la valeur, le potentiel et l'humain.</p>
                     <p>Qu'il s'agisse de propulser une startup technologique vers des sommets internationaux ou de structurer le patrimoine d'une vie, notre méthodologie reste la même : précision, confidentialité et engagement à long terme.</p>
                 </div>
+                <div class="philosophy-image-container">
+                    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcS3t2TcAx3U-C7yKxKdjNb_7OY8YTSw1TOw_aGVPIbyaAWoOJ_gM9YZil-YZdhMq7LbLIOjJoZLSQAWzfQ" alt="Bonsai Investments Offices" class="philosophy-image">
+                </div>
+            </div>
+        </section>
+
+        <!-- NOUVELLE SECTION : CHIFFRES CLÉS -->
+        <section class="about-stats">
+            <div class="about-stat-item">
+                <div class="about-stat-num">Global</div>
+                <div class="about-stat-label">Déploiement & Présence</div>
+            </div>
+            <div class="about-stat-item">
+                <div class="about-stat-num">0€</div>
+                <div class="about-stat-label">Minimum Requis d'Entrée</div>
+            </div>
+            <div class="about-stat-item">
+                <div class="about-stat-num">100%</div>
+                <div class="about-stat-label">Alignement d'Intérêts</div>
             </div>
         </section>
 
@@ -423,7 +511,7 @@
                 </div>
                 <div class="value-card">
                     <div class="value-title">Aucun Minimum requis</div>
-                    <p>Nous croyons en la flexibilité absolue. Notre accompagnement n'est pas dicté par un ticket d'entrée, mais par la solidité de votre vision et de vos besoins.</p>
+                    <p>We believe in absolute flexibility. Our support is not dictated by an entry ticket, but by the strength of your vision and your needs.</p>
                 </div>
                 <div class="value-card">
                     <div class="value-title">Héritage & Transmission</div>
