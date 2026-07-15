@@ -1,542 +1,1221 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | BONSAI INVESTMENTS</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-dark: #070708;
-            --text-light: #f4f4f5;
-            --accent: #c5a880;
-            --accent-dim: rgba(197, 168, 128, 0.15);
-            --muted-light: #a1a1aa;
-            --font-sans: 'Inter', sans-serif;
-            --font-serif: 'Playfair Display', serif;
-            --border: rgba(255, 255, 255, 0.05);
-            --grid-line: rgba(255, 255, 255, 0.02);
-        }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        
-        body { 
-            font-family: var(--font-sans); 
-            background-color: var(--bg-dark); 
-            color: var(--text-light); 
-            -webkit-font-smoothing: antialiased; 
-            overflow-x: hidden;
-            position: relative;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Grille structurelle de fond (identité visuelle Bonsai) */
-        .grid-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 8rem;
-            pointer-events: none;
-            z-index: 1;
-        }
-        .grid-line {
-            width: 1px;
-            height: 100%;
-            background-color: var(--grid-line);
-        }
+<title>About | BONSAI INVESTMENTS SA</title>
 
-        /* Halo lumineux en arrière-plan */
-        .bg-glow {
-            position: absolute;
-            top: -10%;
-            right: 10%;
-            width: 50vw;
-            height: 50vw;
-            background: radial-gradient(circle, rgba(197, 168, 128, 0.06) 0%, transparent 75%);
-            z-index: 1;
-            pointer-events: none;
-            filter: blur(100px);
-        }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        /* Menu de navigation */
-        header { 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            padding: 2rem 8rem; 
-            z-index: 100; 
-            border-bottom: 1px solid var(--border); 
-            backdrop-filter: blur(16px); 
-            -webkit-backdrop-filter: blur(16px); 
-            background: rgba(7, 7, 8, 0.75); 
-            transition: all 0.4s ease;
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 0.9rem;
-            text-decoration: none;
-        }
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .logo-container:hover .logo-icon {
-            transform: rotate(15deg);
-        }
-        .logo-text { 
-            font-size: 0.85rem; 
-            font-weight: 500; 
-            letter-spacing: 5px; 
-            text-transform: uppercase; 
-            color: var(--text-light); 
-        }
-        .logo-text span { color: var(--accent); font-weight: 600; }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        nav a { 
-            color: var(--muted-light); 
-            text-decoration: none; 
-            margin-left: 2.5rem; 
-            font-size: 0.72rem; 
-            letter-spacing: 2px; 
-            text-transform: uppercase; 
-            font-weight: 400; 
-            transition: color 0.4s ease, transform 0.4s ease; 
-            display: inline-block;
-        }
-        nav a:hover, nav a.active { 
-            color: var(--accent); 
-        }
 
-        /* HERO SECTION - ABOUT */
-        .about-hero {
-            min-height: 80vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            padding: 12rem 8rem 6rem 8rem;
-            position: relative;
-            z-index: 2;
-        }
-        .about-tag-container {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.7rem;
-            margin-bottom: 2rem;
-        }
-        .about-tag-line {
-            width: 40px;
-            height: 1px;
-            background-color: var(--accent);
-        }
-        .about-tag {
-            font-size: 0.72rem;
-            text-transform: uppercase;
-            letter-spacing: 6px;
-            color: var(--accent);
-            font-weight: 500;
-        }
-        .about-hero h1 {
-            font-family: var(--font-serif);
-            font-size: 4.5rem;
-            font-weight: 300;
-            line-height: 1.15;
-            max-width: 900px;
-            margin-bottom: 2.5rem;
-        }
-        .about-hero h1 span {
-            font-style: italic;
-            color: var(--accent);
-        }
-        .about-hero p {
-            font-size: 1.25rem;
-            font-weight: 200;
-            color: var(--muted-light);
-            max-width: 700px;
-            line-height: 1.9;
-        }
+<style>
 
-        /* VISION & PHILOSOPHIE AVEC IMAGE */
-        .philosophy-section {
-            padding: 8rem 8rem;
-            position: relative;
-            z-index: 2;
-            border-top: 1px solid var(--border);
-            background-color: #050506;
-        }
-        .philosophy-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 6rem;
-            align-items: center;
-        }
-        .philosophy-left h2 {
-            font-family: var(--font-serif);
-            font-size: 3rem;
-            font-weight: 300;
-            line-height: 1.25;
-            margin-bottom: 2.5rem;
-        }
-        .philosophy-left h2 span {
-            font-style: italic;
-            color: var(--accent);
-        }
-        .philosophy-left p {
-            font-size: 1.05rem;
-            color: var(--muted-light);
-            line-height: 1.9;
-            font-weight: 300;
-            margin-bottom: 2rem;
-        }
-        
-        /* Cadre Image Signature */
-        .philosophy-image-container {
-            position: relative;
-            border: 1px solid var(--border);
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.01);
-        }
-        .philosophy-image {
-            width: 100%;
-            height: 450px;
-            object-fit: cover;
-            filter: grayscale(1) contrast(1.1) brightness(0.85);
-            transition: all 0.6s ease;
-        }
-        .philosophy-image-container:hover .philosophy-image {
-            filter: grayscale(0.2) contrast(1.05) brightness(0.9);
-        }
 
-        /* SECTION STATS */
-        .about-stats {
-            padding: 6rem 8rem;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 4rem;
-            background: #030304;
-            border-top: 1px solid var(--border);
-            position: relative;
-            z-index: 2;
-        }
-        .about-stat-item {
-            text-align: center;
-            border-right: 1px solid var(--border);
-        }
-        .about-stat-item:last-child {
-            border-right: none;
-        }
-        .about-stat-num {
-            font-family: var(--font-serif);
-            font-size: 3.5rem;
-            color: var(--accent);
-            font-weight: 300;
-            margin-bottom: 0.5rem;
-        }
-        .about-stat-label {
-            font-size: 0.72rem;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--muted-light);
-        }
+:root{
 
-        /* NOS ENGAGEMENTS PATRIMONIAUX & FINANCIERS */
-        .values-section {
-            padding: 8rem 8rem;
-            position: relative;
-            z-index: 2;
-            border-top: 1px solid var(--border);
-        }
-        .values-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-            margin-top: 4rem;
-        }
-        .value-card {
-            border: 1px solid var(--border);
-            padding: 3rem 2rem;
-            background: rgba(255, 255, 255, 0.01);
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            position: relative;
-            overflow: hidden;
-        }
-        .value-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, var(--accent), transparent);
-            transform: scaleX(0);
-            transition: transform 0.5s ease;
-        }
-        .value-card:hover {
-            border-color: rgba(197, 168, 128, 0.3);
-            transform: translateY(-5px);
-            background: rgba(197, 168, 128, 0.02);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-        }
-        .value-card:hover::before {
-            transform: scaleX(1);
-        }
-        .value-title {
-            font-size: 1.1rem;
-            font-weight: 400;
-            letter-spacing: 1px;
-            margin-bottom: 1.5rem;
-            color: var(--text-light);
-            display: flex;
-            align-items: center;
-            gap: 0.7rem;
-        }
-        .value-title::before {
-            content: '';
-            width: 6px;
-            height: 6px;
-            background-color: var(--accent);
-            border-radius: 50%;
-        }
-        .value-card p {
-            font-size: 0.88rem;
-            color: var(--muted-light);
-            line-height: 1.7;
-            font-weight: 300;
-        }
+--black:#050505;
+--gold:#c6a46b;
+--white:#f5f5f3;
+--grey:#a5a5a5;
 
-        /* CTA SECTION EN BAS */
-        .cta-footer-section {
-            padding: 10rem 8rem;
-            border-top: 1px solid var(--border);
-            background: linear-gradient(to bottom, #070708, #030304);
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-        .cta-footer-section h2 {
-            font-family: var(--font-serif);
-            font-size: 3.5rem;
-            font-weight: 300;
-            margin-bottom: 2rem;
-        }
-        .cta-footer-section h2 span {
-            font-style: italic;
-            color: var(--accent);
-        }
-        .cta-footer-section p {
-            font-size: 1.1rem;
-            color: var(--muted-light);
-            max-width: 600px;
-            margin: 0 auto 3rem auto;
-            line-height: 1.8;
-            font-weight: 200;
-        }
+--sans:'Inter',sans-serif;
+--serif:'Cormorant Garamond',serif;
 
-        /* Bouton */
-        .btn { 
-            display: inline-flex; 
-            align-items: center; 
-            justify-content: center; 
-            padding: 1.3rem 3rem; 
-            border: 1px solid var(--accent); 
-            color: var(--text-light); 
-            text-decoration: none; 
-            font-size: 0.72rem; 
-            letter-spacing: 3px; 
-            text-transform: uppercase; 
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); 
-            background: transparent;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-        .btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 100%;
-            background-color: var(--accent);
-            z-index: -1;
-            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        .btn:hover {
-            color: var(--bg-dark);
-        }
-        .btn:hover::before {
-            width: 100%;
-        }
+}
 
-        /* FOOTER */
-        footer { 
-            padding: 5rem 8rem; 
-            background-color: #030304; 
-            border-top: 1px solid var(--border); 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            color: var(--muted-light); 
-            font-size: 0.78rem; 
-            letter-spacing: 1.5px; 
-            position: relative;
-            z-index: 2;
-        }
-        footer a { color: var(--muted-light); text-decoration: none; margin-left: 2.5rem; transition: color 0.3s ease; }
-        footer a:hover { color: var(--text-light); }
 
-        /* RESPONSIVE */
-        @media (max-width: 1200px) {
-            header, .about-hero, .philosophy-section, .about-stats, .values-section, .cta-footer-section, footer, .grid-overlay { padding-left: 4rem; padding-right: 4rem; }
-            .values-grid { grid-template-columns: 1fr 1fr; }
-        }
-        @media (max-width: 900px) {
-            header, .about-hero, .philosophy-section, .about-stats, .values-section, .cta-footer-section, footer, .grid-overlay { padding-left: 2rem; padding-right: 2rem; }
-            .grid-overlay { display: none; }
-            header { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-            .about-hero h1 { font-size: 3rem; }
-            .philosophy-grid { grid-template-columns: 1fr; gap: 3.5rem; }
-            .philosophy-image-container { display: none; } /* On cache l'image sur petit écran mobile pour la fluidité */
-            .about-stats { grid-template-columns: 1fr; gap: 2rem; }
-            .about-stat-item { border-right: none; border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; }
-            .about-stat-item:last-child { border-bottom: none; }
-            .values-grid { grid-template-columns: 1fr; }
-            .cta-footer-section h2 { font-size: 2.5rem; }
-            .btn { width: 100%; }
-            footer { flex-direction: column; gap: 2.5rem; text-align: center; }
-            footer div { display: flex; flex-direction: column; gap: 1rem; margin: 0; }
-            footer a { margin: 0; }
-        }
-    </style>
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+background:var(--black);
+color:var(--white);
+font-family:var(--sans);
+
+}
+
+
+
+
+
+/* =====================
+HEADER
+===================== */
+
+
+header{
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+
+height:95px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 8%;
+
+background:rgba(5,5,5,.75);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:1000;
+
+}
+
+
+
+.logo{
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+text-decoration:none;
+
+}
+
+
+
+.logo-mark{
+
+width:50px;
+
+height:50px;
+
+border:1px solid var(--gold);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+}
+
+
+
+.logo-mark svg{
+
+width:36px;
+
+height:36px;
+
+}
+
+
+
+.logo-mark svg path,
+.logo-mark svg circle{
+
+stroke:var(--gold);
+
+stroke-width:3;
+
+fill:none;
+
+stroke-linecap:round;
+
+}
+
+
+
+.logo-mark .leaf{
+
+fill:var(--gold);
+
+stroke:none;
+
+}
+
+
+
+.logo-text{
+
+font-size:14px;
+
+letter-spacing:5px;
+
+font-weight:500;
+
+color:white;
+
+}
+
+
+
+nav a{
+
+color:#aaa;
+
+text-decoration:none;
+
+font-size:12px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+margin-left:35px;
+
+transition:.3s;
+
+}
+
+
+
+nav a:hover{
+
+color:var(--gold);
+
+}
+
+
+
+
+
+
+
+/* =====================
+ABOUT HERO
+===================== */
+
+
+.about-hero{
+
+
+height:90vh;
+
+display:flex;
+
+align-items:center;
+
+padding:0 8%;
+
+position:relative;
+
+
+
+background:
+
+linear-gradient(
+90deg,
+rgba(5,5,5,.95),
+rgba(5,5,5,.55)
+),
+
+url("https://images.unsplash.com/photo-1494522855154-9297ac14b55f");
+
+
+
+background-size:cover;
+
+background-position:center;
+
+
+}
+
+
+
+
+.about-content{
+
+
+max-width:850px;
+
+margin-top:80px;
+
+
+}
+
+
+
+.small-title{
+
+
+color:var(--gold);
+
+font-size:12px;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+margin-bottom:30px;
+
+
+}
+
+
+
+.about-hero h1{
+
+
+font-family:var(--serif);
+
+font-size:75px;
+
+font-weight:400;
+
+line-height:1.1;
+
+margin-bottom:30px;
+
+
+}
+
+
+
+.about-hero h1 em{
+
+
+color:var(--gold);
+
+font-style:italic;
+
+
+}
+
+
+
+.about-hero p{
+
+
+max-width:650px;
+
+font-size:18px;
+
+line-height:1.9;
+
+font-weight:300;
+
+color:#c0c0c0;
+
+
+}
+
+
+
+
+/* =====================
+ABOUT INTRO
+===================== */
+
+
+.section{
+
+
+padding:120px 8%;
+
+
+}
+
+
+
+.intro-grid{
+
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:90px;
+
+align-items:center;
+
+
+}
+
+
+
+h2{
+
+
+font-family:var(--serif);
+
+font-size:55px;
+
+font-weight:400;
+
+line-height:1.2;
+
+
+}
+
+
+
+.text p{
+
+
+font-size:17px;
+
+line-height:2;
+
+color:#aaa;
+
+margin-bottom:25px;
+
+
+}
+
+
+
+
+/* =====================
+PRINCIPLES
+===================== */
+
+
+.principles{
+
+
+padding:120px 8%;
+
+background:#080808;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+.cards{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+margin-top:60px;
+
+
+}
+
+
+
+.card{
+
+
+padding:45px 35px;
+
+border:1px solid rgba(255,255,255,.08);
+
+background:rgba(255,255,255,.02);
+
+transition:.4s;
+
+
+}
+
+
+
+.card:hover{
+
+
+transform:translateY(-8px);
+
+border-color:var(--gold);
+
+
+}
+
+
+
+.card-number{
+
+
+font-family:var(--serif);
+
+font-size:32px;
+
+color:var(--gold);
+
+margin-bottom:25px;
+
+
+}
+
+
+
+.card h3{
+
+
+font-size:20px;
+
+font-weight:400;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.card p{
+
+
+color:#999;
+
+font-size:15px;
+
+line-height:1.8;
+
+
+}
+
+
+
+
+
+
+
+/* =====================
+ZURICH SECTION
+===================== */
+
+
+.zurich{
+
+
+padding:120px 8%;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:80px;
+
+align-items:center;
+
+
+}
+
+
+
+.zurich-image{
+
+
+height:500px;
+
+background:
+
+linear-gradient(
+rgba(5,5,5,.25),
+rgba(5,5,5,.55)
+),
+
+url("https://images.unsplash.com/photo-1527668752968-14dc70a27c95");
+
+
+
+background-size:cover;
+
+background-position:center;
+
+
+}
+
+
+
+.zurich-text h2{
+
+
+margin-bottom:30px;
+
+
+}
+
+
+
+.zurich-text p{
+
+
+color:#aaa;
+
+font-size:17px;
+
+line-height:2;
+
+
+}
+
+
+
+
+
+/* =====================
+FOOTER
+===================== */
+
+
+footer{
+
+
+padding:65px 8%;
+
+background:#030303;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+
+}
+
+
+
+.footer-company{
+
+
+font-size:14px;
+
+letter-spacing:4px;
+
+color:white;
+
+margin-bottom:15px;
+
+
+}
+
+
+
+footer p{
+
+
+color:#888;
+
+font-size:12px;
+
+line-height:2;
+
+letter-spacing:1px;
+
+
+}
+
+
+
+footer a{
+
+
+color:#999;
+
+font-size:12px;
+
+text-decoration:none;
+
+margin-left:30px;
+
+
+}
+
+
+
+footer a:hover{
+
+
+color:var(--gold);
+
+
+}
+
+
+
+
+
+
+/* =====================
+RESPONSIVE
+===================== */
+
+
+@media(max-width:1100px){
+
+
+.intro-grid,
+.zurich{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.cards{
+
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.about-hero h1{
+
+
+font-size:55px;
+
+
+}
+
+
+
+}
+
+
+
+
+@media(max-width:700px){
+
+
+header{
+
+
+padding:0 5%;
+
+
+}
+
+
+
+nav{
+
+
+display:none;
+
+
+}
+
+
+
+.about-hero{
+
+
+padding:0 5%;
+
+
+}
+
+
+
+.about-hero h1{
+
+
+font-size:42px;
+
+
+}
+
+
+
+.section,
+.principles,
+.zurich{
+
+
+padding:80px 5%;
+
+
+}
+
+
+
+footer{
+
+
+flex-direction:column;
+
+gap:30px;
+
+text-align:center;
+
+
+}
+
+
+
+footer a{
+
+
+display:block;
+
+margin:15px 0;
+
+
+}
+
+
+
+}
+
+
+
+
+</style>
+
+
 </head>
+
+
 <body>
 
-    <!-- Grille structurelle arrière-plan -->
-    <div class="grid-overlay">
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-        <div class="grid-line"></div>
-    </div>
 
-    <div class="bg-glow"></div>
 
-    <!-- HEADER UNIQUE ET COHÉRENT -->
-    <header>
-        <a href="index.html" class="logo-container">
-            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="46" stroke="#c5a880" stroke-width="1.5" stroke-dasharray="2 2"/>
-                <path d="M50 85 V45" stroke="#c5a880" stroke-width="3" stroke-linecap="round"/>
-                <path d="M50 65 C40 60 30 65 32 50" stroke="#c5a880" stroke-width="2" stroke-linecap="round"/>
-                <path d="M50 55 C60 50 70 55 68 40" stroke="#c5a880" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="32" cy="50" r="5" fill="#c5a880"/>
-                <circle cx="68" cy="40" r="5" fill="#c5a880"/>
-                <circle cx="50" cy="42" r="6" fill="#c5a880"/>
-                <path d="M30 85 H70" stroke="#c5a880" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            <div class="logo-text">BONSAI INVESTMENTS<span>.</span></div>
-        </a>
-       <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="strategy.html">Strategy</a>
-    <a href="services.html">Services</a>
-    <a href="team.html">Team</a>
-    <a href="contact.html">Contact</a>
+
+<header>
+
+
+<a href="index.html" class="logo">
+
+
+<div class="logo-mark">
+
+
+<svg viewBox="0 0 100 100">
+
+
+<circle cx="50" cy="50" r="45"></circle>
+
+
+<path d="M50 80 V42"></path>
+
+
+<path d="M50 62 C35 55 25 60 30 45"></path>
+
+
+<path d="M50 55 C65 48 75 40 72 28"></path>
+
+
+<circle class="leaf" cx="30" cy="45" r="6"></circle>
+
+
+<circle class="leaf" cx="72" cy="28" r="6"></circle>
+
+
+<circle class="leaf" cx="50" cy="40" r="7"></circle>
+
+
+</svg>
+
+
+</div>
+
+
+
+<div class="logo-text">
+
+BONSAI INVESTMENTS SA
+
+</div>
+
+
+</a>
+
+
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="strategy.html">Strategy</a>
+
+<a href="services.html">Services</a>
+
+<a href="team.html">Team</a>
+
+<a href="contact.html">Contact</a>
+
 </nav>
-    </header>
 
-    <main>
-        <!-- HERO DE LA PAGE ABOUT -->
-        <section class="about-hero">
-            <div class="about-tag-container">
-                <div class="about-tag-line"></div>
-                <span class="about-tag">Qui nous sommes</span>
-            </div>
-            <h1>Bâtir, guider et <span>pérenniser</span> les grandes ambitions.</h1>
-            <p>BONSAI INVESTMENTS est une société d'investissement internationale et un cabinet de conseil en gestion de patrimoine. Nous combinons vision entrepreneuriale globale et rigueur patrimoniale absolue.</p>
-        </section>
 
-        <!-- VISION & PHILOSOPHIE AVEC AJOUT IMAGE SIGNATURE -->
-        <section class="philosophy-section">
-            <div class="philosophy-grid">
-                <div class="philosophy-left">
-                    <h2>Une approche <span>sur-mesure</span>, sans frontières.</h2>
-                    <p>Fondée sur la conviction que chaque parcours de croissance est unique, notre structure refuse les schémas préétablis. Nous intervenons partout dans le monde, en éliminant les barrières de tickets d'investissement minimum pour nous concentrer uniquement sur la valeur, le potentiel et l'humain.</p>
-                    <p>Qu'il s'agisse de propulser une startup technologique vers des sommets internationaux ou de structurer le patrimoine d'une vie, notre méthodologie reste la même : précision, confidentialité et engagement à long terme.</p>
-                </div>
-                <div class="philosophy-image-container">
-                    <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcS3t2TcAx3U-C7yKxKdjNb_7OY8YTSw1TOw_aGVPIbyaAWoOJ_gM9YZil-YZdhMq7LbLIOjJoZLSQAWzfQ" alt="Bonsai Investments Offices" class="philosophy-image">
-                </div>
-            </div>
-        </section>
+</header>
 
-        <!-- NOUVELLE SECTION : CHIFFRES CLÉS -->
-        <section class="about-stats">
-            <div class="about-stat-item">
-                <div class="about-stat-num">Global</div>
-                <div class="about-stat-label">Déploiement & Présence</div>
-            </div>
-            <div class="about-stat-item">
-                <div class="about-stat-num">0€</div>
-                <div class="about-stat-label">Minimum Requis d'Entrée</div>
-            </div>
-            <div class="about-stat-item">
-                <div class="about-stat-num">100%</div>
-                <div class="about-stat-label">Alignement d'Intérêts</div>
-            </div>
-        </section>
 
-        <!-- NOS ENGAGEMENTS PATRIMONIAUX & FINANCIERS -->
-        <section class="values-section">
-            <div class="section-header">
-                <span class="section-tag">Nos piliers</span>
-                <h2>Nos Engagements</h2>
-            </div>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-title">Agilité Globale</div>
-                    <p>Opérant à l'échelle internationale, nous naviguons à travers les juridictions et les marchés pour identifier et sécuriser les meilleures opportunités de croissance.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-title">Aucun Minimum requis</div>
-                    <p>We believe in absolute flexibility. Our support is not dictated by an entry ticket, but by the strength of your vision and your needs.</p>
-                </div>
-                <div class="value-card">
-                    <div class="value-title">Héritage & Transmission</div>
-                    <p>Au-delà du capital-risque, nous intégrons une ingénierie patrimoniale de pointe pour protéger, valoriser et transmettre votre héritage de génération en génération.</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- ACTION DE FIN DE PAGE -->
-        <section class="cta-footer-section">
-            <h2>Prêt à structurer votre <span>avenir</span> ?</h2>
-            <p>Discutons de vos projets d'expansion globale ou de la structuration de vos actifs financiers.</p>
-            <a href="contact.html" class="btn">Prendre contact</a>
-        </section>
-    </main>
 
-    <!-- FOOTER HARMONISÉ -->
-    <footer>
-        <div>&copy; 2026 BONSAI INVESTMENTS. Tous droits réservés.</div>
-        <div>
-            <a href="#">Confidentialité</a>
-            <a href="#">Mentions Légales</a>
-        </div>
-    </footer>
+
+
+<section class="about-hero">
+
+
+<div class="about-content">
+
+
+<div class="small-title">
+
+About Bonsai Investments
+
+</div>
+
+
+<h1>
+
+Une vision indépendante de l'investissement <em>privé.</em>
+
+</h1>
+
+
+<p>
+
+Basée à Zurich, Bonsai Investments SA accompagne entrepreneurs, entreprises et partenaires privés dans la création de valeur durable à travers des investissements stratégiques.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="section">
+
+
+<div class="intro-grid">
+
+
+<div>
+
+
+<div class="small-title">
+
+Notre identité
+
+</div>
+
+
+<h2>
+
+Une approche fondée sur la confiance et l'excellence.
+
+</h2>
+
+
+</div>
+
+
+
+
+<div class="text">
+
+
+<p>
+
+Bonsai Investments SA est une société de conseil financier et d'investissement stratégique spécialisée dans l'identification d'opportunités à fort potentiel.
+
+</p>
+
+
+<p>
+
+Nous travaillons aux côtés de dirigeants ambitieux afin de construire des partenariats solides et accompagner leur développement international.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="principles">
+
+
+<div class="small-title">
+
+Nos principes
+
+</div>
+
+
+<h2>
+
+Les fondations de notre approche.
+
+</h2>
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+
+<div class="card-number">
+
+01
+
+</div>
+
+
+<h3>
+
+Confidentialité
+
+</h3>
+
+
+<p>
+
+Une relation privilégiée basée sur la confiance et la discrétion.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-number">
+
+02
+
+</div>
+
+
+<h3>
+
+Excellence
+
+</h3>
+
+
+<p>
+
+Une analyse rigoureuse avant chaque opportunité stratégique.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="card-number">
+
+03
+
+</div>
+
+
+<h3>
+
+Vision long terme
+
+</h3>
+
+
+<p>
+
+Créer une croissance durable au-delà du simple financement.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="zurich">
+
+
+
+<div class="zurich-image">
+
+</div>
+
+
+
+<div class="zurich-text">
+
+
+<div class="small-title">
+
+Swiss Financial Center
+
+</div>
+
+
+
+<h2>
+
+Depuis Zurich, au cœur de la finance suisse.
+
+</h2>
+
+
+
+<p>
+
+Zurich représente l'un des centres financiers les plus reconnus au monde. Cet environnement offre un cadre idéal pour développer des relations internationales et accompagner des projets ambitieux.
+
+</p>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<footer>
+
+
+<div>
+
+
+<p class="footer-company">
+
+BONSAI INVESTMENTS SA
+
+</p>
+
+
+<p>
+
+Zurich, Switzerland
+
+</p>
+
+
+<p>
+
+Conseiller financier & Strategic Investment Advisory
+
+</p>
+
+
+</div>
+
+
+
+<div>
+
+
+<a href="#">
+
+Confidentialité
+
+</a>
+
+
+<a href="#">
+
+Mentions légales
+
+</a>
+
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+
+</div>
+
+
+
+</footer>
+
+
+
 
 </body>
+
 </html>
