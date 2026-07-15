@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BONSAI INVESTMENTS | Swiss Private Investment</title>
+<title>BONSAI INVESTMENTS SA | Zurich Private Investment</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,67 +15,81 @@
 
 <style>
 
-:root{
-    --black:#050505;
-    --dark:#0b0b0c;
-    --gold:#c6a46b;
-    --white:#f7f7f5;
-    --grey:#a7a7aa;
-    --line:rgba(255,255,255,0.08);
 
-    --sans:'Inter',sans-serif;
-    --serif:'Cormorant Garamond',serif;
+:root{
+
+--black:#050505;
+--dark:#090909;
+--gold:#c6a46b;
+--white:#f5f5f3;
+--grey:#a5a5a5;
+
+--sans:'Inter',sans-serif;
+--serif:'Cormorant Garamond',serif;
+
 }
+
 
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
 }
+
 
 
 html{
-    scroll-behavior:smooth;
+
+scroll-behavior:smooth;
+
 }
+
 
 
 body{
 
-    background:var(--black);
-    color:var(--white);
-    font-family:var(--sans);
-    overflow-x:hidden;
+background:var(--black);
+color:var(--white);
+font-family:var(--sans);
+overflow-x:hidden;
 
 }
 
 
 
-/* =========================
-   HEADER
-========================= */
+
+/* =====================
+HEADER
+===================== */
 
 
 header{
 
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:95px;
 
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
+position:fixed;
+top:0;
+left:0;
 
-    padding:0 8%;
+width:100%;
+height:95px;
 
-    background:rgba(5,5,5,0.65);
-    backdrop-filter:blur(20px);
+display:flex;
+align-items:center;
+justify-content:space-between;
 
-    border-bottom:1px solid var(--line);
+padding:0 8%;
 
-    z-index:1000;
+background:rgba(5,5,5,.75);
+
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:1000;
+
 
 }
 
@@ -82,69 +97,122 @@ header{
 
 .logo{
 
-    display:flex;
-    align-items:center;
-    gap:15px;
 
-    text-decoration:none;
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+text-decoration:none;
+
 
 }
+
 
 
 .logo-mark{
 
-    width:45px;
-    height:45px;
 
-    border:1px solid var(--gold);
+width:50px;
+height:50px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+border:1px solid var(--gold);
 
-    color:var(--gold);
+display:flex;
 
-    font-family:var(--serif);
-    font-size:25px;
+align-items:center;
+
+justify-content:center;
+
 
 }
+
+
+
+.logo-mark svg{
+
+
+width:36px;
+
+height:36px;
+
+
+}
+
+
+
+.logo-mark svg path,
+.logo-mark svg circle{
+
+
+stroke:var(--gold);
+
+stroke-width:3;
+
+fill:none;
+
+stroke-linecap:round;
+
+
+}
+
+
+
+.logo-mark svg .leaf{
+
+
+fill:var(--gold);
+
+stroke:none;
+
+
+}
+
+
 
 
 .logo-text{
 
-    color:white;
 
-    font-size:14px;
+font-size:14px;
 
-    letter-spacing:5px;
+letter-spacing:5px;
 
-    font-weight:500;
+color:white;
+
+font-weight:500;
+
 
 }
+
 
 
 nav a{
 
-    text-decoration:none;
 
-    color:#b5b5b5;
+color:#aaa;
 
-    margin-left:35px;
+text-decoration:none;
 
-    font-size:12px;
+font-size:12px;
 
-    letter-spacing:2px;
+letter-spacing:2px;
 
-    text-transform:uppercase;
+text-transform:uppercase;
 
-    transition:.3s;
+margin-left:35px;
+
+transition:.3s;
+
 
 }
+
 
 
 nav a:hover{
 
-    color:var(--gold);
+color:var(--gold);
 
 }
 
@@ -152,42 +220,40 @@ nav a:hover{
 
 
 
-/* =========================
-   HERO
-========================= */
+/* =====================
+HERO
+===================== */
 
 
 .hero{
 
 
-    min-height:100vh;
+min-height:100vh;
 
-    display:flex;
+display:flex;
 
-    align-items:center;
+align-items:center;
 
-    position:relative;
+padding:0 8%;
 
-
-    padding:0 8%;
-
-
-    background-image:
-
-    linear-gradient(
-        90deg,
-        rgba(5,5,5,.95) 0%,
-        rgba(5,5,5,.70) 45%,
-        rgba(5,5,5,.55)
-    ),
-
-    url("https://images.unsplash.com/photo-1501785888041-af3ef285b470");
+position:relative;
 
 
-    background-size:cover;
+background:
 
-    background-position:center;
+linear-gradient(
+90deg,
+rgba(5,5,5,.96),
+rgba(5,5,5,.65),
+rgba(5,5,5,.45)
+),
 
+url("https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5");
+
+
+background-size:cover;
+
+background-position:center;
 
 
 }
@@ -196,9 +262,11 @@ nav a:hover{
 
 .hero-content{
 
-    max-width:850px;
 
-    margin-top:70px;
+max-width:850px;
+
+margin-top:70px;
+
 
 }
 
@@ -206,32 +274,37 @@ nav a:hover{
 
 .hero-small{
 
-    display:flex;
 
-    align-items:center;
+display:flex;
 
-    gap:20px;
+align-items:center;
 
-    color:var(--gold);
+gap:20px;
 
-    font-size:12px;
+color:var(--gold);
 
-    letter-spacing:5px;
+font-size:12px;
 
-    text-transform:uppercase;
+letter-spacing:5px;
 
-    margin-bottom:35px;
+text-transform:uppercase;
+
+margin-bottom:35px;
+
 
 }
 
 
+
 .hero-small span{
 
-    width:45px;
 
-    height:1px;
+height:1px;
 
-    background:var(--gold);
+width:45px;
+
+background:var(--gold);
+
 
 }
 
@@ -240,26 +313,28 @@ nav a:hover{
 .hero h1{
 
 
-    font-family:var(--serif);
+font-family:var(--serif);
 
-    font-size:78px;
+font-size:80px;
 
-    font-weight:400;
+font-weight:400;
 
-    line-height:1.05;
+line-height:1.05;
 
-
-    margin-bottom:35px;
+margin-bottom:35px;
 
 
 }
 
 
+
 .hero h1 em{
 
-    color:var(--gold);
 
-    font-style:italic;
+font-style:italic;
+
+color:var(--gold);
+
 
 }
 
@@ -268,30 +343,30 @@ nav a:hover{
 .hero p{
 
 
-    max-width:650px;
+max-width:650px;
 
-    color:#c0c0c0;
+font-size:18px;
 
-    font-size:19px;
+font-weight:300;
 
-    line-height:1.8;
+line-height:1.9;
 
-    font-weight:300;
+color:#c0c0c0;
 
-    margin-bottom:50px;
+margin-bottom:50px;
 
 
 }
 
 
 
-
-
 .buttons{
 
-    display:flex;
 
-    gap:25px;
+display:flex;
+
+gap:25px;
+
 
 }
 
@@ -300,21 +375,22 @@ nav a:hover{
 .btn{
 
 
-    padding:18px 40px;
+padding:18px 42px;
 
-    border:1px solid var(--gold);
+border:1px solid var(--gold);
 
-    color:white;
+color:white;
 
-    text-decoration:none;
+text-decoration:none;
 
-    text-transform:uppercase;
+font-size:11px;
 
-    letter-spacing:3px;
+letter-spacing:3px;
 
-    font-size:11px;
+text-transform:uppercase;
 
-    transition:.4s;
+transition:.4s;
+
 
 }
 
@@ -322,9 +398,11 @@ nav a:hover{
 
 .btn:hover{
 
-    background:var(--gold);
 
-    color:black;
+background:var(--gold);
+
+color:#000;
+
 
 }
 
@@ -332,20 +410,25 @@ nav a:hover{
 
 .btn-light{
 
-    border-color:white;
+
+border-color:white;
+
 
 }
 
 
 
-/* =========================
-   INTRO SECTION
-========================= */
+
+/* =====================
+GENERAL SECTION
+===================== */
 
 
 .section{
 
-    padding:120px 8%;
+
+padding:120px 8%;
+
 
 }
 
@@ -353,15 +436,17 @@ nav a:hover{
 
 .title-small{
 
-    color:var(--gold);
 
-    text-transform:uppercase;
+font-size:12px;
 
-    letter-spacing:4px;
+letter-spacing:4px;
 
-    font-size:12px;
+text-transform:uppercase;
 
-    margin-bottom:20px;
+color:var(--gold);
+
+margin-bottom:20px;
+
 
 }
 
@@ -369,26 +454,31 @@ nav a:hover{
 
 h2{
 
-    font-family:var(--serif);
 
-    font-size:55px;
+font-family:var(--serif);
 
-    font-weight:400;
+font-weight:400;
 
-    line-height:1.2;
+font-size:55px;
+
+line-height:1.2;
+
 
 }
 
 
+
 .intro{
 
-    display:grid;
 
-    grid-template-columns:1fr 1fr;
+display:grid;
 
-    gap:80px;
+grid-template-columns:1fr 1fr;
 
-    align-items:center;
+gap:80px;
+
+align-items:center;
+
 
 }
 
@@ -396,29 +486,32 @@ h2{
 
 .intro-text p{
 
-    color:#b0b0b0;
 
-    font-size:17px;
+color:#aaa;
 
-    line-height:2;
+font-size:17px;
 
-    margin-top:30px;
+line-height:2;
+
+margin-bottom:25px;
+
 
 }
 
- 
-/* =========================
-   INVESTMENT AREAS
-========================= */
+/* =====================
+INVESTMENT SECTORS
+===================== */
 
 
 .investments{
 
-    padding:120px 8%;
 
-    background:#080808;
+padding:120px 8%;
 
-    border-top:1px solid var(--line);
+background:#080808;
+
+border-top:1px solid rgba(255,255,255,.08);
+
 
 }
 
@@ -426,13 +519,15 @@ h2{
 
 .cards{
 
-    display:grid;
 
-    grid-template-columns:repeat(4,1fr);
+display:grid;
 
-    gap:25px;
+grid-template-columns:repeat(4,1fr);
 
-    margin-top:70px;
+gap:25px;
+
+margin-top:70px;
+
 
 }
 
@@ -440,13 +535,15 @@ h2{
 
 .card{
 
-    padding:40px 30px;
 
-    border:1px solid var(--line);
+padding:40px 30px;
 
-    background:rgba(255,255,255,0.02);
+border:1px solid rgba(255,255,255,.08);
 
-    transition:.4s;
+background:rgba(255,255,255,.02);
+
+transition:.4s;
+
 
 }
 
@@ -454,9 +551,11 @@ h2{
 
 .card:hover{
 
-    transform:translateY(-8px);
 
-    border-color:var(--gold);
+transform:translateY(-8px);
+
+border-color:var(--gold);
+
 
 }
 
@@ -464,13 +563,15 @@ h2{
 
 .number{
 
-    color:var(--gold);
 
-    font-family:var(--serif);
+font-family:var(--serif);
 
-    font-size:28px;
+font-size:30px;
 
-    margin-bottom:35px;
+color:var(--gold);
+
+margin-bottom:30px;
+
 
 }
 
@@ -478,11 +579,13 @@ h2{
 
 .card h3{
 
-    font-size:18px;
 
-    font-weight:400;
+font-size:18px;
 
-    margin-bottom:20px;
+font-weight:400;
+
+margin-bottom:20px;
+
 
 }
 
@@ -490,34 +593,39 @@ h2{
 
 .card p{
 
-    color:#999;
 
-    font-size:14px;
+font-size:14px;
 
-    line-height:1.8;
+line-height:1.8;
+
+color:#999;
+
 
 }
 
 
 
 
-/* =========================
-   SWISS APPROACH
-========================= */
+
+
+
+/* =====================
+INVESTMENT APPROACH
+===================== */
 
 
 .approach{
 
 
-    padding:120px 8%;
+padding:120px 8%;
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:1fr 1fr;
+grid-template-columns:1fr 1fr;
 
-    gap:90px;
+gap:90px;
 
-    align-items:center;
+align-items:center;
 
 
 }
@@ -527,9 +635,9 @@ h2{
 .approach-box{
 
 
-    border-left:1px solid var(--gold);
+border-left:1px solid var(--gold);
 
-    padding-left:35px;
+padding-left:40px;
 
 
 }
@@ -538,13 +646,16 @@ h2{
 
 .approach-box h3{
 
-    font-family:var(--serif);
 
-    font-size:38px;
+font-family:var(--serif);
 
-    font-weight:400;
+font-size:42px;
 
-    margin-bottom:25px;
+font-weight:400;
+
+line-height:1.3;
+
+margin-bottom:30px;
 
 
 }
@@ -553,11 +664,13 @@ h2{
 
 .approach-box p{
 
-    color:#aaa;
 
-    line-height:1.9;
+font-size:16px;
 
-    font-size:16px;
+line-height:2;
+
+color:#aaa;
+
 
 }
 
@@ -566,11 +679,11 @@ h2{
 .values{
 
 
-    display:grid;
+display:grid;
 
-    grid-template-columns:repeat(2,1fr);
+grid-template-columns:repeat(2,1fr);
 
-    gap:35px;
+gap:30px;
 
 
 }
@@ -580,9 +693,11 @@ h2{
 .value{
 
 
-    padding:35px;
+padding:35px;
 
-    border:1px solid var(--line);
+border:1px solid rgba(255,255,255,.08);
+
+background:rgba(255,255,255,.01);
 
 
 }
@@ -592,15 +707,17 @@ h2{
 .value strong{
 
 
-    display:block;
+display:block;
 
-    font-family:var(--serif);
+font-family:var(--serif);
 
-    color:var(--gold);
+font-size:38px;
 
-    font-size:35px;
+font-weight:400;
 
-    margin-bottom:15px;
+color:var(--gold);
+
+margin-bottom:15px;
 
 
 }
@@ -609,41 +726,136 @@ h2{
 
 .value span{
 
-    color:#aaa;
 
-    font-size:12px;
+font-size:12px;
 
-    letter-spacing:2px;
+text-transform:uppercase;
 
-    text-transform:uppercase;
+letter-spacing:3px;
+
+color:#999;
+
 
 }
 
 
 
 
-/* =========================
-   FOOTER
-========================= */
+
+/* =====================
+SWISS ADVISORY SECTION
+===================== */
+
+
+.advisory{
+
+
+padding:120px 8%;
+
+background:#060606;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+.advisory-grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:60px;
+
+
+}
+
+
+
+.advisory-item{
+
+
+padding:45px 35px;
+
+border:1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+.advisory-item h4{
+
+
+font-family:var(--serif);
+
+font-size:32px;
+
+font-weight:400;
+
+color:white;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.advisory-item p{
+
+
+color:#999;
+
+font-size:15px;
+
+line-height:1.8;
+
+
+}
+
+
+
+/* =====================
+FOOTER
+===================== */
 
 
 footer{
 
 
-    padding:60px 8%;
+padding:65px 8%;
+
+background:#030303;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
 
 
-    background:#030303;
+}
 
 
-    border-top:1px solid var(--line);
+
+.footer-company{
 
 
-    display:flex;
+font-size:14px;
 
-    justify-content:space-between;
+letter-spacing:4px;
 
-    align-items:center;
+color:white;
+
+margin-bottom:15px;
 
 
 }
@@ -653,11 +865,13 @@ footer{
 footer p{
 
 
-    color:#777;
+color:#888;
 
-    font-size:12px;
+font-size:12px;
 
-    letter-spacing:2px;
+line-height:2;
+
+letter-spacing:1px;
 
 
 }
@@ -667,13 +881,16 @@ footer p{
 footer a{
 
 
-    color:#999;
+color:#999;
 
-    text-decoration:none;
+font-size:12px;
 
-    margin-left:30px;
+text-decoration:none;
 
-    font-size:12px;
+margin-left:30px;
+
+letter-spacing:1px;
+
 
 }
 
@@ -681,133 +898,72 @@ footer a{
 
 footer a:hover{
 
-    color:var(--gold);
+
+color:var(--gold);
+
 
 }
-
-
-
-
-
-/* =========================
-   RESPONSIVE
-========================= */
-
 
 @media(max-width:1100px){
 
-
 .cards{
-
 grid-template-columns:repeat(2,1fr);
-
 }
 
+.approach{
+grid-template-columns:1fr;
+}
 
+.advisory-grid{
+grid-template-columns:1fr;
+}
 
 .hero h1{
-
 font-size:55px;
-
 }
 
-
-
-.intro,
-.approach{
-
-grid-template-columns:1fr;
-
 }
-
-
-
-}
-
 
 
 @media(max-width:700px){
 
-
 header{
-
 padding:0 5%;
-
 }
-
-
 
 nav{
-
 display:none;
-
 }
-
-
 
 .hero{
-
 padding:0 5%;
-
 }
-
-
 
 .hero h1{
-
 font-size:42px;
-
 }
-
-
 
 .buttons{
-
 flex-direction:column;
-
 }
 
-
-
-.section,
-.investments,
-.approach{
-
-padding:80px 5%;
-
-}
-
-
-
-.cards{
-
-grid-template-columns:1fr;
-
-}
-
-
-
+.cards,
 .values{
-
 grid-template-columns:1fr;
-
 }
-
-
 
 footer{
-
 flex-direction:column;
-
-gap:25px;
-
+gap:30px;
 text-align:center;
-
 }
 
-
+footer a{
+display:block;
+margin:15px 0;
 }
 
+}
 </style>
 
 </head>
@@ -819,32 +975,76 @@ text-align:center;
 
 <header>
 
+
 <a href="#" class="logo">
 
+
 <div class="logo-mark">
-B
+
+
+<svg viewBox="0 0 100 100">
+
+
+<circle cx="50" cy="50" r="45"></circle>
+
+
+<path d="M50 80 V42"></path>
+
+
+<path d="M50 62 C35 55 25 60 30 45"></path>
+
+
+<path d="M50 55 C65 48 75 40 72 28"></path>
+
+
+<circle class="leaf" cx="30" cy="45" r="6"></circle>
+
+
+<circle class="leaf" cx="72" cy="28" r="6"></circle>
+
+
+<circle class="leaf" cx="50" cy="40" r="7"></circle>
+
+
+</svg>
+
+
 </div>
 
+
+
 <div class="logo-text">
-BONSAI INVESTMENTS
+
+BONSAI INVESTMENTS SA
+
 </div>
+
 
 </a>
 
 
+
 <nav>
 
-<a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Strategy</a>
-<a href="#">Services</a>
-<a href="#">Team</a>
-<a href="#">Contact</a>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="strategy.html">Strategy</a>
+
+<a href="services.html">Services</a>
+
+<a href="team.html">Team</a>
+
+<a href="contact.html">Contact</a>
+
 
 </nav>
 
 
 </header>
+
 
 
 
@@ -856,11 +1056,12 @@ BONSAI INVESTMENTS
 <div class="hero-content">
 
 
+
 <div class="hero-small">
 
 <span></span>
 
-Swiss Private Investment
+Zurich Private Investment
 
 </div>
 
@@ -868,27 +1069,38 @@ Swiss Private Investment
 
 <h1>
 
-Investir dans les entreprises qui façonnent <em>l'avenir.</em>
+
+Capital stratégique pour les entreprises d'<em>exception.</em>
+
 
 </h1>
 
 
+
 <p>
 
-Bonsai Investments accompagne les entrepreneurs ambitieux et les entreprises innovantes grâce à une approche d'investissement stratégique inspirée de l'excellence financière suisse.
+
+Bonsai Investments SA accompagne les entrepreneurs ambitieux et les entreprises innovantes grâce à une approche d'investissement privée, internationale et disciplinée.
+
 
 </p>
 
 
+
 <div class="buttons">
 
+
 <a href="contact.html" class="btn">
+
 Présenter un projet
+
 </a>
 
 
 <a href="strategy.html" class="btn btn-light">
+
 Notre stratégie
+
 </a>
 
 
@@ -900,6 +1112,8 @@ Notre stratégie
 
 
 </section>
+
+
 
 
 
@@ -913,14 +1127,18 @@ Notre stratégie
 
 <div>
 
+
 <div class="title-small">
+
 Notre vision
+
 </div>
+
 
 
 <h2>
 
-Une approche privée, internationale et durable.
+Construire des partenariats durables avec les leaders de demain.
 
 </h2>
 
@@ -929,31 +1147,40 @@ Une approche privée, internationale et durable.
 
 
 
+
 <div class="intro-text">
 
 
 <p>
 
-Nous identifions des opportunités exceptionnelles dans des secteurs à fort potentiel et construisons des partenariats durables avec les fondateurs, dirigeants et investisseurs.
+
+Nous identifions des opportunités exceptionnelles dans des secteurs à fort potentiel et accompagnons les dirigeants dans leurs phases de croissance stratégique.
+
 
 </p>
 
 
+
 <p>
 
-Notre philosophie repose sur la discipline financière, l'analyse stratégique et une vision long terme.
+
+Notre approche combine analyse financière, réseau international et vision long terme.
+
 
 </p>
 
 
 
 </div>
+
 
 
 </div>
 
 
 </section>
+
+
 
 
 
@@ -963,95 +1190,152 @@ Notre philosophie repose sur la discipline financière, l'analyse stratégique e
 <section class="investments">
 
 
+
 <div class="title-small">
+
 Secteurs d'investissement
+
 </div>
 
 
+
 <h2>
+
 Domaines d'excellence
+
 </h2>
+
 
 
 
 <div class="cards">
 
 
+
 <div class="card">
 
+
 <div class="number">
+
 01
+
 </div>
+
 
 <h3>
-Technologie & SaaS
+
+Technology & SaaS
+
 </h3>
 
+
 <p>
-Solutions digitales, infrastructures cloud et plateformes technologiques à forte croissance.
+
+Plateformes digitales, infrastructures cloud et solutions technologiques innovantes.
+
 </p>
 
+
 </div>
+
+
 
 
 
 <div class="card">
 
+
 <div class="number">
+
 02
+
 </div>
+
 
 <h3>
-Intelligence Artificielle
+
+Artificial Intelligence
+
 </h3>
 
+
 <p>
-Technologies avancées, automatisation et innovations issues de la recherche.
+
+Intelligence artificielle, automatisation et technologies de nouvelle génération.
+
 </p>
 
+
 </div>
+
+
 
 
 
 <div class="card">
 
+
 <div class="number">
+
 03
+
 </div>
+
 
 <h3>
+
 Fintech & Web3
+
 </h3>
 
+
 <p>
+
 Nouvelles infrastructures financières et modèles économiques numériques.
+
 </p>
 
+
 </div>
+
+
 
 
 
 <div class="card">
 
+
 <div class="number">
+
 04
+
 </div>
+
 
 <h3>
-Immobilier & Actifs privés
+
+Private Assets
+
 </h3>
 
+
 <p>
-Investissements stratégiques dans des actifs réels et opportunités internationales.
+
+Immobilier, actifs privés et opportunités internationales.
+
 </p>
 
+
 </div>
+
+
 
 
 </div>
 
 
 </section>
+
 
 
 
@@ -1071,14 +1355,20 @@ L'excellence suisse au service de la croissance.
 </h3>
 
 
+
 <p>
 
-Nous combinons confidentialité, analyse approfondie et réseau international afin d'accompagner les projets les plus prometteurs.
+
+Nous privilégions la confidentialité, la rigueur financière et une relation de confiance avec nos partenaires.
+
 
 </p>
 
 
+
 </div>
+
+
 
 
 
@@ -1088,60 +1378,176 @@ Nous combinons confidentialité, analyse approfondie et réseau international af
 <div class="value">
 
 <strong>
+
 Global
+
 </strong>
 
 <span>
+
 Présence internationale
+
 </span>
 
 </div>
 
 
 
-<div class="value">
-
-<strong>
-Long Term
-</strong>
-
-<span>
-Vision durable
-</span>
-
-</div>
-
-
 
 <div class="value">
 
 <strong>
+
 Private
+
 </strong>
 
 <span>
+
 Relations privilégiées
+
 </span>
 
 </div>
+
+
 
 
 
 <div class="value">
 
 <strong>
+
 Strategic
+
 </strong>
 
 <span>
+
 Accompagnement actif
+
 </span>
 
 </div>
 
 
 
+
+
+<div class="value">
+
+<strong>
+
+Long Term
+
+</strong>
+
+<span>
+
+Vision durable
+
+</span>
+
 </div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="advisory">
+
+
+
+<div class="title-small">
+
+Financial Advisory
+
+</div>
+
+
+
+<h2>
+
+Conseil stratégique et investissement privé.
+
+</h2>
+
+
+
+
+<div class="advisory-grid">
+
+
+
+<div class="advisory-item">
+
+<h4>
+
+Investment Advisory
+
+</h4>
+
+<p>
+
+Analyse d'opportunités, structuration financière et accompagnement stratégique.
+
+</p>
+
+</div>
+
+
+
+
+<div class="advisory-item">
+
+<h4>
+
+Private Capital
+
+</h4>
+
+<p>
+
+Mise en relation avec des investisseurs privés et partenaires internationaux.
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="advisory-item">
+
+<h4>
+
+Strategic Growth
+
+</h4>
+
+<p>
+
+Accompagnement des entreprises dans leurs phases d'expansion.
+
+</p>
+
+</div>
+
+
+
+</div>
+
 
 
 </section>
@@ -1155,20 +1561,62 @@ Accompagnement actif
 <footer>
 
 
-<p>
-© 2026 BONSAI INVESTMENTS. Tous droits réservés.
+
+<div>
+
+
+<p class="footer-company">
+
+BONSAI INVESTMENTS SA
+
 </p>
+
+
+
+<p>
+
+Zurich, Switzerland
+
+</p>
+
+
+
+<p>
+
+Conseiller financier & Strategic Investment Advisory
+
+</p>
+
+
+</div>
+
+
 
 
 <div>
 
-<a href="#">
-Confidentialité
-</a>
 
 <a href="#">
-Mentions légales
+
+Confidentialité
+
 </a>
+
+
+<a href="#">
+
+Mentions légales
+
+</a>
+
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+
 
 </div>
 
@@ -1177,6 +1625,42 @@ Mentions légales
 
 
 
+
+
+
+
+<script>
+
+
+window.addEventListener("scroll", function(){
+
+
+const header=document.querySelector("header");
+
+
+if(window.scrollY>50){
+
+header.style.background="rgba(5,5,5,.95)";
+
+}else{
+
+header.style.background="rgba(5,5,5,.75)";
+
+}
+
+
+});
+
+
+</script>
+
+
+
+
+
+
+
 </body>
+
 
 </html>
