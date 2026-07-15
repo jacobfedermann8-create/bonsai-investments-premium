@@ -6,10 +6,7 @@
     <title>BONSAI INVESTMENTS | Multi-Family Office & Stratégies</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-dark: #070708; --text-light: #f4f4f5; --accent: #c5a880; 
-            --muted-light: #a1a1aa; --border: rgba(255, 255, 255, 0.08);
-        }
+        :root { --bg-dark: #070708; --text-light: #f4f4f5; --accent: #c5a880; --muted-light: #a1a1aa; --border: rgba(255, 255, 255, 0.08); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
 
@@ -17,31 +14,32 @@
         header { position: absolute; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 2.5rem 8rem; z-index: 100; }
         .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; }
         .logo-icon { width: 40px; height: 40px; }
-        .logo-text { font-size: 1.1rem; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--text-light); }
+        .logo-text { font-size: 1.1rem; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; }
         .logo-text span { color: var(--accent); }
-        nav a { color: var(--text-light); text-decoration: none; margin-left: 3rem; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; transition: 0.3s; }
-        nav a:hover { opacity: 1; color: var(--accent); }
+        nav a { color: var(--text-light); text-decoration: none; margin-left: 3rem; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; }
 
         /* HERO */
-        .hero { height: 90vh; display: flex; flex-direction: column; justify-content: center; padding: 0 8rem; border-bottom: 1px solid var(--border); }
-        .hero-tag { color: var(--accent); letter-spacing: 6px; text-transform: uppercase; font-size: 0.7rem; margin-bottom: 2rem; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 5.5rem; line-height: 1; max-width: 900px; margin-bottom: 2rem; }
-        .hero h1 span { font-style: italic; color: var(--accent); }
+        .hero { height: 85vh; display: flex; flex-direction: column; justify-content: center; padding: 0 8rem; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 5rem; max-width: 900px; margin-bottom: 2rem; }
+        .hero h1 span { color: var(--accent); font-style: italic; }
 
-        /* SECTIONS METIERS */
-        .services-wrapper { padding: 8rem; }
-        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 4rem; margin-top: 5rem; }
-        .service-card { border-top: 1px solid var(--accent); padding-top: 2rem; }
-        .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; }
-        .service-card p { color: var(--muted-light); font-size: 0.95rem; }
+        /* METRICS */
+        .metrics { display: grid; grid-template-columns: repeat(3, 1fr); padding: 5rem 8rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .metric-item { text-align: center; border-right: 1px solid var(--border); }
+        .metric-item:last-child { border-right: none; }
+        .metric-val { font-size: 2.5rem; color: var(--accent); font-family: 'Playfair Display', serif; display: block; }
 
-        /* FOOTER */
-        footer { padding: 5rem 8rem; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: var(--muted-light); }
-        .footer-links { display: flex; gap: 3rem; }
-        .footer-links a { color: var(--muted-light); text-decoration: none; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
-        .footer-links a:hover { color: var(--text-light); }
+        /* PROCESS */
+        .process { padding: 8rem; }
+        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 4rem; }
+        .step { border-left: 1px solid var(--accent); padding-left: 1.5rem; }
+        .step span { color: var(--accent); font-size: 0.8rem; display: block; margin-bottom: 1rem; }
 
-        @media (max-width: 1000px) { header, .hero, .services-wrapper, footer { padding: 2rem; } .service-grid { grid-template-columns: 1fr; } .hero h1 { font-size: 3.5rem; } }
+        /* FOOTER LÉGAL */
+        footer { padding: 5rem 8rem; background: #030304; border-top: 1px solid var(--border); }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; }
+        .legal-info { color: var(--muted-light); font-size: 0.8rem; line-height: 1.8; }
+        .footer-links a { color: var(--text-light); display: block; text-decoration: none; margin-bottom: 0.5rem; font-size: 0.85rem; }
     </style>
 </head>
 <body>
@@ -51,50 +49,47 @@
             <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="50" cy="50" r="46" stroke="#c5a880" stroke-width="2"/>
                 <path d="M50 85 V45" stroke="#c5a880" stroke-width="4" stroke-linecap="round"/>
-                <path d="M50 65 C40 60 30 65 32 50" stroke="#c5a880" stroke-width="3"/>
-                <path d="M50 55 C60 50 70 55 68 40" stroke="#c5a880" stroke-width="3"/>
+                <circle cx="32" cy="50" r="6" fill="#c5a880"/><circle cx="68" cy="40" r="6" fill="#c5a880"/>
             </svg>
             <div class="logo-text">BONSAI<span>.</span></div>
         </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="strategy.html">Strategy</a>
-            <a href="contact.html">Contact</a>
-        </nav>
+        <nav><a href="#">Home</a><a href="#">About</a><a href="#">Strategy</a></nav>
     </header>
 
-    <main>
-        <section class="hero">
-            <div class="hero-tag">Multi-Family Office & Global Advisory</div>
-            <h1>Une vision <span>exclusive</span> et pérenne de la gestion d'actifs.</h1>
-        </section>
+    <section class="hero">
+        <h1>L'excellence financière, <span>sculptée sur-mesure</span>.</h1>
+        <p style="font-size: 1.2rem; color: var(--muted-light);">Stratégies d'investissement globales pour un patrimoine pérenne.</p>
+    </section>
 
-        <section class="services-wrapper">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem;">Nos expertises</h2>
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Venture Capital</h3>
-                    <p>Nous identifions les pionniers de demain. Notre activité de capital-risque se concentre sur les startups à fort potentiel, offrant à nos partenaires une exposition stratégique aux révolutions technologiques et digitales.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Immobilier</h3>
-                    <p>Développement, acquisition et gestion d'actifs immobiliers de prestige. Nous sécurisons des placements durables alliant rentabilité locative et valorisation patrimoniale sur le long terme.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Gestion de Patrimoine</h3>
-                    <p>Une ingénierie patrimoniale sur-mesure. De la structuration fiscale à la transmission intergénérationnelle, nous protégeons et optimisons votre héritage avec une discrétion absolue.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+    <section class="metrics">
+        <div class="metric-item"><span class="metric-val">350M€</span>Assets Under Advisory</div>
+        <div class="metric-item"><span class="metric-val">15+</span>Ans d'expertise</div>
+        <div class="metric-item"><span class="metric-val">98%</span>Rétention Clients</div>
+    </section>
+
+    <section class="process">
+        <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 3rem;">Notre Méthodologie</h2>
+        <div class="process-grid">
+            <div class="step"><span>01. Audit</span>Analyse de votre situation et de votre appétence au risque.</div>
+            <div class="step"><span>02. Stratégie</span>Allocation d'actifs diversifiée (VC, Immo, Private Equity).</div>
+            <div class="step"><span>03. Exécution</span>Accès privilégié aux opportunités de marché institutionnel.</div>
+            <div class="step"><span>04. Suivi</span>Optimisation constante et reporting de performance.</div>
+        </div>
+    </section>
 
     <footer>
-        <div>&copy; 2026 BONSAI INVESTMENTS. Tous droits réservés.</div>
-        <div class="footer-links">
-            <a href="#">Confidentialité</a>
-            <a href="#">Mentions Légales</a>
-            <a href="#">Contact</a>
+        <div class="footer-grid">
+            <div class="legal-info">
+                <h4 style="color: #fff; margin-bottom: 1rem;">BONSAI INVESTMENTS</h4>
+                <p>Siège Social : 12 Avenue des Champs-Élysées, 75008 Paris</p>
+                <p>RCS Paris B 123 456 789 | Capital Social : 100 000 €</p>
+                <p style="margin-top: 1rem;">© 2026 Tous droits réservés.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Politique de Confidentialité</a>
+                <a href="#">Mentions Légales</a>
+                <a href="#">Nous contacter</a>
+            </div>
         </div>
     </footer>
 
