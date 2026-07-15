@@ -11,44 +11,58 @@
             --text-light: #f4f4f5;
             --accent: #c5a880;
             --muted-light: #a1a1aa;
-            --border: rgba(255, 255, 255, 0.1);
+            --border: rgba(255, 255, 255, 0.08);
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
 
-        /* --- HEADER & NAV --- */
-        header { position: fixed; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 8rem; z-index: 100; background: rgba(7, 7, 8, 0.9); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+        /* --- HEADER & LOGO --- */
+        header { position: fixed; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 8rem; z-index: 100; background: rgba(7, 7, 8, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
         .logo-container { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; }
+        .logo-icon { width: 32px; height: 32px; transition: transform 0.6s ease; }
+        .logo-container:hover .logo-icon { transform: rotate(15deg); }
         .logo-text { font-size: 0.85rem; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; color: var(--text-light); }
         .logo-text span { color: var(--accent); }
-        nav a { color: var(--muted-light); text-decoration: none; margin-left: 2rem; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
+
+        nav a { color: var(--muted-light); text-decoration: none; margin-left: 2rem; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; transition: 0.4s; }
         nav a:hover, nav a.active { color: var(--accent); }
 
         /* --- HERO --- */
-        .services-hero { padding: 12rem 8rem 6rem; }
-        .services-hero h1 { font-family: 'Playfair Display', serif; font-size: 4rem; font-weight: 300; margin-bottom: 1.5rem; }
-        .services-hero p { color: var(--muted-light); max-width: 600px; font-size: 1.1rem; }
+        .services-hero { padding: 14rem 8rem 8rem; }
+        .services-hero h1 { font-family: 'Playfair Display', serif; font-size: 5rem; font-weight: 300; margin-bottom: 2rem; letter-spacing: -1px; }
+        .services-hero h1 span { color: var(--accent); }
+        .services-hero p { font-size: 1.3rem; color: var(--muted-light); max-width: 650px; line-height: 1.6; }
 
-        /* --- SERVICES GRID --- */
-        .services-grid { padding: 4rem 8rem 8rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 3rem; }
-        .service-card { border: 1px solid var(--border); padding: 3rem; transition: 0.4s; }
-        .service-card:hover { border-color: var(--accent); background: rgba(197, 168, 128, 0.03); }
-        .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.8rem; margin-bottom: 1.5rem; color: var(--accent); }
+        /* --- GRID --- */
+        .services-grid { padding: 0 8rem 10rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .service-card { border: 1px solid var(--border); padding: 4rem 3rem; background: rgba(255,255,255,0.01); transition: 0.5s ease-in-out; }
+        .service-card:hover { border-color: var(--accent); transform: translateY(-10px); background: rgba(197, 168, 128, 0.02); }
+        .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 2rem; color: var(--text-light); }
         .service-card p { color: var(--muted-light); line-height: 1.8; font-size: 0.95rem; }
 
-        /* --- CONFIDENTIALITY BANNER --- */
-        .confidentiality { padding: 6rem 8rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); text-align: center; }
-        .confidentiality h2 { font-family: 'Playfair Display', serif; font-size: 2.5rem; margin-bottom: 2rem; }
-        .confidentiality p { color: var(--muted-light); max-width: 800px; margin: 0 auto; line-height: 1.8; }
+        /* --- CONFIDENTIALITÉ --- */
+        .confidentiality { padding: 8rem; background: linear-gradient(180deg, rgba(197, 168, 128, 0.02) 0%, transparent 100%); text-align: center; }
+        .confidentiality h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 2rem; }
+        .confidentiality p { color: var(--muted-light); max-width: 700px; margin: 0 auto; line-height: 2; font-weight: 300; font-size: 1.1rem; letter-spacing: 0.5px; }
 
-        footer { padding: 4rem 8rem; text-align: center; color: #444; font-size: 0.7rem; letter-spacing: 2px; }
+        footer { padding: 4rem 8rem; text-align: center; color: #333; font-size: 0.7rem; letter-spacing: 4px; }
     </style>
 </head>
 <body>
 
     <header>
         <a href="index.html" class="logo-container">
+            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="46" stroke="#c5a880" stroke-width="1.5" stroke-dasharray="2 2"/>
+                <path d="M50 85 V45" stroke="#c5a880" stroke-width="3" stroke-linecap="round"/>
+                <path d="M50 65 C40 60 30 65 32 50" stroke="#c5a880" stroke-width="2" stroke-linecap="round"/>
+                <path d="M50 55 C60 50 70 55 68 40" stroke="#c5a880" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="32" cy="50" r="5" fill="#c5a880"/>
+                <circle cx="68" cy="40" r="5" fill="#c5a880"/>
+                <circle cx="50" cy="42" r="6" fill="#c5a880"/>
+                <path d="M30 85 H70" stroke="#c5a880" stroke-width="2" stroke-linecap="round"/>
+            </svg>
             <div class="logo-text">BONSAI INVESTMENTS<span>.</span></div>
         </a>
         <nav>
@@ -63,33 +77,33 @@
 
     <main>
         <section class="services-hero">
-            <h1>Notre Expertise. <span>Votre Sérénité.</span></h1>
-            <p>Nous accompagnons une clientèle exigeante dans la structuration, la croissance et la préservation de leur patrimoine.</p>
+            <h1>Une approche <span>sur-mesure</span>.</h1>
+            <p>Nous transformons la complexité des marchés en opportunités stratégiques, avec une rigueur et une confidentialité qui définissent l'excellence de notre maison.</p>
         </section>
 
         <section class="services-grid">
             <div class="service-card">
                 <h3>Gestion de Patrimoine</h3>
-                <p>Au-delà de la gestion financière, nous concevons une architecture patrimoniale complète. Optimisation fiscale, planification successorale et stratégie d'investissement sur-mesure pour aligner votre capital avec vos ambitions de long terme.</p>
+                <p>Nous ne gérons pas seulement des chiffres, nous structurons des héritages. De l'ingénierie fiscale à la planification successorale, chaque décision est prise avec une précision chirurgicale pour préserver et transmettre votre prospérité au-delà des générations.</p>
             </div>
             <div class="service-card">
                 <h3>Immobilier Private Equity</h3>
-                <p>L'accès aux actifs tangibles sous un angle institutionnel. Nous identifions et structurons des opportunités immobilières à fort potentiel, offrant une stabilité réelle et un rendement optimisé pour des investisseurs avertis cherchant à diversifier leur exposition.</p>
+                <p>La pierre, repensée par l'investissement institutionnel. Nous sélectionnons des actifs à fort potentiel de création de valeur. Notre intervention permet d'accéder à des opportunités exclusives, là où la rareté et l'emplacement dictent la performance de demain.</p>
             </div>
             <div class="service-card">
                 <h3>Capital-Investissement</h3>
-                <p>Participez à la création de valeur de demain. Nous offrons une sélection rigoureuse d'opportunités en Private Equity, vous permettant de capturer la croissance des entreprises privées et de diversifier votre portefeuille en dehors de la volatilité des marchés cotés.</p>
+                <p>Entrez dans le cercle des investisseurs avertis. Le Private Equity chez BONSAI INVESTMENTS, c'est l'accès direct aux moteurs de croissance de l'économie réelle. Une stratégie décorrélée des marchés publics pour une performance pérenne et ambitieuse.</p>
             </div>
         </section>
 
         <section class="confidentiality">
-            <h2>Discrétion Absolue</h2>
-            <p>Chez BONSAI INVESTMENTS, la confidentialité n'est pas une option, c'est un prérequis fondamental. Nous opérons avec une rigueur absolue, garantissant la protection totale de vos informations et de vos transactions. Chaque relation est bâtie sur une confiance inébranlable et un respect scrupuleux de votre sphère privée.</p>
+            <h2>L'Éthique de la Discrétion</h2>
+            <p>Au cœur de notre ADN se trouve une valeur inébranlable : le silence. Dans un monde de données ouvertes, nous garantissons un sanctuaire pour votre patrimoine. Chaque interaction, chaque conseil et chaque transaction est protégé par une confidentialité absolue, assurant que votre stratégie reste votre jardin secret.</p>
         </section>
     </main>
 
     <footer>
-        &copy; 2026 BONSAI INVESTMENTS. GESTION PRIVÉE ET STRATÉGIES D'INVESTISSEMENT.
+        &copy; 2026 BONSAI INVESTMENTS — WEALTH MANAGEMENT & PRIVATE EQUITY
     </footer>
 </body>
 </html>
