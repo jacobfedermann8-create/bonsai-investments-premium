@@ -3,28 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BONSAI INVESTMENTS | Multi-Family Office & Stratégies</title>
+    <title>BONSAI INVESTMENTS | Multi-Family Office Zürich</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
         :root { --bg-dark: #070708; --text-light: #f4f4f5; --accent: #c5a880; --muted-light: #a1a1aa; --border: rgba(255, 255, 255, 0.08); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
 
-        /* HEADER */
+        /* HEADER AVEC LOGO ET NOM */
         header { position: absolute; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 2.5rem 8rem; z-index: 100; }
         .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; }
-        .logo-icon { width: 40px; height: 40px; }
-        .logo-text { font-size: 1.1rem; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; }
+        .logo-icon { width: 45px; height: 45px; }
+        .logo-text { font-family: 'Inter', sans-serif; font-size: 1.1rem; font-weight: 500; letter-spacing: 3px; text-transform: uppercase; color: var(--text-light); }
         .logo-text span { color: var(--accent); }
-        nav a { color: var(--text-light); text-decoration: none; margin-left: 3rem; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; }
+        nav a { color: var(--text-light); text-decoration: none; margin-left: 3rem; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.7; transition: 0.3s; }
+        nav a:hover { opacity: 1; color: var(--accent); }
 
         /* HERO */
-        .hero { height: 85vh; display: flex; flex-direction: column; justify-content: center; padding: 0 8rem; }
+        .hero { height: 85vh; display: flex; flex-direction: column; justify-content: center; padding: 0 8rem; border-bottom: 1px solid var(--border); }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: 5rem; max-width: 900px; margin-bottom: 2rem; }
         .hero h1 span { color: var(--accent); font-style: italic; }
 
         /* METRICS */
-        .metrics { display: grid; grid-template-columns: repeat(3, 1fr); padding: 5rem 8rem; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .metrics { display: grid; grid-template-columns: repeat(3, 1fr); padding: 5rem 8rem; border-bottom: 1px solid var(--border); }
         .metric-item { text-align: center; border-right: 1px solid var(--border); }
         .metric-item:last-child { border-right: none; }
         .metric-val { font-size: 2.5rem; color: var(--accent); font-family: 'Playfair Display', serif; display: block; }
@@ -33,9 +34,9 @@
         .process { padding: 8rem; }
         .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 4rem; }
         .step { border-left: 1px solid var(--accent); padding-left: 1.5rem; }
-        .step span { color: var(--accent); font-size: 0.8rem; display: block; margin-bottom: 1rem; }
+        .step span { color: var(--accent); font-size: 0.8rem; display: block; margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
 
-        /* FOOTER LÉGAL */
+        /* FOOTER LÉGAL SUISSE */
         footer { padding: 5rem 8rem; background: #030304; border-top: 1px solid var(--border); }
         .footer-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 4rem; }
         .legal-info { color: var(--muted-light); font-size: 0.8rem; line-height: 1.8; }
@@ -51,7 +52,7 @@
                 <path d="M50 85 V45" stroke="#c5a880" stroke-width="4" stroke-linecap="round"/>
                 <circle cx="32" cy="50" r="6" fill="#c5a880"/><circle cx="68" cy="40" r="6" fill="#c5a880"/>
             </svg>
-            <div class="logo-text">BONSAI<span>.</span></div>
+            <div class="logo-text">BONSAI <span>INVESTMENTS</span></div>
         </a>
         <nav><a href="#">Home</a><a href="#">About</a><a href="#">Strategy</a></nav>
     </header>
@@ -81,14 +82,14 @@
         <div class="footer-grid">
             <div class="legal-info">
                 <h4 style="color: #fff; margin-bottom: 1rem;">BONSAI INVESTMENTS</h4>
-                <p>Siège Social : 12 Avenue des Champs-Élysées, 75008 Paris</p>
-                <p>RCS Paris B 123 456 789 | Capital Social : 100 000 €</p>
-                <p style="margin-top: 1rem;">© 2026 Tous droits réservés.</p>
+                <p>Landoltstrasse 1, 8006 Zürich, Switzerland</p>
+                <p>UID / IDE : CH-020.4.091.692-9</p>
+                <p style="margin-top: 1rem;">© 2026 BONSAI INVESTMENTS. Tous droits réservés.</p>
             </div>
             <div class="footer-links">
                 <a href="#">Politique de Confidentialité</a>
                 <a href="#">Mentions Légales</a>
-                <a href="#">Nous contacter</a>
+                <a href="#">Contact</a>
             </div>
         </div>
     </footer>
