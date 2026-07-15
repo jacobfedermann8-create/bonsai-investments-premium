@@ -2,69 +2,68 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BONSAI INVESTMENTS | Capital-Risque & Croissance</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <title>BONSAI INVESTMENTS | Home</title>
     <style>
-        :root {
-            --bg-dark: #070708; --text-light: #f4f4f5; --accent: #c5a880;
-            --muted-light: #a1a1aa; --font-sans: 'Inter', sans-serif;
-            --font-serif: 'Playfair Display', serif; --border: rgba(255, 255, 255, 0.05);
-        }
+        :root { --bg-dark: #070708; --text-light: #f4f4f5; --accent: #c5a880; --muted-light: #a1a1aa; --border: rgba(255, 255, 255, 0.05); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: var(--font-sans); background-color: var(--bg-dark); color: var(--text-light); }
-
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
+        
+        /* Header & Nav */
+        header { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 2rem 8rem; z-index: 100; backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
+        .logo { font-size: 0.85rem; letter-spacing: 5px; text-transform: uppercase; color: var(--text-light); }
+        .menu { display: flex; align-items: center; gap: 2.5rem; }
+        nav a { color: var(--muted-light); text-decoration: none; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; transition: 0.3s; }
+        nav a:hover { color: var(--accent); }
+        
         /* Lang Switcher */
-        .lang-switcher { cursor: pointer; color: var(--accent); font-size: 0.7rem; letter-spacing: 2px; text-transform: uppercase; margin-left: 2rem; border: 1px solid var(--accent); padding: 0.3rem 0.6rem; }
+        .lang-btn { cursor: pointer; color: var(--accent); font-size: 0.7rem; letter-spacing: 2px; border: 1px solid var(--accent); padding: 4px 8px; }
         [lang="en"] .lang-fr, [lang="fr"] .lang-en { display: none; }
 
-        header { position: fixed; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 2rem 8rem; z-index: 100; backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
-        .logo-container { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; }
-        .nav-right { display: flex; align-items: center; }
-        nav a { color: var(--muted-light); text-decoration: none; margin-left: 2rem; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; }
-        nav a:hover { color: var(--accent); }
-
-        /* Section Team Minimaliste */
-        .team-section { padding: 8rem; border-top: 1px solid var(--border); }
-        .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3rem; }
-        .team-card { border: 1px solid var(--border); padding: 2rem; }
-
-        /* ... (Garder le reste de ton CSS original ici) ... */
-        @media (max-width: 900px) { header { padding: 1.5rem 2rem; } }
+        /* Sections */
+        section { padding: 8rem; border-top: 1px solid var(--border); }
+        h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 4rem; }
+        .team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+        .card { border: 1px solid var(--border); padding: 2.5rem; transition: 0.4s; }
+        .card:hover { border-color: var(--accent); }
+        .card h3 { font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .card p { color: var(--muted-light); font-size: 0.85rem; }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo-container">
-            <div class="logo-text">BONSAI INVESTMENTS<span>.</span></div>
-        </a>
-        <div class="nav-right">
+        <div class="logo">BONSAI INVESTMENTS.</div>
+        <div class="menu">
             <nav>
                 <a href="index.html">Home</a>
                 <a href="team.html">Team</a>
                 <a href="strategy.html">Strategy</a>
                 <a href="contact.html">Contact</a>
             </nav>
-            <div class="lang-switcher" onclick="toggleLang()">
+            <div class="lang-btn" onclick="toggleLang()">
                 <span class="lang-fr">EN</span>
                 <span class="lang-en">FR</span>
             </div>
         </div>
     </header>
 
-    <main>
-        <!-- ... (Sections existantes : Hero, Secteurs, Stats) ... -->
-
-        <section class="team-section">
-            <span class="section-tag">Notre équipe</span>
-            <h2>Fondateurs & Partenaires</h2>
+    <main style="margin-top: 100px;">
+        <!-- SECTION TEAM -->
+        <section>
+            <h2>Notre Équipe</h2>
             <div class="team-grid">
-                <div class="team-card"><h3>Nom Prénom</h3><p>Partner</p></div>
-                <div class="team-card"><h3>Nom Prénom</h3><p>Investment Associate</p></div>
-                <div class="team-card"><h3>Nom Prénom</h3><p>Growth Strategist</p></div>
+                <div class="card">
+                    <h3>Jean Dupont</h3>
+                    <p>Managing Partner</p>
+                </div>
+                <div class="card">
+                    <h3>Sarah Martin</h3>
+                    <p>Investment Principal</p>
+                </div>
+                <div class="card">
+                    <h3>Alex Chen</h3>
+                    <p>Growth Strategist</p>
+                </div>
             </div>
         </section>
     </main>
