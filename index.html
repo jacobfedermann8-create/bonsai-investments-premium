@@ -8,88 +8,79 @@
     <style>
         :root {
             --bg-dark: #070708; --text-light: #f4f4f5; --accent: #c5a880; 
-            --muted-light: #a1a1aa; --border: rgba(255, 255, 255, 0.05);
-            --grid-line: rgba(255, 255, 255, 0.02);
+            --muted-light: #a1a1aa; --border: rgba(255, 255, 255, 0.1);
         }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
+        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); line-height: 1.6; }
 
-        /* HEADER COHÉRENT */
-        header { position: fixed; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 2rem 8rem; z-index: 100; border-bottom: 1px solid var(--border); backdrop-filter: blur(16px); background: rgba(7, 7, 8, 0.75); }
-        .logo-container { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; }
-        .logo-text { font-size: 0.85rem; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; color: var(--text-light); }
+        /* HEADER PREMIUM */
+        header { 
+            position: absolute; top: 0; width: 100%; display: flex; justify-content: space-between; align-items: center; 
+            padding: 2.5rem 8rem; z-index: 100; 
+        }
+        .logo-container { display: flex; align-items: center; gap: 15px; text-decoration: none; }
+        .logo-icon { width: 45px; height: 45px; } /* Logo visible et net */
+        .logo-text { font-size: 1.1rem; font-weight: 500; letter-spacing: 4px; text-transform: uppercase; color: var(--text-light); }
         .logo-text span { color: var(--accent); }
-        nav a { color: var(--muted-light); text-decoration: none; margin-left: 2.5rem; font-size: 0.72rem; letter-spacing: 2px; text-transform: uppercase; transition: 0.4s; }
-        nav a:hover { color: var(--accent); }
+        nav a { color: var(--text-light); text-decoration: none; margin-left: 3rem; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; opacity: 0.8; transition: 0.3s; }
+        nav a:hover { opacity: 1; color: var(--accent); }
 
-        /* HERO PREMIUM */
-        .hero { min-height: 90vh; display: flex; flex-direction: column; justify-content: center; padding: 12rem 8rem 6rem; background: linear-gradient(rgba(7, 7, 8, 0.8), rgba(7, 7, 8, 0.8)), url('fond.jpg'); background-size: cover; background-position: center; background-attachment: fixed; }
-        .hero h1 { font-family: 'Playfair Display', serif; font-size: 5rem; line-height: 1.1; margin-bottom: 2rem; max-width: 900px; }
+        /* HERO TYPE "HAUTE FINANCE" */
+        .hero { 
+            height: 100vh; display: flex; flex-direction: column; justify-content: center; padding: 0 8rem; 
+            background: linear-gradient(rgba(7,7,8,0.6), rgba(7,7,8,0.6)), url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80'); 
+            background-size: cover; background-position: center;
+        }
+        .hero-tag { color: var(--accent); letter-spacing: 6px; text-transform: uppercase; font-size: 0.7rem; margin-bottom: 2rem; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 5rem; line-height: 1.05; max-width: 900px; margin-bottom: 2rem; }
         .hero h1 span { font-style: italic; color: var(--accent); }
-        .hero p { font-size: 1.3rem; color: var(--muted-light); max-width: 700px; line-height: 1.8; font-weight: 200; }
 
-        /* SECTIONS SERVICES (Style About) */
-        .services-section { padding: 10rem 8rem; border-top: 1px solid var(--border); }
-        .grid-container { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; margin-top: 5rem; }
-        .card { border: 1px solid var(--border); padding: 3rem; background: rgba(255, 255, 255, 0.01); transition: 0.4s; }
-        .card:hover { border-color: var(--accent); transform: translateY(-10px); }
-        .card h3 { font-family: 'Playfair Display', serif; font-size: 1.5rem; color: var(--accent); margin-bottom: 1.5rem; }
-        .card p { color: var(--muted-light); font-size: 0.9rem; line-height: 1.8; }
+        /* SECTION VALEURS TYPE LVDA */
+        .content-section { padding: 8rem; display: grid; grid-template-columns: 1fr 1fr; gap: 8rem; align-items: center; }
+        h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 2rem; }
+        p { color: var(--muted-light); font-size: 1.1rem; margin-bottom: 1.5rem; }
 
-        /* FOOTER COHÉRENT */
-        footer { padding: 5rem 8rem; background-color: #030304; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; color: var(--muted-light); font-size: 0.78rem; }
-        footer a { color: var(--muted-light); text-decoration: none; margin-left: 2.5rem; }
+        @media (max-width: 900px) { header { padding: 2rem; } .hero { padding: 2rem; } .content-section { padding: 4rem 2rem; grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
     <header>
         <a href="index.html" class="logo-container">
-            <div class="logo-text">BONSAI INVESTMENTS<span>.</span></div>
+            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="50" cy="50" r="46" stroke="#c5a880" stroke-width="2"/>
+                <path d="M50 85 V45" stroke="#c5a880" stroke-width="4" stroke-linecap="round"/>
+                <path d="M50 65 C40 60 30 65 32 50" stroke="#c5a880" stroke-width="3"/>
+                <path d="M50 55 C60 50 70 55 68 40" stroke="#c5a880" stroke-width="3"/>
+                <circle cx="32" cy="50" r="6" fill="#c5a880"/>
+                <circle cx="68" cy="40" r="6" fill="#c5a880"/>
+            </svg>
+            <div class="logo-text">BONSAI<span>.</span></div>
         </a>
         <nav>
-            <a href="index.html" class="active">Home</a>
+            <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="strategy.html">Strategy</a>
-            <a href="services.html">Services</a>
-            <a href="team.html">Team</a>
-            <a href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>L'excellence financière, <span>multi-dimensionnelle</span>.</h1>
-            <p>Nous bâtissons des ponts entre le capital institutionnel et les opportunités de demain. BONSAI INVESTMENTS structure vos ambitions avec une rigueur helvétique absolue.</p>
+            <div class="hero-tag">Multi-Family Office International</div>
+            <h1>Une vision <span>exclusive</span> de la gestion de patrimoine.</h1>
         </section>
 
-        <section class="services-section">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: 3rem;">Nos Domaines d'Intervention</h2>
-            <div class="grid-container">
-                <div class="card">
-                    <h3>Gestion de Patrimoine</h3>
-                    <p>Ingénierie patrimoniale, optimisation fiscale et gestion de portefeuilles diversifiés pour préserver et accroître votre héritage financier sur le long terme.</p>
-                </div>
-                <div class="card">
-                    <h3>Immobilier & Private Equity</h3>
-                    <p>Accès exclusif à des actifs immobiliers institutionnels et à des prises de participation directes dans des entreprises à haut potentiel de croissance.</p>
-                </div>
-                <div class="card">
-                    <h3>Venture Capital</h3>
-                    <p>Accompagnement des startups les plus disruptives. Nous injectons du capital intelligent et une expertise stratégique pour propulser l'innovation.</p>
-                </div>
+        <section class="content-section">
+            <div>
+                <h2>L'art de l'investissement.</h2>
+                <p>Chez BONSAI INVESTMENTS, nous ne gérons pas seulement des actifs, nous sculptons des héritages. Notre approche combine une analyse rigoureuse des marchés financiers et une compréhension fine des aspirations de nos clients.</p>
+                <p>Chaque stratégie est taillée sur mesure pour assurer pérennité et performance dans un environnement global en constante mutation.</p>
+            </div>
+            <div style="background: #111; height: 500px; width: 100%; border: 1px solid var(--border);">
+                <!-- Place ici ton image premium -->
             </div>
         </section>
     </main>
-
-    <footer>
-        <div>&copy; 2026 BONSAI INVESTMENTS. Tous droits réservés.</div>
-        <div>
-            <a href="confidentialite.html">Confidentialité</a>
-            <a href="mentions-legales.html">Mentions Légales</a>
-            <a href="faq.html">FAQ</a>
-        </div>
-    </footer>
 
 </body>
 </html>
