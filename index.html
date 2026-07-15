@@ -1,36 +1,16 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>BONSAI INVESTMENTS SA</title>
-
+<title>BONSAI INVESTMENTS SA | Zurich Private Investment</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-
-
-<script type="text/javascript">
-function googleTranslateElementInit() {
-  new google.translate.TranslateElement(
-    {
-      pageLanguage: 'fr',
-      includedLanguages: 'en,fr',
-      layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-    },
-    'google_translate_element'
-  );
-}
-</script>
-
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
 
 
 <style>
@@ -39,6 +19,7 @@ function googleTranslateElementInit() {
 :root{
 
 --black:#050505;
+--dark:#090909;
 --gold:#c6a46b;
 --white:#f5f5f3;
 --grey:#a5a5a5;
@@ -71,14 +52,12 @@ scroll-behavior:smooth;
 body{
 
 background:var(--black);
-
 color:var(--white);
-
 font-family:var(--sans);
-
 overflow-x:hidden;
 
 }
+
 
 
 
@@ -89,43 +68,35 @@ HEADER
 
 header{
 
+
 position:fixed;
-
 top:0;
-
 left:0;
 
 width:100%;
-
 height:95px;
 
-
 display:flex;
-
 align-items:center;
-
 justify-content:space-between;
-
 
 padding:0 8%;
 
-
 background:rgba(5,5,5,.75);
-
 
 backdrop-filter:blur(18px);
 
-
 border-bottom:1px solid rgba(255,255,255,.08);
 
-
 z-index:1000;
+
 
 }
 
 
 
 .logo{
+
 
 display:flex;
 
@@ -135,18 +106,18 @@ gap:18px;
 
 text-decoration:none;
 
+
 }
 
 
 
 .logo-mark{
 
-width:50px;
 
+width:50px;
 height:50px;
 
 border:1px solid var(--gold);
-
 
 display:flex;
 
@@ -154,12 +125,18 @@ align-items:center;
 
 justify-content:center;
 
+
 }
+
+
+
 .logo-mark svg{
+
 
 width:36px;
 
 height:36px;
+
 
 }
 
@@ -167,6 +144,7 @@ height:36px;
 
 .logo-mark svg path,
 .logo-mark svg circle{
+
 
 stroke:var(--gold);
 
@@ -176,45 +154,42 @@ fill:none;
 
 stroke-linecap:round;
 
+
 }
 
 
 
-.logo-mark .leaf{
+.logo-mark svg .leaf{
+
 
 fill:var(--gold);
 
 stroke:none;
 
+
 }
+
 
 
 
 .logo-text{
 
+
 font-size:14px;
 
 letter-spacing:5px;
 
-font-weight:500;
-
 color:white;
 
-}
+font-weight:500;
 
-
-
-nav{
-
-display:flex;
-
-align-items:center;
 
 }
 
 
 
 nav a{
+
 
 color:#aaa;
 
@@ -230,6 +205,7 @@ margin-left:35px;
 
 transition:.3s;
 
+
 }
 
 
@@ -237,46 +213,6 @@ transition:.3s;
 nav a:hover{
 
 color:var(--gold);
-
-}
-
-
-/* GOOGLE TRANSLATE */
-
-
-#google_translate_element{
-
-margin-left:35px;
-
-font-size:12px;
-
-}
-
-
-
-.goog-te-gadget{
-
-color:#aaa !important;
-
-font-family:var(--sans) !important;
-
-}
-
-
-
-.goog-te-gadget select{
-
-background:#050505;
-
-color:white;
-
-border:1px solid var(--gold);
-
-padding:8px;
-
-font-size:12px;
-
-letter-spacing:1px;
 
 }
 
@@ -292,7 +228,7 @@ HERO
 .hero{
 
 
-height:100vh;
+min-height:100vh;
 
 display:flex;
 
@@ -300,22 +236,19 @@ align-items:center;
 
 padding:0 8%;
 
+position:relative;
+
 
 background:
 
 linear-gradient(
-
 90deg,
-
-rgba(5,5,5,.95),
-
+rgba(5,5,5,.96),
+rgba(5,5,5,.65),
 rgba(5,5,5,.45)
-
 ),
 
-
-url("https://images.unsplash.com/photo-1526304640581-d334cdbbf45e");
-
+url("https://images.unsplash.com/photo-1531971589569-0d9370cbe1e5");
 
 
 background-size:cover;
@@ -329,15 +262,24 @@ background-position:center;
 
 .hero-content{
 
-max-width:900px;
 
-margin-top:80px;
+max-width:850px;
+
+margin-top:70px;
+
 
 }
 
 
 
-.small-title{
+.hero-small{
+
+
+display:flex;
+
+align-items:center;
+
+gap:20px;
 
 color:var(--gold);
 
@@ -347,7 +289,22 @@ letter-spacing:5px;
 
 text-transform:uppercase;
 
-margin-bottom:30px;
+margin-bottom:35px;
+
+
+}
+
+
+
+.hero-small span{
+
+
+height:1px;
+
+width:45px;
+
+background:var(--gold);
+
 
 }
 
@@ -355,15 +312,17 @@ margin-bottom:30px;
 
 .hero h1{
 
+
 font-family:var(--serif);
 
 font-size:80px;
 
 font-weight:400;
 
-line-height:1.1;
+line-height:1.05;
 
 margin-bottom:35px;
+
 
 }
 
@@ -371,9 +330,11 @@ margin-bottom:35px;
 
 .hero h1 em{
 
-color:var(--gold);
 
 font-style:italic;
+
+color:var(--gold);
+
 
 }
 
@@ -381,42 +342,192 @@ font-style:italic;
 
 .hero p{
 
-max-width:700px;
+
+max-width:650px;
 
 font-size:18px;
+
+font-weight:300;
 
 line-height:1.9;
 
 color:#c0c0c0;
 
-font-weight:300;
+margin-bottom:50px;
+
 
 }
 
 
 
+.buttons{
+
+
+display:flex;
+
+gap:25px;
+
+
+}
+
+
+
+.btn{
+
+
+padding:18px 42px;
+
+border:1px solid var(--gold);
+
+color:white;
+
+text-decoration:none;
+
+font-size:11px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+transition:.4s;
+
+
+}
+
+
+
+.btn:hover{
+
+
+background:var(--gold);
+
+color:#000;
+
+
+}
+
+
+
+.btn-light{
+
+
+border-color:white;
+
+
+}
+
+
+
+
 /* =====================
-SECTIONS
+GENERAL SECTION
 ===================== */
 
 
 .section{
 
+
 padding:120px 8%;
+
 
 }
 
 
 
-.grid{
+.title-small{
+
+
+font-size:12px;
+
+letter-spacing:4px;
+
+text-transform:uppercase;
+
+color:var(--gold);
+
+margin-bottom:20px;
+
+
+}
+
+
+
+h2{
+
+
+font-family:var(--serif);
+
+font-weight:400;
+
+font-size:55px;
+
+line-height:1.2;
+
+
+}
+
+
+
+.intro{
+
 
 display:grid;
 
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:1fr 1fr;
 
-gap:30px;
+gap:80px;
 
-margin-top:60px;
+align-items:center;
+
+
+}
+
+
+
+.intro-text p{
+
+
+color:#aaa;
+
+font-size:17px;
+
+line-height:2;
+
+margin-bottom:25px;
+
+
+}
+
+/* =====================
+INVESTMENT SECTORS
+===================== */
+
+
+.investments{
+
+
+padding:120px 8%;
+
+background:#080808;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+.cards{
+
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:25px;
+
+margin-top:70px;
+
 
 }
 
@@ -424,7 +535,8 @@ margin-top:60px;
 
 .card{
 
-padding:45px 35px;
+
+padding:40px 30px;
 
 border:1px solid rgba(255,255,255,.08);
 
@@ -432,15 +544,34 @@ background:rgba(255,255,255,.02);
 
 transition:.4s;
 
+
 }
 
 
 
 .card:hover{
 
+
 transform:translateY(-8px);
 
 border-color:var(--gold);
+
+
+}
+
+
+
+.number{
+
+
+font-family:var(--serif);
+
+font-size:30px;
+
+color:var(--gold);
+
+margin-bottom:30px;
+
 
 }
 
@@ -448,13 +579,13 @@ border-color:var(--gold);
 
 .card h3{
 
-font-family:var(--serif);
 
-font-size:32px;
+font-size:18px;
 
 font-weight:400;
 
 margin-bottom:20px;
+
 
 }
 
@@ -462,11 +593,375 @@ margin-bottom:20px;
 
 .card p{
 
+
+font-size:14px;
+
+line-height:1.8;
+
+color:#999;
+
+
+}
+
+
+
+
+
+
+
+/* =====================
+INVESTMENT APPROACH
+===================== */
+
+
+.approach{
+
+
+padding:120px 8%;
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+gap:90px;
+
+align-items:center;
+
+
+}
+
+
+
+.approach-box{
+
+
+border-left:1px solid var(--gold);
+
+padding-left:40px;
+
+
+}
+
+
+
+.approach-box h3{
+
+
+font-family:var(--serif);
+
+font-size:42px;
+
+font-weight:400;
+
+line-height:1.3;
+
+margin-bottom:30px;
+
+
+}
+
+
+
+.approach-box p{
+
+
+font-size:16px;
+
+line-height:2;
+
+color:#aaa;
+
+
+}
+
+
+
+.values{
+
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:30px;
+
+
+}
+
+
+
+.value{
+
+
+padding:35px;
+
+border:1px solid rgba(255,255,255,.08);
+
+background:rgba(255,255,255,.01);
+
+
+}
+
+
+
+.value strong{
+
+
+display:block;
+
+font-family:var(--serif);
+
+font-size:38px;
+
+font-weight:400;
+
+color:var(--gold);
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.value span{
+
+
+font-size:12px;
+
+text-transform:uppercase;
+
+letter-spacing:3px;
+
+color:#999;
+
+
+}
+
+
+
+
+
+/* =====================
+SWISS ADVISORY SECTION
+===================== */
+
+
+.advisory{
+
+
+padding:120px 8%;
+
+background:#060606;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+.advisory-grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+margin-top:60px;
+
+
+}
+
+
+
+.advisory-item{
+
+
+padding:45px 35px;
+
+border:1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+.advisory-item h4{
+
+
+font-family:var(--serif);
+
+font-size:32px;
+
+font-weight:400;
+
+color:white;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.advisory-item p{
+
+
 color:#999;
 
 font-size:15px;
 
-line-height:1.9;
+line-height:1.8;
+
+
+}
+
+
+
+/* =====================
+FOOTER
+===================== */
+
+
+footer{
+
+
+padding:65px 8%;
+
+background:#030303;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+
+}
+
+
+
+.footer-company{
+
+
+font-size:14px;
+
+letter-spacing:4px;
+
+color:white;
+
+margin-bottom:15px;
+
+
+}
+
+
+
+footer p{
+
+
+color:#888;
+
+font-size:12px;
+
+line-height:2;
+
+letter-spacing:1px;
+
+
+}
+
+
+
+footer a{
+
+
+color:#999;
+
+font-size:12px;
+
+text-decoration:none;
+
+margin-left:30px;
+
+letter-spacing:1px;
+
+
+}
+
+
+
+footer a:hover{
+
+
+color:var(--gold);
+
+
+}
+
+@media(max-width:1100px){
+
+.cards{
+grid-template-columns:repeat(2,1fr);
+}
+
+.approach{
+grid-template-columns:1fr;
+}
+
+.advisory-grid{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:55px;
+}
+
+}
+
+
+@media(max-width:700px){
+
+header{
+padding:0 5%;
+}
+
+nav{
+display:none;
+}
+
+.hero{
+padding:0 5%;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.buttons{
+flex-direction:column;
+}
+
+.cards,
+.values{
+grid-template-columns:1fr;
+}
+
+footer{
+flex-direction:column;
+gap:30px;
+text-align:center;
+}
+
+footer a{
+display:block;
+margin:15px 0;
+}
 
 }
 </style>
@@ -478,11 +973,10 @@ line-height:1.9;
 
 
 
-
 <header>
 
 
-<a href="index.html" class="logo">
+<a href="#" class="logo">
 
 
 <div class="logo-mark">
@@ -530,8 +1024,6 @@ BONSAI INVESTMENTS SA
 
 
 
-
-
 <nav>
 
 
@@ -545,12 +1037,7 @@ BONSAI INVESTMENTS SA
 
 <a href="team.html">Team</a>
 
-<a href="legal.html">Legal</a>
-
 <a href="contact.html">Contact</a>
-
-
-<div id="google_translate_element"></div>
 
 
 </nav>
@@ -563,16 +1050,18 @@ BONSAI INVESTMENTS SA
 
 
 
-
 <section class="hero">
 
 
 <div class="hero-content">
 
 
-<div class="small-title">
 
-Swiss Investment Advisory
+<div class="hero-small">
+
+<span></span>
+
+Zurich Private Investment
 
 </div>
 
@@ -580,7 +1069,9 @@ Swiss Investment Advisory
 
 <h1>
 
-Creating value through <em>strategic opportunities.</em>
+
+Capital stratégique pour les entreprises d'<em>exception.</em>
+
 
 </h1>
 
@@ -588,9 +1079,33 @@ Creating value through <em>strategic opportunities.</em>
 
 <p>
 
-Bonsai Investments SA connects entrepreneurs, companies and investors through strategic partnerships focused on sustainable growth and long-term value creation.
+
+Bonsai Investments SA accompagne les entrepreneurs ambitieux et les entreprises innovantes grâce à une approche d'investissement privée, internationale et disciplinée.
+
 
 </p>
+
+
+
+<div class="buttons">
+
+
+<a href="contact.html" class="btn">
+
+Présenter un projet
+
+</a>
+
+
+<a href="strategy.html" class="btn btn-light">
+
+Notre stratégie
+
+</a>
+
+
+</div>
+
 
 
 </div>
@@ -607,40 +1122,25 @@ Bonsai Investments SA connects entrepreneurs, companies and investors through st
 <section class="section">
 
 
-<div class="small-title">
+<div class="intro">
 
-Our Approach
+
+<div>
+
+
+<div class="title-small">
+
+Notre vision
 
 </div>
 
 
-<h1 style="font-family:var(--serif);font-size:55px;font-weight:400;">
 
-Strategic investment with a long-term vision.
+<h2>
 
-</h1>
+Construire des partenariats durables avec les leaders de demain.
 
-
-
-<div class="grid">
-
-
-
-<div class="card">
-
-
-<h3>
-
-Strategy
-
-</h3>
-
-
-<p>
-
-Identifying and evaluating high-potential opportunities through a disciplined investment approach.
-
-</p>
+</h2>
 
 
 </div>
@@ -648,45 +1148,27 @@ Identifying and evaluating high-potential opportunities through a disciplined in
 
 
 
-
-<div class="card">
-
-
-<h3>
-
-Partnership
-
-</h3>
+<div class="intro-text">
 
 
 <p>
 
-Building strong relationships between investors, entrepreneurs and international partners.
+
+Nous identifions des opportunités exceptionnelles dans des secteurs à fort potentiel et accompagnons les dirigeants dans leurs phases de croissance stratégique.
+
 
 </p>
 
-
-</div>
-
-
-
-
-
-<div class="card">
-
-
-<h3>
-
-Growth
-
-</h3>
 
 
 <p>
 
-Supporting sustainable development through strategic expertise and global networks.
+
+Notre approche combine analyse financière, réseau international et vision long terme.
+
 
 </p>
+
 
 
 </div>
@@ -704,59 +1186,406 @@ Supporting sustainable development through strategic expertise and global networ
 
 
 
+
+<section class="investments">
+
+
+
+<div class="title-small">
+
+Secteurs d'investissement
+
+</div>
+
+
+
+<h2>
+
+Domaines d'excellence
+
+</h2>
+
+
+
+
+<div class="cards">
+
+
+
+<div class="card">
+
+
+<div class="number">
+
+01
+
+</div>
+
+
+<h3>
+
+Technology & SaaS
+
+</h3>
+
+
+<p>
+
+Plateformes digitales, infrastructures cloud et solutions technologiques innovantes.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="number">
+
+02
+
+</div>
+
+
+<h3>
+
+Artificial Intelligence
+
+</h3>
+
+
+<p>
+
+Intelligence artificielle, automatisation et technologies de nouvelle génération.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="number">
+
+03
+
+</div>
+
+
+<h3>
+
+Fintech & Web3
+
+</h3>
+
+
+<p>
+
+Nouvelles infrastructures financières et modèles économiques numériques.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card">
+
+
+<div class="number">
+
+04
+
+</div>
+
+
+<h3>
+
+Private Assets
+
+</h3>
+
+
+<p>
+
+Immobilier, actifs privés et opportunités internationales.
+
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="approach">
+
+
+<div class="approach-box">
+
+
+<h3>
+
+L'excellence suisse au service de la croissance.
+
+</h3>
+
+
+
+<p>
+
+
+Nous privilégions la confidentialité, la rigueur financière et une relation de confiance avec nos partenaires.
+
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+<div class="values">
+
+
+<div class="value">
+
+<strong>
+
+Global
+
+</strong>
+
+<span>
+
+Présence internationale
+
+</span>
+
+</div>
+
+
+
+
+<div class="value">
+
+<strong>
+
+Private
+
+</strong>
+
+<span>
+
+Relations privilégiées
+
+</span>
+
+</div>
+
+
+
+
+
+<div class="value">
+
+<strong>
+
+Strategic
+
+</strong>
+
+<span>
+
+Accompagnement actif
+
+</span>
+
+</div>
+
+
+
+
+
+<div class="value">
+
+<strong>
+
+Long Term
+
+</strong>
+
+<span>
+
+Vision durable
+
+</span>
+
+</div>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="advisory">
+
+
+
+<div class="title-small">
+
+Financial Advisory
+
+</div>
+
+
+
+<h2>
+
+Conseil stratégique et investissement privé.
+
+</h2>
+
+
+
+
+<div class="advisory-grid">
+
+
+
+<div class="advisory-item">
+
+<h4>
+
+Investment Advisory
+
+</h4>
+
+<p>
+
+Analyse d'opportunités, structuration financière et accompagnement stratégique.
+
+</p>
+
+</div>
+
+
+
+
+<div class="advisory-item">
+
+<h4>
+
+Private Capital
+
+</h4>
+
+<p>
+
+Mise en relation avec des investisseurs privés et partenaires internationaux.
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="advisory-item">
+
+<h4>
+
+Strategic Growth
+
+</h4>
+
+<p>
+
+Accompagnement des entreprises dans leurs phases d'expansion.
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
 <footer>
 
+    <div>
 
+        <p class="footer-company">
+            BONSAI INVESTMENTS SA
+        </p>
 
-<div>
+        <p>
+            Landoltstrasse 1<br>
+            8006 Zürich, Switzerland
+        </p>
 
+        <p>
+            Private Investment Advisory · Strategic Capital
+        </p>
 
-<p class="footer-company">
+    </div>
 
-BONSAI INVESTMENTS SA
+    <div>
 
-</p>
+        <a href="privacy.html">Privacy Policy</a>
 
+        <a href="legal.html">Legal Notice</a>
 
-<p>
+        <a href="contact.html">Contact</a>
 
-Zurich, Switzerland
-
-</p>
-
-
-<p>
-
-Strategic Investment Advisory
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div>
-
-
-<a href="legal.html">
-
-Legal
-
-</a>
-
-
-<a href="contact.html">
-
-Contact
-
-</a>
-
-
-</div>
-
+    </div>
 
 </footer>
 
@@ -765,6 +1594,38 @@ Contact
 
 
 
+<script>
+
+
+window.addEventListener("scroll", function(){
+
+
+const header=document.querySelector("header");
+
+
+if(window.scrollY>50){
+
+header.style.background="rgba(5,5,5,.95)";
+
+}else{
+
+header.style.background="rgba(5,5,5,.75)";
+
+}
+
+
+});
+
+
+</script>
+
+
+
+
+
+
+
 </body>
+
 
 </html>
