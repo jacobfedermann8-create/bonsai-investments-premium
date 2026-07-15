@@ -51,7 +51,7 @@
             background-color: var(--grid-line);
         }
 
-        /* Halo lumineux dynamique qui suit en partie la souris (effet de fond) */
+        /* Halo lumineux dynamique */
         .bg-glow {
             position: absolute;
             top: -10%;
@@ -189,7 +189,6 @@
             animation: slideUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
         }
 
-        /* Boutons sophistiqués */
         .btn { 
             display: inline-flex; 
             align-items: center; 
@@ -236,7 +235,7 @@
             border-color: var(--text-light);
         }
 
-        /* SECTION PORTFOLIO / SECTEURS */
+        /* SECTION SECTEURS (Passage à 4 colonnes régressant proprement sur tablette/mobile) */
         .sectors-section {
             padding: 8rem 8rem;
             position: relative;
@@ -261,12 +260,12 @@
         }
         .sectors-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* Ajusté pour une grille parfaite à 4 éléments */
-            gap: 2.5rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
         }
         .sector-card {
             border: 1px solid var(--border);
-            padding: 3rem 2.5rem;
+            padding: 2.5rem 2rem;
             background: rgba(255, 255, 255, 0.01);
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
@@ -286,12 +285,12 @@
         .sector-card h3 {
             font-family: var(--font-sans);
             font-weight: 400;
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             letter-spacing: 1px;
             margin-bottom: 1rem;
         }
         .sector-card p {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: var(--muted-light);
             line-height: 1.7;
             font-weight: 300;
@@ -333,7 +332,7 @@
         }
         .stat-number {
             font-family: var(--font-serif);
-            font-size: 3.5rem;
+            font-size: 3.2rem;
             color: var(--accent);
             font-weight: 300;
             margin-bottom: 0.5rem;
@@ -347,7 +346,6 @@
             font-weight: 400;
         }
 
-        /* ANIMATIONS */
         @keyframes slideUp {
             from { opacity: 0; transform: translateY(30px); }
             to { opacity: 1; transform: translateY(0); }
@@ -371,9 +369,11 @@
         footer a:hover { color: var(--text-light); }
 
         /* RESPONSIVE */
+        @media (max-width: 1400px) {
+            .sectors-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         @media (max-width: 1200px) {
             header, .hero, .sectors-section, .stats-section, footer, .grid-overlay { padding-left: 4rem; padding-right: 4rem; }
-            .sectors-grid { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 900px) {
             header, .hero, .sectors-section, .stats-section, footer, .grid-overlay { padding-left: 2rem; padding-right: 2rem; }
@@ -442,7 +442,7 @@
             </div>
         </section>
 
-        <!-- DOMAINES D'INTERVENTION -->
+        <!-- SECTEURS D'EXCELLENCE -->
         <section class="sectors-section">
             <div class="section-header">
                 <span class="section-tag">Focus stratégique</span>
@@ -464,7 +464,7 @@
                     <h3>Fintech & Web3</h3>
                     <p>Nouvelles architectures financières, infrastructures de paiement sécurisées et protocoles décentralisés d'avenir.</p>
                 </div>
-                <!-- NOUVELLE CARTE : GESTION DE PATRIMOINE -->
+                <!-- AJOUT DE LA GESTION DE PATRIMOINE -->
                 <div class="sector-card">
                     <span class="sector-num">IV /</span>
                     <h3>Gestion de Patrimoine</h3>
@@ -477,13 +477,13 @@
         <section class="stats-section">
             <div class="stats-left">
                 <h2>Une rigueur institutionnelle au service de l'audace.</h2>
-                <p>We combine the agility of a growth-focused partner with the analytical depth of a premier financial institution. Our mission is to scale and secure your long-term legacy.</p>
+                <p>Nous combinons la réactivité d'un partenaire de croissance agile avec la profondeur d'analyse d'une institution financière de premier plan. Notre mission est d'assurer la pérennité et le passage à l'échelle de votre vision.</p>
             </div>
             <div class="stats-grid">
-                <!-- LE TICKET MINIMUM A ÉTÉ RETIRÉ POUR LA FLEXIBILITÉ -->
+                <!-- LE TICKET MINIMUM DE 3M€ A ÉTÉ REMPLACÉ PAR SUR-MESURE / SANS MINIMUM -->
                 <div class="stat-card">
-                    <div class="stat-number">Sur-Mesure</div>
-                    <div class="stat-label">Aucun minimum d'investissement</div>
+                    <div class="stat-number">Flexible</div>
+                    <div class="stat-label">Aucun minimum requis</div>
                 </div>
                 <div class="stat-card">
                     <div class="stat-number">100%</div>
