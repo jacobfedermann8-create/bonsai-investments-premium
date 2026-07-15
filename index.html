@@ -6,13 +6,7 @@
     <title>BONSAI INVESTMENTS | Capital-Risque & Croissance</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-dark: #070708;
-            --text-light: #f4f4f5;
-            --accent: #c5a880;
-            --muted-light: #a1a1aa;
-            --border: rgba(255, 255, 255, 0.08);
-        }
+        :root { --bg-dark: #070708; --text-light: #f4f4f5; --accent: #c5a880; --muted-light: #a1a1aa; --border: rgba(255, 255, 255, 0.08); }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
 
@@ -24,20 +18,28 @@
         nav a { color: var(--muted-light); text-decoration: none; margin-left: 2rem; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; transition: 0.3s; }
         nav a:hover, nav a.active { color: var(--accent); }
 
-        /* FOOTER PREMIUM */
-        .footer-premium { padding: 6rem 8rem 4rem; background-color: #030304; border-top: 1px solid var(--border); color: var(--muted-light); margin-top: 5rem; }
+        /* HERO & SECTIONS */
+        .hero { padding: 14rem 8rem 8rem; }
+        .hero h1 { font-family: 'Playfair Display', serif; font-size: 5rem; margin-bottom: 2rem; }
+        .hero p { color: var(--muted-light); font-size: 1.2rem; max-width: 600px; line-height: 1.8; }
+        .sectors-section { padding: 8rem; }
+        .sectors-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3rem; }
+        .sector-card { border: 1px solid var(--border); padding: 2rem; }
+        .sector-card h3 { color: var(--accent); margin-bottom: 1rem; }
+        .stats-section { padding: 8rem; border-top: 1px solid var(--border); display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
+
+        /* FOOTER */
+        .footer-premium { padding: 6rem 8rem 4rem; background-color: #030304; border-top: 1px solid var(--border); color: var(--muted-light); }
         .footer-content { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4rem; }
-        .footer-col h4 { font-family: 'Playfair Display', serif; font-size: 1rem; color: var(--text-light); margin-bottom: 1.5rem; }
-        .footer-col p, .footer-col a { display: block; font-size: 0.8rem; line-height: 2; text-decoration: none; color: var(--muted-light); }
+        .footer-col h4 { font-family: 'Playfair Display', serif; color: #fff; margin-bottom: 1.5rem; }
+        .footer-col a { display: block; text-decoration: none; color: var(--muted-light); margin-bottom: 0.5rem; }
         .footer-col a:hover { color: var(--accent); }
     </style>
 </head>
 <body>
 
     <header>
-        <a href="index.html" class="logo-container">
-            <div class="logo-text">BONSAI<span>INVESTMENTS</span></div>
-        </a>
+        <a href="index.html" class="logo-container"><div class="logo-text">BONSAI<span>INVESTMENTS</span></div></a>
         <nav>
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
@@ -48,9 +50,29 @@
         </nav>
     </header>
 
-    <main style="min-height: 80vh; padding-top: 150px;">
-        <!-- CONTENU DE TA PAGE ICI -->
-        <h1 style="text-align: center;">Bienvenue sur Bonsai Investments</h1>
+    <main>
+        <section class="hero">
+            <h1>Nous finançons les visionnaires qui façonnent <span>l'avenir</span>.</h1>
+            <p>Partenaire stratégique des startups à forte croissance à l'international. Nous injectons du capital intelligent pour propulser vos ambitions globales.</p>
+        </section>
+
+        <section class="sectors-section">
+            <h2>Secteurs d'excellence</h2>
+            <div class="sectors-grid">
+                <div class="sector-card"><h3>Technologie & SaaS</h3><p>Infrastructures logicielles et cloud.</p></div>
+                <div class="sector-card"><h3>Deeptech & IA</h3><p>Intelligence artificielle et robotique.</p></div>
+                <div class="sector-card"><h3>Fintech & Web3</h3><p>Architectures financières décentralisées.</p></div>
+                <div class="sector-card"><h3>Gestion de Patrimoine</h3><p>Ingénierie patrimoniale haut de gamme.</p></div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div><h2>Une rigueur institutionnelle.</h2><p>Nous combinons réactivité et analyse de premier plan.</p></div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                <div><h4>Flexible</h4><p>Aucun minimum requis</p></div>
+                <div><h4>100%</h4><p>Secteur Agnostique</p></div>
+            </div>
+        </section>
     </main>
 
     <footer class="footer-premium">
