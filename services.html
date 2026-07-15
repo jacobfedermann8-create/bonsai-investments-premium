@@ -1,109 +1,1656 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services | BONSAI INVESTMENTS</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg-dark: #070708;
-            --text-light: #f4f4f5;
-            --accent: #c5a880;
-            --muted-light: #a1a1aa;
-            --border: rgba(255, 255, 255, 0.08);
-        }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Inter', sans-serif; background-color: var(--bg-dark); color: var(--text-light); }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* --- HEADER & LOGO --- */
-        header { position: fixed; width: 100%; display: flex; justify-content: space-between; align-items: center; padding: 1.5rem 8rem; z-index: 100; background: rgba(7, 7, 8, 0.85); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); }
-        .logo-container { display: flex; align-items: center; gap: 0.9rem; text-decoration: none; }
-        .logo-icon { width: 32px; height: 32px; transition: transform 0.6s ease; }
-        .logo-container:hover .logo-icon { transform: rotate(15deg); }
-        .logo-text { font-size: 0.85rem; font-weight: 500; letter-spacing: 5px; text-transform: uppercase; color: var(--text-light); }
-        .logo-text span { color: var(--accent); }
+<title>Services | BONSAI INVESTMENTS SA</title>
 
-        nav a { color: var(--muted-light); text-decoration: none; margin-left: 2rem; font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; transition: 0.4s; }
-        nav a:hover, nav a.active { color: var(--accent); }
 
-        /* --- HERO --- */
-        .services-hero { padding: 14rem 8rem 8rem; }
-        .services-hero h1 { font-family: 'Playfair Display', serif; font-size: 5rem; font-weight: 300; margin-bottom: 2rem; letter-spacing: -1px; }
-        .services-hero h1 span { color: var(--accent); }
-        .services-hero p { font-size: 1.3rem; color: var(--muted-light); max-width: 650px; line-height: 1.6; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        /* --- GRID --- */
-        .services-grid { padding: 0 8rem 10rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        .service-card { border: 1px solid var(--border); padding: 4rem 3rem; background: rgba(255,255,255,0.01); transition: 0.5s ease-in-out; }
-        .service-card:hover { border-color: var(--accent); transform: translateY(-10px); background: rgba(197, 168, 128, 0.02); }
-        .service-card h3 { font-family: 'Playfair Display', serif; font-size: 1.6rem; margin-bottom: 2rem; color: var(--text-light); }
-        .service-card p { color: var(--muted-light); line-height: 1.8; font-size: 0.95rem; }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-        /* --- CONFIDENTIALITÉ --- */
-        .confidentiality { padding: 8rem; background: linear-gradient(180deg, rgba(197, 168, 128, 0.02) 0%, transparent 100%); text-align: center; }
-        .confidentiality h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 2rem; }
-        .confidentiality p { color: var(--muted-light); max-width: 700px; margin: 0 auto; line-height: 2; font-weight: 300; font-size: 1.1rem; letter-spacing: 0.5px; }
 
-        footer { padding: 4rem 8rem; text-align: center; color: #333; font-size: 0.7rem; letter-spacing: 4px; }
-    </style>
+<style>
+
+
+:root{
+
+--black:#050505;
+--gold:#c6a46b;
+--white:#f5f5f3;
+--grey:#a5a5a5;
+
+--sans:'Inter',sans-serif;
+--serif:'Cormorant Garamond',serif;
+
+}
+
+
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
+}
+
+
+
+html{
+
+scroll-behavior:smooth;
+
+}
+
+
+
+body{
+
+background:var(--black);
+
+color:var(--white);
+
+font-family:var(--sans);
+
+overflow-x:hidden;
+
+}
+
+
+
+
+
+/* =====================
+HEADER
+===================== */
+
+
+header{
+
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+
+height:95px;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+
+padding:0 8%;
+
+
+background:rgba(5,5,5,.75);
+
+
+backdrop-filter:blur(18px);
+
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+
+z-index:1000;
+
+
+}
+
+
+
+
+.logo{
+
+
+display:flex;
+
+align-items:center;
+
+gap:18px;
+
+text-decoration:none;
+
+
+}
+
+
+
+
+.logo-mark{
+
+
+width:50px;
+
+height:50px;
+
+
+border:1px solid var(--gold);
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+}
+
+
+
+.logo-mark svg{
+
+
+width:36px;
+
+height:36px;
+
+
+}
+
+
+
+.logo-mark svg path,
+.logo-mark svg circle{
+
+
+stroke:var(--gold);
+
+stroke-width:3;
+
+fill:none;
+
+stroke-linecap:round;
+
+
+}
+
+
+
+.logo-mark .leaf{
+
+
+fill:var(--gold);
+
+stroke:none;
+
+
+}
+
+
+
+.logo-text{
+
+
+font-size:14px;
+
+letter-spacing:5px;
+
+color:white;
+
+font-weight:500;
+
+
+}
+
+
+
+nav a{
+
+
+color:#aaa;
+
+text-decoration:none;
+
+
+font-size:12px;
+
+
+letter-spacing:2px;
+
+
+text-transform:uppercase;
+
+
+margin-left:35px;
+
+
+transition:.3s;
+
+
+}
+
+
+
+nav a:hover{
+
+
+color:var(--gold);
+
+
+}
+
+
+
+
+
+
+/* =====================
+SERVICES HERO
+===================== */
+
+
+.services-hero{
+
+
+height:90vh;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+padding:0 8%;
+
+
+background:
+
+
+linear-gradient(
+
+90deg,
+
+rgba(5,5,5,.96),
+
+rgba(5,5,5,.55)
+
+),
+
+
+url("https://images.unsplash.com/photo-1556761175-b413da4baf72");
+
+
+
+background-size:cover;
+
+
+background-position:center;
+
+
+
+}
+
+
+
+.hero-content{
+
+
+max-width:900px;
+
+margin-top:80px;
+
+
+}
+
+
+
+.small-title{
+
+
+color:var(--gold);
+
+
+font-size:12px;
+
+
+letter-spacing:5px;
+
+
+text-transform:uppercase;
+
+
+margin-bottom:30px;
+
+
+}
+
+
+
+
+.services-hero h1{
+
+
+font-family:var(--serif);
+
+
+font-size:75px;
+
+
+font-weight:400;
+
+
+line-height:1.1;
+
+
+margin-bottom:35px;
+
+
+}
+
+
+
+.services-hero h1 em{
+
+
+color:var(--gold);
+
+
+font-style:italic;
+
+
+}
+
+
+
+.services-hero p{
+
+
+max-width:700px;
+
+
+font-size:18px;
+
+
+line-height:1.9;
+
+
+font-weight:300;
+
+
+color:#c0c0c0;
+
+
+}
+
+
+
+
+
+
+/* =====================
+SERVICES SECTION
+===================== */
+
+
+.section{
+
+
+padding:120px 8%;
+
+
+}
+
+
+
+h2{
+
+
+font-family:var(--serif);
+
+
+font-size:55px;
+
+
+font-weight:400;
+
+
+line-height:1.2;
+
+
+}
+
+
+
+.service-grid{
+
+
+display:grid;
+
+
+grid-template-columns:repeat(2,1fr);
+
+
+gap:30px;
+
+
+margin-top:60px;
+
+
+}
+
+
+
+.service-card{
+
+
+padding:45px 35px;
+
+
+border:1px solid rgba(255,255,255,.08);
+
+
+background:rgba(255,255,255,.02);
+
+
+transition:.4s;
+
+
+}
+
+
+
+.service-card:hover{
+
+
+transform:translateY(-8px);
+
+
+border-color:var(--gold);
+
+
+}
+
+
+
+.service-number{
+
+
+font-family:var(--serif);
+
+
+font-size:35px;
+
+
+color:var(--gold);
+
+
+margin-bottom:25px;
+
+
+}
+
+
+
+.service-card h3{
+
+
+font-size:22px;
+
+
+font-weight:400;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.service-card p{
+
+
+color:#999;
+
+
+font-size:15px;
+
+
+line-height:1.9;
+
+
+}
+
+
+
+/* =====================
+APPROACH SECTION
+===================== */
+
+
+.approach{
+
+
+padding:120px 8%;
+
+background:#080808;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+.approach-grid{
+
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+margin-top:60px;
+
+
+}
+
+
+
+.approach-card{
+
+
+padding:45px 35px;
+
+
+border-left:1px solid var(--gold);
+
+
+background:rgba(255,255,255,.02);
+
+
+}
+
+
+
+.approach-card h3{
+
+
+font-family:var(--serif);
+
+
+font-size:38px;
+
+
+font-weight:400;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.approach-card p{
+
+
+color:#999;
+
+
+line-height:1.9;
+
+
+font-size:15px;
+
+
+}
+
+
+
+
+
+
+/* =====================
+CONFIDENTIALITY
+===================== */
+
+
+.confidentiality{
+
+
+padding:120px 8%;
+
+
+display:grid;
+
+
+grid-template-columns:1fr 1fr;
+
+
+gap:80px;
+
+
+align-items:center;
+
+
+}
+
+
+
+.confidentiality-image{
+
+
+height:450px;
+
+
+background:
+
+
+linear-gradient(
+
+rgba(5,5,5,.25),
+
+rgba(5,5,5,.65)
+
+),
+
+
+url("https://images.unsplash.com/photo-1560520653-9e0e4c89eb11");
+
+
+background-size:cover;
+
+
+background-position:center;
+
+
+}
+
+
+
+
+.confidentiality-text p{
+
+
+color:#aaa;
+
+
+font-size:17px;
+
+
+line-height:2;
+
+
+margin-top:30px;
+
+
+}
+
+
+
+
+
+/* =====================
+WHY US
+===================== */
+
+
+.why{
+
+
+padding:120px 8%;
+
+
+background:#060606;
+
+
+border-top:1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+.why-grid{
+
+
+display:grid;
+
+
+grid-template-columns:repeat(4,1fr);
+
+
+gap:25px;
+
+
+margin-top:60px;
+
+
+}
+
+
+
+.why-card{
+
+
+padding:35px 25px;
+
+
+border:1px solid rgba(255,255,255,.08);
+
+
+}
+
+
+
+.why-card h3{
+
+
+font-family:var(--serif);
+
+
+font-size:30px;
+
+
+font-weight:400;
+
+
+margin-bottom:20px;
+
+
+}
+
+
+
+.why-card p{
+
+
+color:#999;
+
+
+font-size:14px;
+
+
+line-height:1.8;
+
+
+}
+
+
+
+
+
+
+
+/* =====================
+FOOTER
+===================== */
+
+
+footer{
+
+
+padding:65px 8%;
+
+
+background:#030303;
+
+
+border-top:1px solid rgba(255,255,255,.08);
+
+
+display:flex;
+
+
+justify-content:space-between;
+
+
+align-items:center;
+
+
+}
+
+
+
+.footer-company{
+
+
+font-size:14px;
+
+
+letter-spacing:4px;
+
+
+color:white;
+
+
+margin-bottom:15px;
+
+
+}
+
+
+
+footer p{
+
+
+color:#888;
+
+
+font-size:12px;
+
+
+line-height:2;
+
+
+}
+
+
+
+footer a{
+
+
+color:#999;
+
+
+font-size:12px;
+
+
+text-decoration:none;
+
+
+margin-left:30px;
+
+
+}
+
+
+
+footer a:hover{
+
+
+color:var(--gold);
+
+
+}
+
+
+
+
+
+
+/* =====================
+RESPONSIVE
+===================== */
+
+
+@media(max-width:1100px){
+
+
+.service-grid{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.approach-grid{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.confidentiality{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+.why-grid{
+
+
+grid-template-columns:repeat(2,1fr);
+
+
+}
+
+
+
+.services-hero h1{
+
+
+font-size:55px;
+
+
+}
+
+
+}
+
+
+
+
+
+@media(max-width:700px){
+
+
+header{
+
+
+padding:0 5%;
+
+
+}
+
+
+
+nav{
+
+
+display:none;
+
+
+}
+
+
+
+.services-hero{
+
+
+padding:0 5%;
+
+
+}
+
+
+
+.services-hero h1{
+
+
+font-size:42px;
+
+
+}
+
+
+
+.section,
+.approach,
+.confidentiality,
+.why{
+
+
+padding:80px 5%;
+
+
+}
+
+
+
+.why-grid{
+
+
+grid-template-columns:1fr;
+
+
+}
+
+
+
+footer{
+
+
+flex-direction:column;
+
+
+gap:30px;
+
+
+text-align:center;
+
+
+}
+
+
+
+footer a{
+
+
+display:block;
+
+
+margin:15px 0;
+
+
+}
+
+
+
+}
+
+
+
+
+
+</style>
+
+
 </head>
+
+
+
 <body>
 
-    <header>
-        <a href="index.html" class="logo-container">
-            <svg class="logo-icon" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="50" cy="50" r="46" stroke="#c5a880" stroke-width="1.5" stroke-dasharray="2 2"/>
-                <path d="M50 85 V45" stroke="#c5a880" stroke-width="3" stroke-linecap="round"/>
-                <path d="M50 65 C40 60 30 65 32 50" stroke="#c5a880" stroke-width="2" stroke-linecap="round"/>
-                <path d="M50 55 C60 50 70 55 68 40" stroke="#c5a880" stroke-width="2" stroke-linecap="round"/>
-                <circle cx="32" cy="50" r="5" fill="#c5a880"/>
-                <circle cx="68" cy="40" r="5" fill="#c5a880"/>
-                <circle cx="50" cy="42" r="6" fill="#c5a880"/>
-                <path d="M30 85 H70" stroke="#c5a880" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-            <div class="logo-text">BONSAI INVESTMENTS<span>.</span></div>
-        </a>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="strategy.html">Strategy</a>
-            <a href="services.html" class="active">Services</a>
-            <a href="team.html">Team</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
 
-    <main>
-        <section class="services-hero">
-            <h1>Une approche <span>sur-mesure</span>.</h1>
-            <p>Nous transformons la complexité des marchés en opportunités stratégiques, avec une rigueur et une confidentialité qui définissent l'excellence de notre maison.</p>
-        </section>
 
-        <section class="services-grid">
-            <div class="service-card">
-                <h3>Gestion de Patrimoine</h3>
-                <p>Nous ne gérons pas seulement des chiffres, nous structurons des héritages. De l'ingénierie fiscale à la planification successorale, chaque décision est prise avec une précision chirurgicale pour préserver et transmettre votre prospérité au-delà des générations.</p>
-            </div>
-            <div class="service-card">
-                <h3>Immobilier Private Equity</h3>
-                <p>La pierre, repensée par l'investissement institutionnel. Nous sélectionnons des actifs à fort potentiel de création de valeur. Notre intervention permet d'accéder à des opportunités exclusives, là où la rareté et l'emplacement dictent la performance de demain.</p>
-            </div>
-            <div class="service-card">
-                <h3>Capital-Investissement</h3>
-                <p>Entrez dans le cercle des investisseurs avertis. Le Private Equity chez BONSAI INVESTMENTS, c'est l'accès direct aux moteurs de croissance de l'économie réelle. Une stratégie décorrélée des marchés publics pour une performance pérenne et ambitieuse.</p>
-            </div>
-        </section>
 
-        <section class="confidentiality">
-            <h2>L'Éthique de la Discrétion</h2>
-            <p>Au cœur de notre ADN se trouve une valeur inébranlable : le silence. Dans un monde de données ouvertes, nous garantissons un sanctuaire pour votre patrimoine. Chaque interaction, chaque conseil et chaque transaction est protégé par une confidentialité absolue, assurant que votre stratégie reste votre jardin secret.</p>
-        </section>
-    </main>
 
-    <footer>
-        &copy; 2026 BONSAI INVESTMENTS — WEALTH MANAGEMENT & PRIVATE EQUITY
-    </footer>
+<header>
+
+
+<a href="index.html" class="logo">
+
+
+<div class="logo-mark">
+
+
+<svg viewBox="0 0 100 100">
+
+
+<circle cx="50" cy="50" r="45"></circle>
+
+
+<path d="M50 80 V42"></path>
+
+
+<path d="M50 62 C35 55 25 60 30 45"></path>
+
+
+<path d="M50 55 C65 48 75 40 72 28"></path>
+
+
+<circle class="leaf" cx="30" cy="45" r="6"></circle>
+
+
+<circle class="leaf" cx="72" cy="28" r="6"></circle>
+
+
+<circle class="leaf" cx="50" cy="40" r="7"></circle>
+
+
+</svg>
+
+
+</div>
+
+
+
+<div class="logo-text">
+
+BONSAI INVESTMENTS SA
+
+</div>
+
+
+</a>
+
+
+
+
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="strategy.html">Strategy</a>
+
+<a href="services.html">Services</a>
+
+<a href="team.html">Team</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
+
+</header>
+
+
+
+
+
+
+
+<section class="services-hero">
+
+
+<div class="hero-content">
+
+
+<div class="small-title">
+
+Our Services
+
+</div>
+
+
+
+<h1>
+
+Des solutions stratégiques adaptées aux <em>ambitions internationales.</em>
+
+</h1>
+
+
+
+<p>
+
+Nous accompagnons entrepreneurs, entreprises et investisseurs privés grâce à des services personnalisés combinant expertise financière, accès au capital et accompagnement stratégique.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<section class="section">
+
+
+<div class="small-title">
+
+Notre expertise
+
+</div>
+
+
+<h2>
+
+Des services conçus pour créer de la valeur.
+
+</h2>
+
+
+
+<div class="service-grid">
+
+
+
+<div class="service-card">
+
+
+<div class="service-number">
+
+01
+
+</div>
+
+
+<h3>
+
+Investment Advisory
+
+</h3>
+
+
+<p>
+
+Analyse des opportunités, structuration financière et accompagnement stratégique pour les décisions d’investissement.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-number">
+
+02
+
+</div>
+
+
+<h3>
+
+Private Capital Advisory
+
+</h3>
+
+
+<p>
+
+Accès à des investisseurs privés et partenaires stratégiques grâce à un réseau international.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-number">
+
+03
+
+</div>
+
+
+<h3>
+
+Growth Strategy
+
+</h3>
+
+
+<p>
+
+Accompagnement des entreprises dans leur développement, expansion internationale et croissance durable.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-number">
+
+04
+
+</div>
+
+
+<h3>
+
+Strategic Partnerships
+
+</h3>
+
+
+<p>
+
+Création de connexions entre entreprises, investisseurs et acteurs financiers.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="approach">
+
+
+<div class="small-title">
+
+Notre méthode
+
+</div>
+
+
+<h2>
+
+Une approche structurée.
+
+</h2>
+
+
+
+<div class="approach-grid">
+
+
+
+<div class="approach-card">
+
+
+<h3>
+
+Analyse
+
+</h3>
+
+
+<p>
+
+Comprendre vos objectifs, votre positionnement et vos besoins stratégiques.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="approach-card">
+
+
+<h3>
+
+Stratégie
+
+</h3>
+
+
+<p>
+
+Définir une approche personnalisée afin d'optimiser les opportunités.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="approach-card">
+
+
+<h3>
+
+Exécution
+
+</h3>
+
+
+<p>
+
+Accompagner la réalisation avec discrétion, efficacité et engagement.
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="confidentiality">
+
+
+<div class="confidentiality-image">
+
+</div>
+
+
+
+<div class="confidentiality-text">
+
+
+<div class="small-title">
+
+Private Advisory
+
+</div>
+
+
+<h2>
+
+La confidentialité avant tout.
+
+</h2>
+
+
+<p>
+
+Chaque mandat est traité avec le plus haut niveau de confidentialité. Nous protégeons les informations sensibles de nos clients et partenaires afin de garantir une relation basée sur la confiance et la discrétion.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="why">
+
+
+<div class="small-title">
+
+Pourquoi nous
+
+</div>
+
+
+<h2>
+
+Une relation fondée sur l'excellence.
+
+</h2>
+
+
+
+
+<div class="why-grid">
+
+
+
+<div class="why-card">
+
+<h3>
+
+Sur mesure
+
+</h3>
+
+<p>
+
+Chaque stratégie est adaptée aux objectifs spécifiques de nos clients.
+
+</p>
+
+</div>
+
+
+
+<div class="why-card">
+
+<h3>
+
+International
+
+</h3>
+
+<p>
+
+Une approche ouverte aux opportunités et marchés internationaux.
+
+</p>
+
+</div>
+
+
+
+
+<div class="why-card">
+
+<h3>
+
+Expertise
+
+</h3>
+
+<p>
+
+Une vision financière combinée à une compréhension stratégique.
+
+</p>
+
+</div>
+
+
+
+
+<div class="why-card">
+
+<h3>
+
+Confiance
+
+</h3>
+
+<p>
+
+Des relations durables basées sur la transparence et la confidentialité.
+
+</p>
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<footer>
+
+
+<div>
+
+
+<p class="footer-company">
+
+BONSAI INVESTMENTS SA
+
+</p>
+
+
+<p>
+
+Zurich, Switzerland
+
+</p>
+
+
+<p>
+
+Conseiller financier & Strategic Investment Advisory
+
+</p>
+
+
+</div>
+
+
+
+
+<div>
+
+
+<a href="#">
+
+Confidentialité
+
+</a>
+
+
+<a href="#">
+
+Mentions légales
+
+</a>
+
+
+<a href="contact.html">
+
+Contact
+
+</a>
+
+
+</div>
+
+
+</footer>
+
+
+
+
+
+
 </body>
+
 </html>
