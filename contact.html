@@ -10,7 +10,7 @@
 
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -64,16 +64,12 @@ overflow-x:hidden;
 
 
 
-
-
-
 /* =====================
 HEADER
 ===================== */
 
 
 header{
-
 
 position:fixed;
 
@@ -83,9 +79,7 @@ left:0;
 
 width:100%;
 
-
 height:95px;
-
 
 display:flex;
 
@@ -93,30 +87,21 @@ align-items:center;
 
 justify-content:space-between;
 
-
 padding:0 8%;
-
 
 background:rgba(5,5,5,.75);
 
-
 backdrop-filter:blur(18px);
-
 
 border-bottom:1px solid rgba(255,255,255,.08);
 
-
 z-index:1000;
-
 
 }
 
 
 
-
-
 .logo{
-
 
 display:flex;
 
@@ -126,22 +111,17 @@ gap:18px;
 
 text-decoration:none;
 
-
 }
-
 
 
 
 .logo-mark{
 
-
 width:50px;
 
 height:50px;
 
-
 border:1px solid var(--gold);
-
 
 display:flex;
 
@@ -149,19 +129,15 @@ align-items:center;
 
 justify-content:center;
 
-
 }
-
 
 
 
 .logo-mark svg{
 
-
 width:36px;
 
 height:36px;
-
 
 }
 
@@ -169,7 +145,6 @@ height:36px;
 
 .logo-mark svg path,
 .logo-mark svg circle{
-
 
 stroke:var(--gold);
 
@@ -179,25 +154,21 @@ fill:none;
 
 stroke-linecap:round;
 
-
 }
 
 
 
 .logo-mark .leaf{
 
-
 fill:var(--gold);
 
 stroke:none;
-
 
 }
 
 
 
 .logo-text{
-
 
 font-size:14px;
 
@@ -207,35 +178,25 @@ color:white;
 
 font-weight:500;
 
-
 }
-
 
 
 
 nav a{
 
-
 color:#aaa;
-
 
 text-decoration:none;
 
-
 font-size:12px;
-
 
 letter-spacing:2px;
 
-
 text-transform:uppercase;
-
 
 margin-left:35px;
 
-
 transition:.3s;
-
 
 }
 
@@ -243,19 +204,81 @@ transition:.3s;
 
 nav a:hover{
 
-
 color:var(--gold);
-
 
 }
 
 
 
+/* MOBILE BUTTON */
+
+
+.mobile-menu-btn{
+
+display:none;
+
+font-size:28px;
+
+color:white;
+
+cursor:pointer;
+
+}
 
 
 
+/* MOBILE MENU */
 
 
+.mobile-menu{
+
+display:none;
+
+position:absolute;
+
+top:95px;
+
+left:0;
+
+width:100%;
+
+background:#050505;
+
+padding:30px;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.mobile-menu a{
+
+display:block;
+
+color:white;
+
+text-decoration:none;
+
+font-size:14px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+padding:15px 0;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.mobile-menu.open{
+
+display:block;
+
+}
 /* =====================
 CONTACT HERO
 ===================== */
@@ -263,43 +286,29 @@ CONTACT HERO
 
 .contact-hero{
 
-
 height:85vh;
-
 
 display:flex;
 
-
 align-items:center;
-
 
 padding:0 8%;
 
 
 background:
 
-
 linear-gradient(
-
 90deg,
-
 rgba(5,5,5,.96),
-
 rgba(5,5,5,.55)
-
 ),
-
 
 url("https://images.unsplash.com/photo-1449824913935-59a10b8d2000");
 
 
-
 background-size:cover;
 
-
 background-position:center;
-
-
 
 }
 
@@ -307,58 +316,41 @@ background-position:center;
 
 .hero-content{
 
-
 max-width:850px;
-
 
 margin-top:80px;
 
-
 }
-
 
 
 
 .small-title{
 
-
 color:var(--gold);
-
 
 font-size:12px;
 
-
 letter-spacing:5px;
-
 
 text-transform:uppercase;
 
-
 margin-bottom:30px;
-
 
 }
 
 
 
-
 .contact-hero h1{
-
 
 font-family:var(--serif);
 
-
 font-size:75px;
-
 
 font-weight:400;
 
-
 line-height:1.1;
 
-
 margin-bottom:35px;
-
 
 }
 
@@ -366,12 +358,9 @@ margin-bottom:35px;
 
 .contact-hero h1 em{
 
-
 color:var(--gold);
 
-
 font-style:italic;
-
 
 }
 
@@ -379,26 +368,17 @@ font-style:italic;
 
 .contact-hero p{
 
-
 max-width:650px;
-
 
 font-size:18px;
 
-
 line-height:1.9;
-
 
 font-weight:300;
 
-
 color:#c0c0c0;
 
-
 }
-
-
-
 
 
 
@@ -410,64 +390,46 @@ CONTACT SECTION
 
 .contact-section{
 
-
 padding:120px 8%;
-
 
 display:grid;
 
-
 grid-template-columns:1fr 1fr;
-
 
 gap:90px;
 
-
 }
-
 
 
 
 h2{
 
-
 font-family:var(--serif);
-
 
 font-size:55px;
 
-
 font-weight:400;
-
 
 line-height:1.2;
 
-
 }
-
 
 
 
 
 .contact-info{
 
-
 margin-top:50px;
-
 
 }
 
 
 
-
 .info-box{
-
 
 padding:25px 0;
 
-
 border-bottom:1px solid rgba(255,255,255,.08);
-
 
 }
 
@@ -475,21 +437,15 @@ border-bottom:1px solid rgba(255,255,255,.08);
 
 .info-title{
 
-
 font-size:12px;
-
 
 letter-spacing:3px;
 
-
 text-transform:uppercase;
-
 
 color:var(--gold);
 
-
 margin-bottom:10px;
-
 
 }
 
@@ -498,18 +454,13 @@ margin-bottom:10px;
 .info-box p,
 .info-box a{
 
-
 color:#aaa;
-
 
 font-size:16px;
 
-
 line-height:1.8;
 
-
 text-decoration:none;
-
 
 }
 
@@ -517,30 +468,24 @@ text-decoration:none;
 
 .info-box a:hover{
 
-
 color:var(--gold);
-
 
 }
 
 
 
 /* =====================
-CONTACT FORM
+FORMULAIRE
 ===================== */
 
 
 .contact-form{
 
-
 background:#080808;
-
 
 border:1px solid rgba(255,255,255,.08);
 
-
 padding:45px;
-
 
 }
 
@@ -548,18 +493,13 @@ padding:45px;
 
 .contact-form h3{
 
-
 font-family:var(--serif);
-
 
 font-size:38px;
 
-
 font-weight:400;
 
-
 margin-bottom:35px;
-
 
 }
 
@@ -567,9 +507,7 @@ margin-bottom:35px;
 
 .form-group{
 
-
 margin-bottom:25px;
-
 
 }
 
@@ -577,24 +515,17 @@ margin-bottom:25px;
 
 .form-group label{
 
-
 display:block;
-
 
 font-size:11px;
 
-
 letter-spacing:2px;
-
 
 text-transform:uppercase;
 
-
 color:#999;
 
-
 margin-bottom:10px;
-
 
 }
 
@@ -603,27 +534,19 @@ margin-bottom:10px;
 .form-group input,
 .form-group textarea{
 
-
 width:100%;
-
 
 background:transparent;
 
-
 border:1px solid rgba(255,255,255,.15);
-
 
 padding:15px;
 
-
 color:white;
-
 
 font-family:var(--sans);
 
-
 font-size:14px;
-
 
 }
 
@@ -631,12 +554,9 @@ font-size:14px;
 
 .form-group textarea{
 
-
 height:140px;
 
-
 resize:none;
-
 
 }
 
@@ -645,12 +565,9 @@ resize:none;
 .form-group input:focus,
 .form-group textarea:focus{
 
-
 outline:none;
 
-
 border-color:var(--gold);
-
 
 }
 
@@ -659,33 +576,23 @@ border-color:var(--gold);
 
 .submit-btn{
 
-
 padding:16px 40px;
-
 
 background:transparent;
 
-
 border:1px solid var(--gold);
-
 
 color:white;
 
-
 font-size:12px;
-
 
 letter-spacing:3px;
 
-
 text-transform:uppercase;
-
 
 cursor:pointer;
 
-
 transition:.4s;
-
 
 }
 
@@ -693,19 +600,11 @@ transition:.4s;
 
 .submit-btn:hover{
 
-
 background:var(--gold);
-
 
 color:#050505;
 
-
 }
-
-
-
-
-
 /* =====================
 LEGAL SECTION
 ===================== */
@@ -1069,11 +968,6 @@ margin:15px 0;
 
 
 <body>
-
-
-
-
-
 <header>
 
 
@@ -1418,14 +1312,6 @@ Envoyer
 
 
 </section>
-
-
-
-
-
-
-
-
 <section class="legal">
 
 
