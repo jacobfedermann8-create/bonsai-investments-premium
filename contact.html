@@ -8,9 +8,8 @@
 
 <title>Contact | BONSAI INVESTMENTS SA</title>
 
-
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -210,24 +209,21 @@ color:var(--gold);
 
 
 
-/* MOBILE BUTTON */
+/* MENU MOBILE */
 
 
 .mobile-menu-btn{
 
 display:none;
 
-font-size:28px;
-
 color:white;
+
+font-size:28px;
 
 cursor:pointer;
 
 }
 
-
-
-/* MOBILE MENU */
 
 
 .mobile-menu{
@@ -244,7 +240,7 @@ width:100%;
 
 background:#050505;
 
-padding:30px;
+padding:30px 25px;
 
 border-top:1px solid rgba(255,255,255,.08);
 
@@ -279,6 +275,9 @@ border-bottom:1px solid rgba(255,255,255,.08);
 display:block;
 
 }
+
+
+
 /* =====================
 CONTACT HERO
 ===================== */
@@ -294,13 +293,16 @@ align-items:center;
 
 padding:0 8%;
 
-
 background:
 
 linear-gradient(
+
 90deg,
+
 rgba(5,5,5,.96),
+
 rgba(5,5,5,.55)
+
 ),
 
 url("https://images.unsplash.com/photo-1449824913935-59a10b8d2000");
@@ -337,9 +339,6 @@ text-transform:uppercase;
 margin-bottom:30px;
 
 }
-
-
-
 .contact-hero h1{
 
 font-family:var(--serif);
@@ -383,6 +382,7 @@ color:#c0c0c0;
 
 
 
+
 /* =====================
 CONTACT SECTION
 ===================== */
@@ -413,7 +413,6 @@ font-weight:400;
 line-height:1.2;
 
 }
-
 
 
 
@@ -474,8 +473,10 @@ color:var(--gold);
 
 
 
+
+
 /* =====================
-FORMULAIRE
+CONTACT FORM
 ===================== */
 
 
@@ -534,6 +535,7 @@ margin-bottom:10px;
 .form-group input,
 .form-group textarea{
 
+
 width:100%;
 
 background:transparent;
@@ -576,6 +578,7 @@ border-color:var(--gold);
 
 .submit-btn{
 
+
 padding:16px 40px;
 
 background:transparent;
@@ -605,6 +608,11 @@ background:var(--gold);
 color:#050505;
 
 }
+
+
+
+
+
 /* =====================
 LEGAL SECTION
 ===================== */
@@ -612,24 +620,17 @@ LEGAL SECTION
 
 .legal{
 
-
 padding:100px 8%;
-
 
 background:#060606;
 
-
 border-top:1px solid rgba(255,255,255,.08);
-
 
 display:grid;
 
-
 grid-template-columns:1fr 1fr;
 
-
 gap:80px;
-
 
 }
 
@@ -637,9 +638,7 @@ gap:80px;
 
 .legal h2{
 
-
 margin-bottom:30px;
-
 
 }
 
@@ -647,15 +646,11 @@ margin-bottom:30px;
 
 .legal p{
 
-
 color:#999;
-
 
 line-height:2;
 
-
 font-size:15px;
-
 
 }
 
@@ -663,16 +658,9 @@ font-size:15px;
 
 .legal strong{
 
-
 color:white;
 
-
 }
-
-
-
-
-
 /* =====================
 MAP
 ===================== */
@@ -680,9 +668,7 @@ MAP
 
 .map-section{
 
-
 padding:0 8% 120px;
-
 
 }
 
@@ -690,15 +676,11 @@ padding:0 8% 120px;
 
 .map-container{
 
-
 height:450px;
-
 
 border:1px solid rgba(255,255,255,.08);
 
-
 overflow:hidden;
-
 
 }
 
@@ -706,22 +688,15 @@ overflow:hidden;
 
 .map-container iframe{
 
-
 width:100%;
-
 
 height:100%;
 
-
 border:0;
-
 
 filter:grayscale(100%) brightness(.7);
 
-
 }
-
-
 
 
 
@@ -734,24 +709,17 @@ FOOTER
 
 footer{
 
-
 padding:65px 8%;
-
 
 background:#030303;
 
-
 border-top:1px solid rgba(255,255,255,.08);
-
 
 display:flex;
 
-
 justify-content:space-between;
 
-
 align-items:center;
-
 
 }
 
@@ -759,18 +727,13 @@ align-items:center;
 
 .footer-company{
 
-
 font-size:14px;
-
 
 letter-spacing:4px;
 
-
 color:white;
 
-
 margin-bottom:15px;
-
 
 }
 
@@ -778,15 +741,11 @@ margin-bottom:15px;
 
 footer p{
 
-
 color:#888;
-
 
 font-size:12px;
 
-
 line-height:2;
-
 
 }
 
@@ -794,18 +753,13 @@ line-height:2;
 
 footer a{
 
-
 color:#999;
-
 
 font-size:12px;
 
-
 text-decoration:none;
 
-
 margin-left:30px;
-
 
 }
 
@@ -813,9 +767,7 @@ margin-left:30px;
 
 footer a:hover{
 
-
 color:var(--gold);
-
 
 }
 
@@ -823,9 +775,8 @@ color:var(--gold);
 
 
 
-
 /* =====================
-RESPONSIVE
+RESPONSIVE TABLETTE
 ===================== */
 
 
@@ -835,9 +786,7 @@ RESPONSIVE
 .contact-section,
 .legal{
 
-
 grid-template-columns:1fr;
-
 
 }
 
@@ -845,17 +794,20 @@ grid-template-columns:1fr;
 
 .contact-hero h1{
 
-
 font-size:55px;
 
+}
+
 
 }
 
 
 
-}
 
 
+/* =====================
+RESPONSIVE MOBILE
+===================== */
 
 
 @media(max-width:700px){
@@ -863,9 +815,47 @@ font-size:55px;
 
 header{
 
+height:80px;
 
-padding:0 5%;
+padding:0 20px;
 
+}
+
+
+
+.logo{
+
+gap:10px;
+
+}
+
+
+
+.logo-mark{
+
+width:40px;
+
+height:40px;
+
+}
+
+
+
+.logo-mark svg{
+
+width:28px;
+
+height:28px;
+
+}
+
+
+
+.logo-text{
+
+font-size:10px;
+
+letter-spacing:3px;
 
 }
 
@@ -873,9 +863,23 @@ padding:0 5%;
 
 nav{
 
-
 display:none;
 
+}
+
+
+
+.mobile-menu-btn{
+
+display:block;
+
+}
+
+
+
+.mobile-menu{
+
+top:80px;
 
 }
 
@@ -883,9 +887,29 @@ display:none;
 
 .contact-hero{
 
+height:100vh;
 
-padding:0 5%;
+padding:120px 25px 60px;
 
+}
+
+
+
+.hero-content{
+
+margin-top:0;
+
+}
+
+
+
+.small-title{
+
+font-size:10px;
+
+letter-spacing:3px;
+
+margin-bottom:25px;
 
 }
 
@@ -893,9 +917,21 @@ padding:0 5%;
 
 .contact-hero h1{
 
+font-size:40px;
 
-font-size:42px;
+line-height:1.15;
 
+margin-bottom:25px;
+
+}
+
+
+
+.contact-hero p{
+
+font-size:15px;
+
+line-height:1.8;
 
 }
 
@@ -905,12 +941,27 @@ font-size:42px;
 .legal,
 .map-section{
 
+padding-left:25px;
 
-padding-left:5%;
+padding-right:25px;
+
+}
 
 
-padding-right:5%;
 
+.contact-section{
+
+padding-top:80px;
+
+padding-bottom:80px;
+
+}
+
+
+
+h2{
+
+font-size:38px;
 
 }
 
@@ -918,9 +969,15 @@ padding-right:5%;
 
 .contact-form{
 
-
 padding:30px;
 
+}
+
+
+
+.map-container{
+
+height:330px;
 
 }
 
@@ -928,15 +985,13 @@ padding:30px;
 
 footer{
 
+padding:50px 25px;
 
 flex-direction:column;
 
-
 gap:30px;
 
-
 text-align:center;
-
 
 }
 
@@ -944,30 +999,25 @@ text-align:center;
 
 footer a{
 
-
 display:block;
-
 
 margin:15px 0;
 
-
 }
 
 
-
 }
-
-
-
-
-
 </style>
-
 
 </head>
 
 
 <body>
+
+
+
+
+
 <header>
 
 
@@ -1038,7 +1088,60 @@ BONSAI INVESTMENTS SA
 </nav>
 
 
+
+
+
+<div class="mobile-menu-btn" onclick="openMenu()">
+
+☰
+
+</div>
+
+
+
+
+
+<div class="mobile-menu">
+
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="strategy.html">Strategy</a>
+
+<a href="services.html">Services</a>
+
+<a href="team.html">Team</a>
+
+<a href="contact.html">Contact</a>
+
+
+</div>
+
+
+
 </header>
+
+
+
+
+
+
+
+<script>
+
+
+function openMenu(){
+
+document.querySelector(".mobile-menu").classList.toggle("open");
+
+}
+
+
+</script>
+
+
 
 
 
@@ -1059,11 +1162,13 @@ Contact Us
 </div>
 
 
+
 <h1>
 
 Construisons ensemble les opportunités de <em>demain.</em>
 
 </h1>
+
 
 
 <p>
@@ -1108,11 +1213,7 @@ Entrer en relation avec Bonsai Investments SA.
 
 
 
-
 <div class="contact-info">
-
-
-
 <div class="info-box">
 
 
@@ -1204,12 +1305,11 @@ CHE-285.609.245
 </div>
 
 
-
-
 </div>
 
 
 </div>
+
 
 
 
@@ -1295,13 +1395,11 @@ Message
 
 
 
-
 <button class="submit-btn">
 
 Envoyer
 
 </button>
-
 
 
 </form>
@@ -1310,8 +1408,14 @@ Envoyer
 </div>
 
 
-
 </section>
+
+
+
+
+
+
+
 <section class="legal">
 
 
@@ -1337,17 +1441,30 @@ Chaque échange est traité avec la plus grande confidentialité. Bonsai Investm
 
 
 
+
 <div>
 
 
 <p>
 
-<strong>BONSAI INVESTMENTS SA</strong><br><br>
+<strong>
+
+BONSAI INVESTMENTS SA
+
+</strong>
+
+<br><br>
+
 
 Numéro au registre du commerce :<br>
-CH-020.4.091.692-9<br><br>
+
+CH-020.4.091.692-9
+
+<br><br>
+
 
 IDE / TVA :<br>
+
 CHE-285.609.245
 
 </p>
@@ -1364,7 +1481,6 @@ CHE-285.609.245
 
 
 
-
 <section class="map-section">
 
 
@@ -1372,7 +1488,9 @@ CHE-285.609.245
 
 
 <iframe
+
 src="https://maps.google.com/maps?q=Landoltstrasse%201%208006%20Zurich%20Switzerland&t=&z=15&ie=UTF8&iwloc=&output=embed">
+
 </iframe>
 
 
