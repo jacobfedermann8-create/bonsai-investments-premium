@@ -8,6 +8,7 @@
 
 <title>Team | BONSAI INVESTMENTS SA</title>
 
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -60,6 +61,7 @@ font-family:var(--sans);
 overflow-x:hidden;
 
 }
+
 
 
 
@@ -215,6 +217,74 @@ color:var(--gold);
 
 
 
+/* MOBILE MENU */
+
+.mobile-menu-btn{
+
+display:none;
+
+font-size:28px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+
+
+.mobile-menu{
+
+display:none;
+
+position:absolute;
+
+top:95px;
+
+left:0;
+
+width:100%;
+
+background:#050505;
+
+padding:30px;
+
+border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
+.mobile-menu.open{
+
+display:block;
+
+}
+
+
+
+.mobile-menu a{
+
+display:block;
+
+color:white;
+
+text-decoration:none;
+
+font-size:14px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+padding:15px 0;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+
+
 /* =====================
 TEAM HERO
 ===================== */
@@ -222,43 +292,27 @@ TEAM HERO
 
 .team-hero{
 
-
 height:90vh;
-
 
 display:flex;
 
-
 align-items:center;
-
 
 padding:0 8%;
 
-
 background:
 
-
 linear-gradient(
-
 90deg,
-
 rgba(5,5,5,.96),
-
 rgba(5,5,5,.55)
-
 ),
-
 
 url("https://images.unsplash.com/photo-1556761175-4b46a572b786");
 
-
-
 background-size:cover;
 
-
 background-position:center;
-
-
 
 }
 
@@ -266,11 +320,9 @@ background-position:center;
 
 .hero-content{
 
-
 max-width:900px;
 
 margin-top:80px;
-
 
 }
 
@@ -278,43 +330,29 @@ margin-top:80px;
 
 .small-title{
 
-
 color:var(--gold);
-
 
 font-size:12px;
 
-
 letter-spacing:5px;
-
 
 text-transform:uppercase;
 
-
 margin-bottom:30px;
-
 
 }
 
-
-
 .team-hero h1{
-
 
 font-family:var(--serif);
 
-
 font-size:75px;
-
 
 font-weight:400;
 
-
 line-height:1.1;
 
-
 margin-bottom:35px;
-
 
 }
 
@@ -322,12 +360,9 @@ margin-bottom:35px;
 
 .team-hero h1 em{
 
-
 color:var(--gold);
 
-
 font-style:italic;
-
 
 }
 
@@ -335,23 +370,20 @@ font-style:italic;
 
 .team-hero p{
 
-
 max-width:700px;
-
 
 font-size:18px;
 
-
 line-height:1.9;
-
 
 font-weight:300;
 
-
 color:#c0c0c0;
 
-
 }
+
+
+
 
 
 /* =====================
@@ -361,9 +393,7 @@ LEADERSHIP
 
 .team-section{
 
-
 padding:120px 8%;
-
 
 }
 
@@ -371,18 +401,13 @@ padding:120px 8%;
 
 h2{
 
-
 font-family:var(--serif);
-
 
 font-size:55px;
 
-
 font-weight:400;
 
-
 line-height:1.2;
-
 
 }
 
@@ -390,18 +415,13 @@ line-height:1.2;
 
 .team-grid{
 
-
 display:grid;
-
 
 grid-template-columns:repeat(3,1fr);
 
-
 gap:30px;
 
-
 margin-top:60px;
-
 
 }
 
@@ -409,18 +429,13 @@ margin-top:60px;
 
 .member-card{
 
-
 padding:45px 35px;
-
 
 border:1px solid rgba(255,255,255,.08);
 
-
 background:rgba(255,255,255,.02);
 
-
 transition:.4s;
-
 
 }
 
@@ -428,12 +443,9 @@ transition:.4s;
 
 .member-card:hover{
 
-
 transform:translateY(-8px);
 
-
 border-color:var(--gold);
-
 
 }
 
@@ -441,36 +453,25 @@ border-color:var(--gold);
 
 .initials{
 
-
 width:70px;
-
 
 height:70px;
 
-
 border:1px solid var(--gold);
-
 
 display:flex;
 
-
 align-items:center;
-
 
 justify-content:center;
 
-
 font-family:var(--serif);
-
 
 font-size:32px;
 
-
 color:var(--gold);
 
-
 margin-bottom:30px;
-
 
 }
 
@@ -478,15 +479,11 @@ margin-bottom:30px;
 
 .member-card h3{
 
-
 font-size:22px;
-
 
 font-weight:400;
 
-
 margin-bottom:10px;
-
 
 }
 
@@ -494,21 +491,15 @@ margin-bottom:10px;
 
 .member-role{
 
-
 color:var(--gold);
-
 
 font-size:13px;
 
-
 letter-spacing:2px;
-
 
 text-transform:uppercase;
 
-
 margin-bottom:20px;
-
 
 }
 
@@ -516,15 +507,11 @@ margin-bottom:20px;
 
 .member-email{
 
-
 color:#999;
-
 
 font-size:14px;
 
-
 text-decoration:none;
-
 
 }
 
@@ -532,28 +519,41 @@ text-decoration:none;
 
 .member-email:hover{
 
-
 color:var(--gold);
 
+}
+
+
+
+
+
+/* =====================
+TEAM MEMBERS
+===================== */
+
+
+.member-card a{
+
+display:inline-block;
 
 }
- 
+
+
+
+
+
 /* =====================
-APPROACH SECTION
+APPROACH
 ===================== */
 
 
 .team-approach{
 
-
 padding:120px 8%;
-
 
 background:#080808;
 
-
 border-top:1px solid rgba(255,255,255,.08);
-
 
 }
 
@@ -561,18 +561,13 @@ border-top:1px solid rgba(255,255,255,.08);
 
 .approach-grid{
 
-
 display:grid;
-
 
 grid-template-columns:repeat(3,1fr);
 
-
 gap:30px;
 
-
 margin-top:60px;
-
 
 }
 
@@ -580,12 +575,9 @@ margin-top:60px;
 
 .approach-card{
 
-
 padding:40px 30px;
 
-
 border-left:1px solid var(--gold);
-
 
 }
 
@@ -593,18 +585,13 @@ border-left:1px solid var(--gold);
 
 .approach-card h3{
 
-
 font-family:var(--serif);
-
 
 font-size:36px;
 
-
 font-weight:400;
 
-
 margin-bottom:20px;
-
 
 }
 
@@ -612,19 +599,13 @@ margin-bottom:20px;
 
 .approach-card p{
 
-
 color:#999;
-
 
 line-height:1.9;
 
-
 font-size:15px;
 
-
 }
-
-
 
 
 /* =====================
@@ -634,21 +615,15 @@ GLOBAL NETWORK
 
 .network{
 
-
 padding:120px 8%;
-
 
 display:grid;
 
-
 grid-template-columns:1fr 1fr;
-
 
 gap:80px;
 
-
 align-items:center;
-
 
 }
 
@@ -656,31 +631,21 @@ align-items:center;
 
 .network-image{
 
-
 height:450px;
-
 
 background:
 
-
 linear-gradient(
-
 rgba(5,5,5,.25),
-
 rgba(5,5,5,.65)
-
 ),
-
 
 url("https://images.unsplash.com/photo-1497366811353-6870744d04b2");
 
 
-
 background-size:cover;
 
-
 background-position:center;
-
 
 }
 
@@ -688,20 +653,17 @@ background-position:center;
 
 .network-text p{
 
-
 color:#aaa;
-
 
 font-size:17px;
 
-
 line-height:2;
-
 
 margin-top:30px;
 
-
 }
+
+
 
 
 
@@ -714,24 +676,17 @@ FOOTER
 
 footer{
 
-
 padding:65px 8%;
-
 
 background:#030303;
 
-
 border-top:1px solid rgba(255,255,255,.08);
-
 
 display:flex;
 
-
 justify-content:space-between;
 
-
 align-items:center;
-
 
 }
 
@@ -739,18 +694,13 @@ align-items:center;
 
 .footer-company{
 
-
 font-size:14px;
-
 
 letter-spacing:4px;
 
-
 color:white;
 
-
 margin-bottom:15px;
-
 
 }
 
@@ -758,15 +708,11 @@ margin-bottom:15px;
 
 footer p{
 
-
 color:#888;
-
 
 font-size:12px;
 
-
 line-height:2;
-
 
 }
 
@@ -774,18 +720,13 @@ line-height:2;
 
 footer a{
 
-
 color:#999;
-
 
 font-size:12px;
 
-
 text-decoration:none;
 
-
 margin-left:30px;
-
 
 }
 
@@ -793,9 +734,7 @@ margin-left:30px;
 
 footer a:hover{
 
-
 color:var(--gold);
-
 
 }
 
@@ -803,10 +742,8 @@ color:var(--gold);
 
 
 
-
-
 /* =====================
-RESPONSIVE
+RESPONSIVE TABLET
 ===================== */
 
 
@@ -815,9 +752,7 @@ RESPONSIVE
 
 .team-grid{
 
-
 grid-template-columns:repeat(2,1fr);
-
 
 }
 
@@ -825,9 +760,7 @@ grid-template-columns:repeat(2,1fr);
 
 .approach-grid{
 
-
 grid-template-columns:1fr;
-
 
 }
 
@@ -835,9 +768,7 @@ grid-template-columns:1fr;
 
 .network{
 
-
 grid-template-columns:1fr;
-
 
 }
 
@@ -845,17 +776,15 @@ grid-template-columns:1fr;
 
 .team-hero h1{
 
-
 font-size:55px;
 
-
 }
 
 
-
 }
-
-
+/* =====================
+MOBILE RESPONSIVE
+===================== */
 
 
 @media(max-width:700px){
@@ -863,9 +792,47 @@ font-size:55px;
 
 header{
 
+height:80px;
 
-padding:0 5%;
+padding:0 20px;
 
+}
+
+
+
+.logo{
+
+gap:10px;
+
+}
+
+
+
+.logo-mark{
+
+width:40px;
+
+height:40px;
+
+}
+
+
+
+.logo-mark svg{
+
+width:28px;
+
+height:28px;
+
+}
+
+
+
+.logo-text{
+
+font-size:10px;
+
+letter-spacing:3px;
 
 }
 
@@ -873,19 +840,55 @@ padding:0 5%;
 
 nav{
 
-
 display:none;
-
 
 }
 
 
 
+.mobile-menu-btn{
+
+display:block;
+
+}
+
+
+
+.mobile-menu{
+
+top:80px;
+
+}
+
+
+
+
+
 .team-hero{
 
+height:100vh;
 
-padding:0 5%;
+padding:120px 25px 60px;
 
+}
+
+
+
+.hero-content{
+
+margin-top:0;
+
+}
+
+
+
+.small-title{
+
+font-size:10px;
+
+letter-spacing:3px;
+
+margin-bottom:25px;
 
 }
 
@@ -893,9 +896,21 @@ padding:0 5%;
 
 .team-hero h1{
 
+font-size:40px;
 
-font-size:42px;
+line-height:1.15;
 
+margin-bottom:25px;
+
+}
+
+
+
+.team-hero p{
+
+font-size:15px;
+
+line-height:1.8;
 
 }
 
@@ -905,9 +920,15 @@ font-size:42px;
 .team-approach,
 .network{
 
+padding:80px 25px;
 
-padding:80px 5%;
+}
 
+
+
+h2{
+
+font-size:38px;
 
 }
 
@@ -915,9 +936,71 @@ padding:80px 5%;
 
 .team-grid{
 
+grid-template-columns:1fr;
+
+gap:20px;
+
+}
+
+
+
+.member-card{
+
+padding:30px 25px;
+
+}
+
+
+
+.member-card h3{
+
+font-size:20px;
+
+}
+
+
+
+.approach-grid{
 
 grid-template-columns:1fr;
 
+gap:20px;
+
+}
+
+
+
+.approach-card{
+
+padding:30px 25px;
+
+}
+
+
+
+.approach-card h3{
+
+font-size:32px;
+
+}
+
+
+
+.network-image{
+
+height:330px;
+
+margin-bottom:40px;
+
+}
+
+
+
+.network-text p{
+
+font-size:15px;
+
+line-height:1.8;
 
 }
 
@@ -925,15 +1008,13 @@ grid-template-columns:1fr;
 
 footer{
 
+padding:50px 25px;
 
 flex-direction:column;
 
-
 gap:30px;
 
-
 text-align:center;
-
 
 }
 
@@ -941,19 +1022,14 @@ text-align:center;
 
 footer a{
 
-
 display:block;
-
 
 margin:15px 0;
 
-
 }
 
 
-
 }
-
 
 
 </style>
@@ -962,11 +1038,7 @@ margin:15px 0;
 </head>
 
 
-
 <body>
-
-
-
 
 
 <header>
@@ -983,21 +1055,15 @@ margin:15px 0;
 
 <circle cx="50" cy="50" r="45"></circle>
 
-
 <path d="M50 80 V42"></path>
-
 
 <path d="M50 62 C35 55 25 60 30 45"></path>
 
-
 <path d="M50 55 C65 48 75 40 72 28"></path>
-
 
 <circle class="leaf" cx="30" cy="45" r="6"></circle>
 
-
 <circle class="leaf" cx="72" cy="28" r="6"></circle>
-
 
 <circle class="leaf" cx="50" cy="40" r="7"></circle>
 
@@ -1020,8 +1086,6 @@ BONSAI INVESTMENTS SA
 
 
 
-
-
 <nav>
 
 <a href="index.html">Home</a>
@@ -1039,19 +1103,39 @@ BONSAI INVESTMENTS SA
 </nav>
 
 
-</header>
+
+
+<div class="mobile-menu-btn" onclick="openMenu()">
+
+☰
+
+</div>
 
 
 
+<div class="mobile-menu">
 
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="strategy.html">Strategy</a>
+
+<a href="services.html">Services</a>
+
+<a href="team.html">Team</a>
+
+<a href="contact.html">Contact</a>
+
+
+</div>
 
 
 
 <section class="team-hero">
 
-
 <div class="hero-content">
-
 
 <div class="small-title">
 
@@ -1060,13 +1144,11 @@ Leadership
 </div>
 
 
-
 <h1>
 
 Une équipe dédiée à la création de valeur <em>durable.</em>
 
 </h1>
-
 
 
 <p>
@@ -1078,487 +1160,18 @@ Notre équipe combine expertise financière, vision stratégique et réseau inte
 
 </div>
 
-
 </section>
 
 
+<script>
 
+function openMenu(){
 
+document.querySelector(".mobile-menu").classList.toggle("open");
 
+}
 
-
-<section class="team-section">
-
-
-<div class="small-title">
-
-Our Team
-
-</div>
-
-
-<h2>
-
-Leadership & Expertise
-
-</h2>
-
-
-
-
-<div class="team-grid">
-
-
-
-<div class="member-card">
-
-
-<div class="initials">
-
-LH
-
-</div>
-
-
-<h3>
-
-Lars Hartmann
-
-</h3>
-
-
-<div class="member-role">
-
-Chief Executive Officer
-
-</div>
-
-
-<a class="member-email">
-
-L.hartmann@bonsai-invest.com
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="member-card">
-
-
-<div class="initials">
-
-NP
-
-</div>
-
-
-<h3>
-
-Navneet Patel
-
-</h3>
-
-
-<div class="member-role">
-
-Chief Operating Officer
-
-</div>
-
-
-<a class="member-email">
-
-N.patel@bonsai-invest.com
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="member-card">
-
-
-<div class="initials">
-
-JF
-
-</div>
-
-
-<h3>
-
-Jacob Federmann
-
-</h3>
-
-
-<div class="member-role">
-
-Chief Financial Officer
-
-</div>
-
-
-<a class="member-email">
-
-J.federmann@bonsai-invest.com
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="member-card">
-
-
-<div class="initials">
-
-TL
-
-</div>
-
-
-<h3>
-
-Thomas Lopez
-
-</h3>
-
-
-<div class="member-role">
-
-Business Consultant
-
-</div>
-
-
-<a class="member-email">
-
-T.lopez@bonsai-invest.com
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="member-card">
-
-
-<div class="initials">
-
-SM
-
-</div>
-
-
-<h3>
-
-Simon Mulliez
-
-</h3>
-
-
-<div class="member-role">
-
-Business Consultant
-
-</div>
-
-
-<a class="member-email">
-
-S.mulliez@bonsai-invest.com
-
-</a>
-
-
-</div>
-
-
-
-
-
-
-
-<div class="member-card">
-
-
-<div class="initials">
-
-EC
-
-</div>
-
-
-<h3>
-
-Edouard Chatila
-
-</h3>
-
-
-<div class="member-role">
-
-Business Consultant
-
-</div>
-
-
-<a class="member-email">
-
-E.chatila@bonsai-invest.com
-
-</a>
-
-
-</div>
-
-
-
-
-</div>
-
-
-</section>
-
-<section class="team-approach">
-
-
-<div class="small-title">
-
-Notre philosophie
-
-</div>
-
-
-<h2>
-
-Une approche fondée sur la confiance.
-
-</h2>
-
-
-
-<div class="approach-grid">
-
-
-
-<div class="approach-card">
-
-
-<h3>
-
-Confidentialité
-
-</h3>
-
-
-<p>
-
-Nous protégeons les informations stratégiques de nos partenaires avec le plus haut niveau de discrétion.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="approach-card">
-
-
-<h3>
-
-Collaboration
-
-</h3>
-
-
-<p>
-
-Nous construisons des relations durables avec entrepreneurs, investisseurs et partenaires.
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div class="approach-card">
-
-
-<h3>
-
-Excellence
-
-</h3>
-
-
-<p>
-
-Notre objectif est d'apporter une vision stratégique et une valeur ajoutée à chaque relation.
-
-</p>
-
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<section class="network">
-
-
-<div class="network-image">
-
-</div>
-
-
-
-<div class="network-text">
-
-
-<div class="small-title">
-
-International Network
-
-</div>
-
-
-
-<h2>
-
-Une présence connectée aux opportunités mondiales.
-
-</h2>
-
-
-
-<p>
-
-Depuis la Suisse, Bonsai Investments SA développe des relations avec entrepreneurs, investisseurs privés et partenaires internationaux afin de créer des opportunités stratégiques.
-
-</p>
-
-
-</div>
-
-
-</section>
-
-
-
-
-
-
-
-<footer>
-
-
-
-<div>
-
-
-<p class="footer-company">
-
-BONSAI INVESTMENTS SA
-
-</p>
-
-
-<p>
-
-Zurich, Switzerland
-
-</p>
-
-
-<p>
-
-Conseiller financier & Strategic Investment Advisory
-
-</p>
-
-
-</div>
-
-
-
-
-
-<div>
-
-
-<a href="#">
-
-Confidentialité
-
-</a>
-
-
-<a href="#">
-
-Mentions légales
-
-</a>
-
-
-<a href="contact.html">
-
-Contact
-
-</a>
-
-
-</div>
-
-
-</footer>
-
-
-
-
-
+</script>
 
 
 </body>
