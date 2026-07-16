@@ -23,7 +23,6 @@
 --black:#050505;
 --gold:#c6a46b;
 --white:#f5f5f3;
---grey:#a5a5a5;
 
 --sans:'Inter',sans-serif;
 --serif:'Cormorant Garamond',serif;
@@ -53,15 +52,11 @@ scroll-behavior:smooth;
 body{
 
 background:var(--black);
-
 color:var(--white);
-
 font-family:var(--sans);
-
 overflow-x:hidden;
 
 }
-
 
 
 
@@ -72,18 +67,14 @@ HEADER
 
 header{
 
-
 position:fixed;
 
 top:0;
-
 left:0;
 
 width:100%;
 
-
 height:95px;
-
 
 display:flex;
 
@@ -91,29 +82,21 @@ align-items:center;
 
 justify-content:space-between;
 
-
 padding:0 8%;
-
 
 background:rgba(5,5,5,.75);
 
-
 backdrop-filter:blur(18px);
-
 
 border-bottom:1px solid rgba(255,255,255,.08);
 
-
 z-index:1000;
-
 
 }
 
 
 
-
 .logo{
-
 
 display:flex;
 
@@ -123,22 +106,17 @@ gap:18px;
 
 text-decoration:none;
 
-
 }
-
 
 
 
 .logo-mark{
 
-
 width:50px;
 
 height:50px;
 
-
 border:1px solid var(--gold);
-
 
 display:flex;
 
@@ -146,19 +124,15 @@ align-items:center;
 
 justify-content:center;
 
-
 }
-
 
 
 
 .logo-mark svg{
 
-
 width:36px;
 
 height:36px;
-
 
 }
 
@@ -166,7 +140,6 @@ height:36px;
 
 .logo-mark svg path,
 .logo-mark svg circle{
-
 
 stroke:var(--gold);
 
@@ -176,25 +149,21 @@ fill:none;
 
 stroke-linecap:round;
 
-
 }
 
 
 
 .logo-mark .leaf{
 
-
 fill:var(--gold);
 
 stroke:none;
-
 
 }
 
 
 
 .logo-text{
-
 
 font-size:14px;
 
@@ -204,13 +173,11 @@ color:white;
 
 font-weight:500;
 
-
 }
 
 
 
 nav a{
-
 
 color:#aaa;
 
@@ -222,12 +189,9 @@ letter-spacing:2px;
 
 text-transform:uppercase;
 
-
 margin-left:35px;
 
-
 transition:.3s;
-
 
 }
 
@@ -235,13 +199,92 @@ transition:.3s;
 
 nav a:hover{
 
-
 color:var(--gold);
-
 
 }
 
 
+
+
+
+/* =====================
+MOBILE MENU
+===================== */
+
+
+.mobile-menu-btn{
+
+display:none;
+
+font-size:30px;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+
+
+.mobile-menu{
+
+position:fixed;
+
+top:80px;
+
+left:0;
+
+width:100%;
+
+background:#050505;
+
+display:flex;
+
+flex-direction:column;
+
+max-height:0;
+
+overflow:hidden;
+
+transition:.4s;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:999;
+
+}
+
+
+
+.mobile-menu a{
+
+padding:18px;
+
+width:100%;
+
+text-align:center;
+
+color:white;
+
+text-decoration:none;
+
+font-size:13px;
+
+letter-spacing:2px;
+
+text-transform:uppercase;
+
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+
+
+.mobile-menu.open{
+
+max-height:500px;
+
+}
 
 
 
@@ -253,41 +296,28 @@ STRATEGY HERO
 
 .strategy-hero{
 
-
 height:90vh;
-
 
 display:flex;
 
-
 align-items:center;
-
 
 padding:0 8%;
 
-
 background:
 
-
 linear-gradient(
-
 90deg,
-
 rgba(5,5,5,.96),
-
 rgba(5,5,5,.55)
-
 ),
-
 
 url("https://images.unsplash.com/photo-1497366754035-f200968a6e72");
 
 
 background-size:cover;
 
-
 background-position:center;
-
 
 }
 
@@ -295,101 +325,69 @@ background-position:center;
 
 .hero-content{
 
-
 max-width:900px;
 
 margin-top:80px;
 
-
 }
-
 
 
 
 .small-title{
 
-
 color:var(--gold);
-
 
 font-size:12px;
 
-
 letter-spacing:5px;
-
 
 text-transform:uppercase;
 
-
 margin-bottom:30px;
 
-
 }
-
 
 
 
 .strategy-hero h1{
 
-
 font-family:var(--serif);
-
 
 font-size:75px;
 
-
 font-weight:400;
-
 
 line-height:1.1;
 
-
 margin-bottom:35px;
 
-
 }
-
 
 
 
 .strategy-hero h1 em{
 
-
 color:var(--gold);
-
 
 font-style:italic;
 
-
 }
-
 
 
 
 .strategy-hero p{
 
-
 max-width:700px;
-
 
 font-size:18px;
 
-
 line-height:1.9;
-
 
 color:#c0c0c0;
 
-
 font-weight:300;
 
-
 }
-
-
-
-
-
 /* =====================
 PHILOSOPHY
 ===================== */
@@ -397,29 +395,21 @@ PHILOSOPHY
 
 .section{
 
-
 padding:120px 8%;
-
 
 }
 
 
 
-
 .grid-two{
-
 
 display:grid;
 
-
 grid-template-columns:1fr 1fr;
-
 
 gap:90px;
 
-
 align-items:center;
-
 
 }
 
@@ -427,38 +417,27 @@ align-items:center;
 
 h2{
 
-
 font-family:var(--serif);
-
 
 font-size:55px;
 
-
 font-weight:400;
 
-
 line-height:1.2;
-
 
 }
 
 
 
-
 .text p{
-
 
 color:#aaa;
 
-
 font-size:17px;
-
 
 line-height:2;
 
-
 margin-bottom:25px;
-
 
 }
 
@@ -473,20 +452,17 @@ INVESTMENT PROCESS
 
 .process{
 
-
 padding:120px 8%;
 
 background:#080808;
 
 border-top:1px solid rgba(255,255,255,.08);
 
-
 }
 
 
 
 .process-grid{
-
 
 display:grid;
 
@@ -496,13 +472,11 @@ gap:25px;
 
 margin-top:60px;
 
-
 }
 
 
 
 .process-card{
-
 
 padding:40px 30px;
 
@@ -512,25 +486,21 @@ background:rgba(255,255,255,.02);
 
 transition:.4s;
 
-
 }
 
 
 
 .process-card:hover{
 
-
 transform:translateY(-8px);
 
 border-color:var(--gold);
-
 
 }
 
 
 
 .process-number{
-
 
 font-family:var(--serif);
 
@@ -540,13 +510,11 @@ color:var(--gold);
 
 margin-bottom:25px;
 
-
 }
 
 
 
 .process-card h3{
-
 
 font-size:18px;
 
@@ -554,13 +522,11 @@ font-weight:400;
 
 margin-bottom:20px;
 
-
 }
 
 
 
 .process-card p{
-
 
 color:#999;
 
@@ -568,9 +534,7 @@ font-size:14px;
 
 line-height:1.8;
 
-
 }
-
 
 
 
@@ -583,16 +547,13 @@ INVESTMENT CRITERIA
 
 .criteria{
 
-
 padding:120px 8%;
-
 
 }
 
 
 
 .criteria-grid{
-
 
 display:grid;
 
@@ -602,13 +563,11 @@ gap:30px;
 
 margin-top:60px;
 
-
 }
 
 
 
 .criteria-box{
-
 
 padding:40px;
 
@@ -616,13 +575,11 @@ border-left:1px solid var(--gold);
 
 background:rgba(255,255,255,.02);
 
-
 }
 
 
 
 .criteria-box h3{
-
 
 font-family:var(--serif);
 
@@ -632,18 +589,15 @@ font-weight:400;
 
 margin-bottom:20px;
 
-
 }
 
 
 
 .criteria-box p{
 
-
 color:#999;
 
 line-height:1.8;
-
 
 }
 
@@ -658,13 +612,11 @@ CONFIDENTIALITY
 
 .confidentiality{
 
-
 padding:120px 8%;
 
 background:#060606;
 
 border-top:1px solid rgba(255,255,255,.08);
-
 
 display:grid;
 
@@ -674,16 +626,13 @@ gap:80px;
 
 align-items:center;
 
-
 }
 
 
 
 .confidentiality h2{
 
-
 margin-bottom:30px;
-
 
 }
 
@@ -691,13 +640,11 @@ margin-bottom:30px;
 
 .confidentiality p{
 
-
 color:#aaa;
 
 font-size:17px;
 
 line-height:2;
-
 
 }
 
@@ -705,18 +652,15 @@ line-height:2;
 
 .conf-box{
 
-
 border:1px solid rgba(198,164,107,.35);
 
 padding:45px;
-
 
 }
 
 
 
 .conf-box h3{
-
 
 font-family:var(--serif);
 
@@ -728,20 +672,15 @@ color:var(--gold);
 
 margin-bottom:20px;
 
-
 }
 
 
 
 .conf-box p{
 
-
 font-size:15px;
 
-
 }
-
-
 
 
 
@@ -754,7 +693,6 @@ GLOBAL VISION
 
 .global{
 
-
 padding:120px 8%;
 
 display:grid;
@@ -765,46 +703,33 @@ gap:80px;
 
 align-items:center;
 
-
 }
 
 
 
 .global-image{
 
-
 height:450px;
-
 
 background:
 
-
 linear-gradient(
-
 rgba(5,5,5,.3),
-
 rgba(5,5,5,.65)
-
 ),
-
 
 url("https://images.unsplash.com/photo-1449824913935-59a10b8d2000");
 
 
 background-size:cover;
 
-
 background-position:center;
-
 
 }
 
 
 
-
-
 .global-text p{
-
 
 color:#aaa;
 
@@ -812,9 +737,7 @@ font-size:17px;
 
 line-height:2;
 
-
 }
-
 
 
 
@@ -827,15 +750,11 @@ FOOTER
 
 footer{
 
-
 padding:65px 8%;
-
 
 background:#030303;
 
-
 border-top:1px solid rgba(255,255,255,.08);
-
 
 display:flex;
 
@@ -843,25 +762,19 @@ justify-content:space-between;
 
 align-items:center;
 
-
 }
 
 
 
 .footer-company{
 
-
 font-size:14px;
-
 
 letter-spacing:4px;
 
-
 color:white;
 
-
 margin-bottom:15px;
-
 
 }
 
@@ -869,15 +782,11 @@ margin-bottom:15px;
 
 footer p{
 
-
 color:#888;
-
 
 font-size:12px;
 
-
 line-height:2;
-
 
 }
 
@@ -885,18 +794,13 @@ line-height:2;
 
 footer a{
 
-
 color:#999;
-
 
 font-size:12px;
 
-
 text-decoration:none;
 
-
 margin-left:30px;
-
 
 }
 
@@ -904,16 +808,9 @@ margin-left:30px;
 
 footer a:hover{
 
-
 color:var(--gold);
 
-
 }
-
-
-
-
-
 /* =====================
 RESPONSIVE
 ===================== */
@@ -924,9 +821,7 @@ RESPONSIVE
 
 .process-grid{
 
-
 grid-template-columns:repeat(2,1fr);
-
 
 }
 
@@ -936,9 +831,7 @@ grid-template-columns:repeat(2,1fr);
 .confidentiality,
 .global{
 
-
 grid-template-columns:1fr;
-
 
 }
 
@@ -946,15 +839,13 @@ grid-template-columns:1fr;
 
 .strategy-hero h1{
 
-
 font-size:55px;
 
-
 }
 
 
-
 }
+
 
 
 
@@ -963,7 +854,47 @@ font-size:55px;
 
 header{
 
-padding:0 5%;
+height:80px;
+
+padding:0 20px;
+
+}
+
+
+
+.logo{
+
+gap:10px;
+
+}
+
+
+
+.logo-mark{
+
+width:40px;
+
+height:40px;
+
+}
+
+
+
+.logo-mark svg{
+
+width:28px;
+
+height:28px;
+
+}
+
+
+
+.logo-text{
+
+font-size:10px;
+
+letter-spacing:3px;
 
 }
 
@@ -971,9 +902,15 @@ padding:0 5%;
 
 nav{
 
-
 display:none;
 
+}
+
+
+
+.mobile-menu-btn{
+
+display:block;
 
 }
 
@@ -981,9 +918,27 @@ display:none;
 
 .strategy-hero{
 
+height:100vh;
 
-padding:0 5%;
+padding:120px 25px 60px;
 
+}
+
+
+
+.hero-content{
+
+margin-top:0;
+
+}
+
+
+
+.small-title{
+
+font-size:10px;
+
+letter-spacing:3px;
 
 }
 
@@ -991,9 +946,19 @@ padding:0 5%;
 
 .strategy-hero h1{
 
+font-size:40px;
 
-font-size:42px;
+line-height:1.15;
 
+}
+
+
+
+.strategy-hero p{
+
+font-size:15px;
+
+line-height:1.8;
 
 }
 
@@ -1005,20 +970,111 @@ font-size:42px;
 .confidentiality,
 .global{
 
-
-padding:80px 5%;
-
+padding:80px 25px;
 
 }
 
 
 
-.process-grid,
-.criteria-grid{
+.grid-two{
 
+display:block;
+
+}
+
+
+
+.text{
+
+margin-top:35px;
+
+}
+
+
+
+h2{
+
+font-size:38px;
+
+}
+
+
+
+.text p{
+
+font-size:15px;
+
+line-height:1.8;
+
+}
+
+
+
+.process-grid{
 
 grid-template-columns:1fr;
 
+gap:20px;
+
+}
+
+
+
+.process-card{
+
+padding:30px 25px;
+
+}
+
+
+
+.criteria-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+
+.criteria-box{
+
+padding:30px;
+
+}
+
+
+
+.conf-box{
+
+padding:30px;
+
+}
+
+
+
+.global{
+
+display:block;
+
+}
+
+
+
+.global-image{
+
+height:350px;
+
+margin-bottom:40px;
+
+}
+
+
+
+.global-text p{
+
+font-size:15px;
+
+line-height:1.8;
 
 }
 
@@ -1026,15 +1082,13 @@ grid-template-columns:1fr;
 
 footer{
 
+padding:50px 25px;
 
 flex-direction:column;
 
-
 gap:30px;
 
-
 text-align:center;
-
 
 }
 
@@ -1042,20 +1096,14 @@ text-align:center;
 
 footer a{
 
-
 display:block;
-
 
 margin:15px 0;
 
-
 }
 
 
-
 }
-
-
 
 
 
@@ -1065,10 +1113,7 @@ margin:15px 0;
 </head>
 
 
-
 <body>
-
-
 
 
 <header>
@@ -1110,7 +1155,6 @@ margin:15px 0;
 </div>
 
 
-
 <div class="logo-text">
 
 BONSAI INVESTMENTS SA
@@ -1119,8 +1163,6 @@ BONSAI INVESTMENTS SA
 
 
 </a>
-
-
 
 
 
@@ -1141,9 +1183,35 @@ BONSAI INVESTMENTS SA
 </nav>
 
 
+
+<div class="mobile-menu-btn" onclick="openMenu()">
+
+☰
+
+</div>
+
+
+
+<div class="mobile-menu">
+
+
+<a href="index.html">Home</a>
+
+<a href="about.html">About</a>
+
+<a href="strategy.html">Strategy</a>
+
+<a href="services.html">Services</a>
+
+<a href="team.html">Team</a>
+
+<a href="contact.html">Contact</a>
+
+
+</div>
+
+
 </header>
-
-
 
 
 
@@ -1185,8 +1253,6 @@ Nous identifions, analysons et accompagnons des opportunités exceptionnelles gr
 
 
 
-
-
 <section class="section">
 
 
@@ -1211,7 +1277,6 @@ Investir avec conviction, construire avec patience.
 
 
 </div>
-
 
 
 
@@ -1244,7 +1309,6 @@ Nous privilégions les entreprises disposant d'un fort potentiel de croissance e
 
 
 
-
 <section class="process">
 
 
@@ -1266,15 +1330,9 @@ Processus d'investissement
 <div class="process-grid">
 
 
-
 <div class="process-card">
 
-<div class="process-number">
-
-01
-
-</div>
-
+<div class="process-number">01</div>
 
 <h3>
 
@@ -1282,28 +1340,19 @@ Analyse & Sélection
 
 </h3>
 
-
 <p>
 
 Identification des projets présentant un potentiel stratégique et une équipe solide.
 
 </p>
 
-
 </div>
-
-
 
 
 
 <div class="process-card">
 
-<div class="process-number">
-
-02
-
-</div>
-
+<div class="process-number">02</div>
 
 <h3>
 
@@ -1311,28 +1360,19 @@ Due Diligence
 
 </h3>
 
-
 <p>
 
 Analyse financière, opérationnelle et stratégique approfondie.
 
 </p>
 
-
 </div>
-
-
 
 
 
 <div class="process-card">
 
-<div class="process-number">
-
-03
-
-</div>
-
+<div class="process-number">03</div>
 
 <h3>
 
@@ -1340,28 +1380,19 @@ Structuration
 
 </h3>
 
-
 <p>
 
 Construction d'une stratégie adaptée aux objectifs de croissance.
 
 </p>
 
-
 </div>
-
-
 
 
 
 <div class="process-card">
 
-<div class="process-number">
-
-04
-
-</div>
-
+<div class="process-number">04</div>
 
 <h3>
 
@@ -1369,13 +1400,11 @@ Accompagnement
 
 </h3>
 
-
 <p>
 
 Relation durable et soutien stratégique après investissement.
 
 </p>
-
 
 </div>
 
@@ -1384,6 +1413,7 @@ Relation durable et soutien stratégique après investissement.
 
 
 </section>
+
 
 
 
@@ -1405,18 +1435,12 @@ Nos critères de sélection
 </h2>
 
 
-
 <div class="criteria-grid">
-
 
 
 <div class="criteria-box">
 
-<h3>
-
-Leadership
-
-</h3>
+<h3>Leadership</h3>
 
 <p>
 
@@ -1428,14 +1452,9 @@ Une équipe dirigeante expérimentée avec une vision claire et ambitieuse.
 
 
 
-
 <div class="criteria-box">
 
-<h3>
-
-Innovation
-
-</h3>
+<h3>Innovation</h3>
 
 <p>
 
@@ -1447,14 +1466,9 @@ Des solutions différenciantes capables de créer un avantage compétitif durabl
 
 
 
-
 <div class="criteria-box">
 
-<h3>
-
-Scalabilité
-
-</h3>
+<h3>Scalabilité</h3>
 
 <p>
 
@@ -1466,14 +1480,9 @@ Des modèles économiques capables de se développer sur des marchés internatio
 
 
 
-
 <div class="criteria-box">
 
-<h3>
-
-Impact
-
-</h3>
+<h3>Impact</h3>
 
 <p>
 
@@ -1488,7 +1497,6 @@ Des projets créateurs de valeur économique et durable.
 
 
 </section>
-
 
 
 
@@ -1590,10 +1598,7 @@ Depuis Zurich, nous créons des connexions entre entrepreneurs, investisseurs pr
 
 
 
-
-
 <footer>
-
 
 
 <div>
@@ -1624,18 +1629,17 @@ Conseiller financier & Strategic Investment Advisory
 
 
 
-
 <div>
 
 
-<a href="#">
+<a href="privacy.html">
 
 Confidentialité
 
 </a>
 
 
-<a href="#">
+<a href="legal.html">
 
 Mentions légales
 
@@ -1657,6 +1661,39 @@ Contact
 
 
 
+
+<script>
+
+
+window.addEventListener("scroll",function(){
+
+
+const header=document.querySelector("header");
+
+
+if(window.scrollY>50){
+
+header.style.background="rgba(5,5,5,.95)";
+
+}else{
+
+header.style.background="rgba(5,5,5,.75)";
+
+}
+
+
+});
+
+
+
+function openMenu(){
+
+document.querySelector(".mobile-menu").classList.toggle("open");
+
+}
+
+
+</script>
 
 
 </body>
